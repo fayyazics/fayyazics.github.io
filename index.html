@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="images/shortcut-icon.png">
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/component.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/animated-bg.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizer -->
+  	
+	<title>Fayyaz Mukarram | Portfolio</title>
+</head>
+<body>
+	<header class="cd-header">
+		<div class="cd-logo"><a href="index.html"><img src="images/logo-white.png" height='50' alt="Logo"></a></div>
+
+		<a class="cd-primary-nav-trigger" href="#0">
+			<span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span>
+		</a> <!-- cd-primary-nav-trigger -->
+	</header>
+
+	<nav>
+		<ul class="cd-primary-nav">
+
+			<li><a class="cd-label" href="index.html">Home</a></li>
+			<li><a href="designs.html">Designs</a></li>
+			<li><a href="project.html">Projects</a></li>
+			<li><a href="photography.html">Photography</a></li>
+
+			<li class="cd-label">Follow Me</li>
+			
+			<li class="cd-social cd-facebook"><a href="#0">Facebook</a></li>
+			<li class="cd-social cd-instagram"><a href="#0">Instagram</a></li>
+			<li class="cd-social cd-dribbble"><a href="#0">Dribbble</a></li>
+			<li class="cd-social cd-twitter"><a href="#0">Twitter</a></li>
+		</ul>
+	</nav>
+				<div id="large-header" class="large-header">
+				<canvas id="demo-canvas"></canvas>
+					<h5 class="main-title"> Designer, Developer, Photographer</span></h5>
+				</div>
+
+
+
+
+
+<!-- Section 1 (Hello World) -->
+
+	<main id="more" class="cd-main-content" style="margin-top: 8rem;">
+		<div class="cd-container">
+			<h1>I Design Stuff</h1>
+			<p>Hello! My name is Fayyaz Mukarram. I am a 21 year old designer from</br> Los Angeles, California. Currently a student at UC Berkeley, I hope to make my way into the world of design with a harmonious balance between functionality and aesthetics. Now you may be asking, "what is this stuff you design?" Take a look through my site for some of the stuff that I have dabbled in - visual designs, mockups, mobile and web interfaces, and a bit of photography.</p>
+			
+			<a href="project.html"><div class="read-more-btn">See My Work</div></a>
+		</div>
+
+
+		<hr></hr>
+
+
+		<div class="cd-container">
+		<!--	<h4 style="color: rgb(212,175,55);">Projects</h4> -->
+			<h1>Check out my Photos</h1>
+		</div>	
+				
+		<div class="cd-container-more-about">
+			<div class="row">
+				<a href="photography.html"><div class="cd-container-clmn-1">
+				</div></a>
+				<a href="photography.html"><div class="cd-container-clmn-2">
+				</div></a>
+				<a href="photography.html"><div class="cd-container-clmn-3">
+				</div></a>
+				<a href="photography.html"><div class="cd-container-clmn-4">
+				</div></a>
+			</div>
+
+			<div class="row">
+				<a href="photography.html"><div class="cd-container-clmn-5">
+				</div></a>
+				<a href="photography.html"><div class="cd-container-clmn-6">
+				</div></a>
+				<a href="photography.html"><div class="cd-container-clmn-7">
+				</div></a>
+				<a href="photography.html"><div class="cd-container-clmn-8">
+				</div></a>
+			</div>
+		</div>
+
+
+
+<!-- Section 2 (Contact) -->
+
+ <a id="contact" name="contact"></a>
+
+		<div class="cd-container">
+			<h1>Let's Talk</h1>
+			<p>email me: mfayyaz@berkeley.edu</p>
+			<a href="mailto:mfayyaz@berkeley.edu"><div class="read-more-btn">OPEN EMAIL</div></a>
+		</div>	
+
+<!-- Section 5 (Footer) -->
+		
+		<div class="footer bg-dark">
+			<div class="footer-content">
+				<div class="col-md-12 text-center">
+					<div>© 2015 Designed and Developed by Fayyaz Mukarram</div>
+				</div>
+			</div>
+		</div>
+
+<a id="contact"></a>
+		
+	</main>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
+
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+
+<!-- Script for smooth scrolling -->
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
