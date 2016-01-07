@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="images/shortcut-icon.png">
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/component.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/animated-bg.css"> <!-- Resource style -->
+	<link rel="stylesheet" type="text/css" href="css/zoomwall.css">
+	<script type="text/javascript" src="js/zoomwall.js"></script> <!-- Zoomwall -->
+	<script>
+	window.onload = function() {
+		zoomwall.create(document.getElementById('zoomwall'), true);
+	};
+	</script>
+
+  	
+	<title>Fayyaz Mukarram | Portfolio</title>
+</head>
+<body>
+	<header class="cd-header-1">
+		<div class="cd-logo"><a href="index.html"><img src="images/logo-white.png" height='50' alt="Logo"></a></div>
+
+		<a class="cd-primary-nav-trigger" href="#0">
+			<span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span>
+		</a>
+	</header>
+
+	<nav>
+		<ul class="cd-primary-nav">
+			<li><a class="cd-label" href="index.html">Home</a></li>
+			<li><a href="designs.html">Designs</a></li>
+			<li><a href="project.html">Projects</a></li>
+			<li><a href="photography.html">Photography</a></li>
+			<li><a href="index.html#contact">Contact Me</a></li>
+
+			<li class="cd-label">Follow Me</li>
+			
+			<li class="cd-social cd-facebook"><a href="#0">Facebook</a></li>
+			<li class="cd-social cd-instagram"><a href="#0">Instagram</a></li>
+			<li class="cd-social cd-dribbble"><a href="#0">Dribbble</a></li>
+			<li class="cd-social cd-twitter"><a href="#0">Twitter</a></li>
+		</ul>
+	</nav>
+
+<!-- Section 1 -->
+
+	<main id="more" class="cd-main-content" style="margin-top: 8rem;">
+		<div class="cd-container">
+			<h4 style="color: rgb(212,175,55);">designs</h4>
+			<h1 style="font-size: 70px">Have a Look</h1>
+		</div>
+
+
+		<div id="zoomwall" class="zoomwall">
+			<img src="images/des1.jpg" data-highres="images/des1.jpg" />
+			<img src="images/des7.jpg" data-highres="images/des7.jpg" />
+			<img src="images/des3.jpg" data-highres="images/des3.jpg" />
+			<img src="images/des13.jpg" data-highres="images/des13.jpg" />
+			<img src="images/des4.jpg" data-highres="images/des4.jpg" />
+			<img src="images/des6.jpg" data-highres="images/des6.jpg" />
+			<img src="images/des9.jpg" data-highres="images/des9.jpg" />
+			<img src="images/des10.jpg" data-highres="images/des10.jpg" />
+			<img src="images/des5.jpg" data-highres="images/des5.jpg" />
+			<img src="images/des12.jpg" data-highres="images/des12.jpg" />
+			<img src="images/des8.jpg" data-highres="images/des8.jpg" />
+		</div>
+
+		<div class="cd-container">
+		</div>
+
+
+<!-- Section 5 -->
+		
+		<div class="footer bg-dark">
+			<div class="footer-content">
+				<div class="col-md-12 text-center">
+					<div>© 2015 Designed and Developed by Fayyaz Mukarram</div>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
+
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+
+<!-- Script for smooth scrolling -->
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
