@@ -489,7 +489,7 @@ The .cd-intro change the background image
 .cd-intro {
   position: relative;
   height: 100%;
-  background: url(https://github.com/fayyazics/fayyazics.github.io/blob/master/css/DSC_7037.JPG?raw=true) center center;
+  background: url(https://fayyazics.github.io/css/DSC_7037.JPG) center center;
   background-size: cover;
   z-index: 1;
   -webkit-font-smoothing: antialiased;
