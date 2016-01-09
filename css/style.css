@@ -597,7 +597,7 @@ The .cd-intro change the background image
 }
 .cd-container-more-about {
 	width: 100%;
-/* max-width: 1280px;   */
+  max-width: 1280px;
 	background-color: #f9f9f9;
 	display: inline-block;
 	margin: 0 auto;
