@@ -429,6 +429,7 @@ html, body {
   background-image: url(images/cd-socials.svg);
   background-repeat: no-repeat;
   /* image replacement */
+  overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
