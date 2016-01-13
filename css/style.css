@@ -427,6 +427,7 @@ html, body {
   height: 44px;
   padding: 0;
   background-image: url(images/cd-socials.svg);
+  background-repeat: no-repeat;
   /* image replacement */
   overflow: hidden;
   text-indent: 100%;
