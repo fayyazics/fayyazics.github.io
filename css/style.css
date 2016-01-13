@@ -433,18 +433,7 @@ html, body {
   text-indent: 100%;
   white-space: nowrap;
 }
-.cd-primary-nav .cd-facebook a {
-  background-position: 0 0;
-}
-.cd-primary-nav .cd-instagram a {
-  background-position: -44px 0;
-}
-.cd-primary-nav .cd-dribbble a {
-  background-position: -88px 0;
-}
-.cd-primary-nav .cd-twitter a {
-  background-position: -132px 0;
-}
+
 .cd-primary-nav.is-visible {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
