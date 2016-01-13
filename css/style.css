@@ -419,15 +419,14 @@ html, body {
   margin: 2.4em 0 .8em;
 }
 .cd-primary-nav .cd-social {
-  display: inline-block;
+  display: inherit;
   margin: 0 .4em;
 }
 .cd-primary-nav .cd-social a {
-  width: 88px;
-  height: 88px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   background-image: url(images/cd-socials.svg);
-  background-repeat: no-repeat;
   /* image replacement */
   overflow: hidden;
   text-indent: 100%;
