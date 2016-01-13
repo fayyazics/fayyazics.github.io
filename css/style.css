@@ -423,7 +423,7 @@ html, body {
   margin: 0 .4em;
 }
 .cd-primary-nav .cd-social a {
-  width: 44px;
+  width: 30px;
   height: 44px;
   padding: 0;
   background-image: url(images/cd-socials.svg);
@@ -437,13 +437,13 @@ html, body {
   background-position: 0 0;
 }
 .cd-primary-nav .cd-instagram a {
-  background-position: -44px 0;
+  background-position: -40px 0;
 }
 .cd-primary-nav .cd-dribbble a {
-  background-position: -88px 0;
+  background-position: -80px 0;
 }
 .cd-primary-nav .cd-twitter a {
-  background-position: -132px 0;
+  background-position: -120px 0;
 }
 .cd-primary-nav.is-visible {
   -webkit-transform: translateY(0);
