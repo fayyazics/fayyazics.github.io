@@ -419,7 +419,7 @@ html, body {
   margin: 2.4em 0 .8em;
 }
 .cd-primary-nav .cd-social {
-  display: inherit;
+  display: inline-block;
   margin: 0 .4em;
 }
 .cd-primary-nav .cd-social a {
