@@ -1,4 +1,4 @@
 # fayyazics.github.io
 
-Check out my portfolio at fayyazmukarram.me!
+Check out my portfolio at fayyazmukarram.com!
 
