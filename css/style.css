@@ -943,7 +943,7 @@ media="all"
 
 /*--about-starts--*/
 .about-info {
-    margin: 105px 0px 0 200px;
+    margin: 105px 0px 0 20px;
 }
 .about-info h3{
   font-size:36px;
@@ -1181,15 +1181,14 @@ Footer Style
   color: #c3c3c3;
   max-width: 450px;
   margin: 0 auto;
-  padding-top: 40px;
   padding: 40px 10px 0px 10px
 }
 .footer-content a {
   color: #ffffff;
 }
 .footer-clmn1 {
-  width: 50%;
-  float: left;
+  width: 100%;
+  float: middle;
 }
 .footer-clmn1 a:hover {
   color: rgb(33,142,225);
@@ -1204,7 +1203,11 @@ Footer Style
 }
 
 @media all and (min-width: 320px) and (max-width: 780px) {
-	.footer-clmn1 {
+	.footer {
+	width: 100%;
+	background-color: rgb(55,55,55);
+  }
+  .footer-clmn1 {
 		width: 100%;
 	}
 	.footer-clmn2 {
@@ -1212,4 +1215,5 @@ Footer Style
 		text-align: left;
 		margin-top: 1rem;
 	}	
+}
 }
