@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="images/shortcut-icon.png">
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/component.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/animated-bg.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizer -->
+	<link rel="stylesheet" type="text/css" href="css/zoomwall.css">
+	<script type="text/javascript" src="js/zoomwall.js"></script> <!-- Zoomwall -->
+	<script>
+	window.onload = function() {
+		zoomwall.create(document.getElementById('zoomwall'), true);
+	};
+	</script>  	
+	<title>Fayyaz Mukarram | Designs</title>
+</head>
+
+<body>
+
+    <div class="cd-container">
+    </div>
+	
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
+
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+
+<!-- Script for smooth scrolling -->
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+function passWord() {
+    var testV = 1;
+    var pass1 = prompt('Please Enter Password',' ');
+    while (testV < 3) {
+        if (!pass1) 
+            history.go(-1);
+        if (pass1.toLowerCase() == "big2") {
+            alert('Welcome to Danial Takeover');
+            window.open('dhani-in.html');
+            break;
+        } 
+        testV+=1;
+        var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+    }
+
+    if (pass1.toLowerCase()!="password" & testV ==3) 
+        history.go(-1);
+        return " ";
+    } 
+</script>
+<center>
+<form>
+    <a class="read-more-btn btn btn-lg makespace" onClick="passWord()" href="https://itunes.apple.com/us/app/blue-bear-stickers/id1161050066?mt=8">Enter the land of unknown</a>
+
+    <!--<input class="read-more-btn text-center" value="Enter the land of unknown" onClick="passWord()">-->
+</form>
+</center>
+
+</body>
+</html>
