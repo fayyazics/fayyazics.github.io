@@ -548,11 +548,11 @@ footer.bg-dark li,
 .image-bg .container,
 .image-bg div[class*='col-'] {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 .container.image-bg .row {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 .background-image-holder {
   position: absolute;
@@ -720,7 +720,7 @@ html, body {
   background: rgba(2, 23, 37, 0.7);
   height: 60px;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
  
 }
 .cd-header-1 {
@@ -730,7 +730,7 @@ html, body {
   background: rgba(50,50,50,0.7);
   height: 60px;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
  
 }
 @media only screen and (min-width: 768px) {
@@ -955,7 +955,7 @@ html, body {
   height: 100%;
   width: 100%;
   background: rgb(45, 48, 53);
-  z-index: 2;
+  z-index: 4;
   text-align: center;
   padding: 50px 0;
   -webkit-backface-visibility: hidden;
@@ -1454,7 +1454,7 @@ Photo Thumbnails
 .page-title-1 .breadcrumb,
 .page-title-3 .breadcrumb {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   width: 100%;
   text-align: center;
   bottom: 0;
