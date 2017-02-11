@@ -449,6 +449,14 @@ p.lead {
   background: #fff;
 }
 
+.contact-image {
+  position: relative;
+	overflow: hidden;
+	background-size: cover;
+  width:100%;
+  background-image: url(../images/me.jpg);
+}
+
 /*!---------- 5. SECTIONS ----------*/
 section,
 footer {
@@ -1184,7 +1192,6 @@ The .cd-intro change the background image
 }
 .cd-container-more-about {
 	width: 100%;
-  max-width: 1280px;
 	background-color: #f9f9f9;
 	display: inline-block;
 	margin: 0 auto;
