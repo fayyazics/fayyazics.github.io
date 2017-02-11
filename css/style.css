@@ -463,6 +463,8 @@ footer {
   padding: 46px 0;
   position: relative;
   overflow: hidden;
+	background-size: cover;
+	background-position: center center;
 }
 footer {
   padding: 72px 0;
@@ -1889,6 +1891,7 @@ figure {
 figure {
   margin: 0;
 }
+}
 
 /* -------------------------------- 
 
@@ -1899,6 +1902,9 @@ Footer Style
 .footer {
 	width: 100%;
 	height: 150px;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
 	background-color: rgb(55,55,55);
 }
 .footer-content {
@@ -1912,7 +1918,7 @@ Footer Style
   color: #ffffff;
 }
 
-@media all and (min-width: 320px) and (max-width: 780px) {
+@media all and (max-width: 780px) {
 	.footer {
 	width: 100%;
 	background-color: rgb(55,55,55);
