@@ -1296,93 +1296,226 @@ Photo Thumbnails
 .cd-container-clmn-8:hover {
 	opacity: .5;
 }
+
+#centerit {
+  padding-top:3em;
+  z-index:2;
+}
+
 .cd-container-clmn-9 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/blood_moon.jpg);
-  background-size: cover;
-  display: inline-block;
+	width: 45%;
+	height: 450px;
+	margin: 10px;
+	background-image: url(images/agproject2.jpg);
+	background-size: cover;
+	display: inline-block;
+}
+.cd-container-clmn-9 .mofo {
+  position: relative;
+  overflow: hidden;
+  display: table;
+  width: 80%;
+  color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.5);
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
 }
 .cd-container-clmn-9:hover {
-  opacity: .5;
+	opacity: .6;
 }
+.cd-container-clmn-9:hover .mofo {
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .cd-container-clmn-10 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/IMG_3353.jpg);
-  background-size: cover;
-  display: inline-block;
+	width: 45%;
+	height: 450px;
+	margin: 10px;
+	background-image: url(images/bubbacover.jpg);
+	background-size: cover;
+	display: inline-block;
+}
+.cd-container-clmn-10 .mofo {
+  position: relative;
+  overflow: hidden;
+  display: table;
+  width: 80%;
+  color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.5);
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
 }
 .cd-container-clmn-10:hover {
-  opacity: .5;
+	opacity: .6;
 }
+.cd-container-clmn-10:hover .mofo {
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .cd-container-clmn-11 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/IMG_3358.jpg);
-  background-size: cover;
-  display: inline-block;
+	width: 45%;
+	height: 450px;
+	margin: 10px;
+	background-image: url(images/masar_cover.jpg);
+	background-size: cover;
+	display: inline-block;
+}
+.cd-container-clmn-11 .mofo {
+  position: relative;
+  overflow: hidden;
+  display: table;
+  width: 80%;
+  color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.5);
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
 }
 .cd-container-clmn-11:hover {
-  opacity: .5;
+	opacity: .6;
 }
+.cd-container-clmn-11:hover .mofo {
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .cd-container-clmn-12 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/stars&bridges.jpg);
-  background-size: cover;
-  display: inline-block;
+	width: 45%;
+	height: 450px;
+	margin: 10px;
+	background-image: url(images/textflow_cover.jpg);
+	background-size: cover;
+	display: inline-block;
+}
+.cd-container-clmn-12 .mofo {
+  position: relative;
+  overflow: hidden;
+  display: table;
+  width: 80%;
+  color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.5);
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
 }
 .cd-container-clmn-12:hover {
-  opacity: .5;
+	opacity: .6;
 }
+.cd-container-clmn-12:hover .mofo {
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .cd-container-clmn-13 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/IMG_4412.jpg);
-  background-size: cover;
-  display: inline-block;
+	width: 45%;
+	height: 450px;
+	margin: 10px;
+	background-image: url(images/bbmockup.jpg);
+	background-size: cover;
+	display: inline-block;
+}
+.cd-container-clmn-13 .mofo {
+  position: relative;
+  overflow: hidden;
+  display: table;
+  width: 80%;
+  color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.5);
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
 }
 .cd-container-clmn-13:hover {
-  opacity: .5;
+	opacity: .6;
 }
+.cd-container-clmn-13:hover .mofo {
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
 .cd-container-clmn-14 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/DSC_7062.jpg);
-  background-size: cover;
-  display: inline-block;
+	width: 45%;
+	height: 450px;
+	margin: 10px;
+	background-image: url(images/petcover.jpg);
+	background-size: cover;
+	display: inline-block;
+}
+.cd-container-clmn-14 .mofo {
+  position: relative;
+  overflow: hidden;
+  display: table;
+  width: 80%;
+  color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.5);
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1);
 }
 .cd-container-clmn-14:hover {
-  opacity: .5;
+	opacity: .6;
 }
-.cd-container-clmn-15 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/IMG_4388.jpg);
-  background-size: cover;
-  display: inline-block;
-}
-.cd-container-clmn-15:hover {
-  opacity: .5;
-}
-.cd-container-clmn-16 {
-  width: 24.7%;
-  height: 300px;
-  margin: 0;
-  background-image: url(images/DSC_0745.jpg);
-  background-size: cover;
-  display: inline-block;
-}
-.cd-container-clmn-16:hover {
-  opacity: .5;
+.cd-container-clmn-14:hover .mofo {
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 @media all and (min-width: 320px) and (max-width: 780px) {
