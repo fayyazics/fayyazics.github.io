@@ -1198,6 +1198,7 @@ The .cd-intro change the background image
 	display: inline-block;
 	margin: 0 auto;
 	text-align: center;
+  background-position:center center;
 }
 .row {
 	margin-top: 0.2rem;
