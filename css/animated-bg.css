@@ -12,7 +12,7 @@
 
 .main-title {
   position: absolute;
-  width: 70%;
+  width: 50%;
   max-width: 1170px;
   left: 50%;
   top: 35%;
@@ -24,13 +24,17 @@
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   color: white;
-  font-size: 50px;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 100;
   text-align: center;
   color: rgb(255,255,255);
-  letter-spacing: .05em;
+  letter-spacing: .3em;
   line-height: 1.5em;
+}
+
+.main-title a:hover {
+	color: rgb(33,142,225);
+	font-weight: 300;
 }
 
 .demo-1 .main-title, 

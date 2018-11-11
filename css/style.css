@@ -46,7 +46,8 @@ p {
 	font-size: 100%;
 }
 h1 {
-	font-size: 3rem;
+  font-size: 2.5rem;
+  /* font-family: 'SF Compact', cursive; */
 }
 
 h2 {
@@ -264,6 +265,7 @@ Foundry
 .uppercase {
   font-weight: 400;
   text-transform: uppercase;
+  margin-left: 1em;
 }
 
 .mb64 {
@@ -334,12 +336,13 @@ p.lead {
 }
 
 .makespace {
-  margin-top:5em;
-  margin-bottom: 1.5em;
+  /* margin-top:5em;
+  margin-bottom: 1.5em; */
+  margin: 5em 0em 1.5em 1em;
 }
 
 .sup {
-  margin-bottom: 1em;
+  margin: 0em 1em 1em 1em;
 }
 
 .fs-vid-background {
@@ -593,6 +596,7 @@ footer.bg-dark li,
   top: -50vh;
   transition: all 0s ease !important;
   transition: opacity 0.3s ease !important;
+  transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 }
 .parallax:first-child .slides li > .background-image-holder,
@@ -1330,10 +1334,15 @@ Photo Thumbnails
   transform: scale(0,1);
 }
 .cd-container-clmn-9:hover {
-	opacity: .6;
+	opacity: .8;
 }
 .cd-container-clmn-9:hover .mofo {
   filter: alpha(opacity=100);
+  /* -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  -ms-transform: scale(0,1);
+  transform: scale(0,1); */
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -1366,7 +1375,7 @@ Photo Thumbnails
   transform: scale(0,1);
 }
 .cd-container-clmn-10:hover {
-	opacity: .6;
+	opacity: .8;
 }
 .cd-container-clmn-10:hover .mofo {
   filter: alpha(opacity=100);
@@ -1402,7 +1411,7 @@ Photo Thumbnails
   transform: scale(0,1);
 }
 .cd-container-clmn-11:hover {
-	opacity: .6;
+	opacity: .8;
 }
 .cd-container-clmn-11:hover .mofo {
   filter: alpha(opacity=100);
@@ -1438,7 +1447,7 @@ Photo Thumbnails
   transform: scale(0,1);
 }
 .cd-container-clmn-12:hover {
-	opacity: .6;
+	opacity: .8;
 }
 .cd-container-clmn-12:hover .mofo {
   filter: alpha(opacity=100);
@@ -1474,7 +1483,7 @@ Photo Thumbnails
   transform: scale(0,1);
 }
 .cd-container-clmn-13:hover {
-	opacity: .6;
+	opacity: .8;
 }
 .cd-container-clmn-13:hover .mofo {
   filter: alpha(opacity=100);
@@ -1510,7 +1519,7 @@ Photo Thumbnails
   transform: scale(0,1);
 }
 .cd-container-clmn-14:hover {
-	opacity: .6;
+	opacity: .8;
 }
 .cd-container-clmn-14:hover .mofo {
   filter: alpha(opacity=100);
@@ -1793,12 +1802,6 @@ Project Page Style
   max-height:640px;
   overflow:hidden;
   padding:0;
-
-media="all"
-.right {
-  right:0;
-}
-
 }
 
 /*--about-starts--*/
