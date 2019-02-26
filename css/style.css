@@ -268,6 +268,12 @@ Foundry
   margin-left: 1em;
 }
 
+.camelcase {
+  font-weight: 800;
+  margin-left: 1em;
+  font-size: 1.2em;
+}
+
 .mb64 {
   margin-bottom: 64px;
 }
@@ -1496,7 +1502,7 @@ Photo Thumbnails
 	width: 45%;
 	height: 450px;
 	margin: 10px;
-	background-image: url(images/petcover.jpg);
+	background-image: url(images/dynamicsignal.jpg);
 	background-size: cover;
 	display: inline-block;
 }
