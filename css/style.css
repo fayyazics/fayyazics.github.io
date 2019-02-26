@@ -1502,7 +1502,7 @@ Photo Thumbnails
 	width: 45%;
 	height: 450px;
 	margin: 10px;
-	background-image: url(images/dynamicsignal.jpg);
+	background-image: url(css/images/dynamicsignal.jpg);
 	background-size: cover;
 	display: inline-block;
 }
