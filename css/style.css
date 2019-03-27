@@ -304,6 +304,14 @@ p.lead {
   opacity: 0.9;
 }
 
+li.reqs {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #888888;
+  opacity: 0.9;
+}
+
 @media all and (max-width: 767px) {
   p.lead {
     font-size: 13px;
