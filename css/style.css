@@ -350,8 +350,6 @@ li.reqs {
 }
 
 .makespace {
-  /* margin-top:5em;
-  margin-bottom: 1.5em; */
   margin: 5em 0em 1.5em 1em;
 }
 
@@ -1199,16 +1197,20 @@ The .cd-intro change the background image
 	margin-bottom: 1em;
 }
 .read-more-btn {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
 	margin: 0 auto;
 	width: 15rem;
-	border: #000 solid 1px;
+	border: rgb(33,142,225) solid 1px;
 	padding: 15px 20px 15px 20px;
-	color: rgba(2, 23, 37, 0.7);
+	color: rgb(33,142,225);
   margin-top: 2em;
 }
 .read-more-btn:hover {
-	border: rgb(33,142,225) solid 1px;
-	color: rgb(33,142,225); 
+  border-color: rgb(33,142,225);
+  background-color: rgb(33,142,225);
+  cursor: pointer;
+  color: #fff;
 }
 .cd-container-more-about {
 	width: 100%;
