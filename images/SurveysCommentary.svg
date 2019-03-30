@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700px" height="700px" viewBox="0 0 700 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>SurveysCommentary</title>
+    <desc>Created with Sketch.</desc>
+    <g id="SurveysCommentary" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="700" height="700"></rect>
+        <g id="Group" transform="translate(30.000000, 85.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="My-employees-should" font-family="SFProText-Regular, SF Pro Text" font-size="30" font-weight="normal" line-spacing="40" fill="#787577">
+                <tspan x="48.5595703" y="44">My employees </tspan>
+                <tspan x="19.2333984" y="84">should know when </tspan>
+                <tspan x="20.9765625" y="124">the survey expires</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(370.000000, 85.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="They-need-to-know-ho" font-family="SFProText-Regular, SF Pro Text" font-size="30" font-weight="normal" line-spacing="40" fill="#787577">
+                <tspan x="15.9301758" y="44">They need to know </tspan>
+                <tspan x="30.9082031" y="84">how many points </tspan>
+                <tspan x="61.1279297" y="124">they can win</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(370.000000, 275.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="I-like-how-Survey-Mo" font-family="SFProText-Regular, SF Pro Text" font-size="30" font-weight="normal" line-spacing="40" fill="#787577">
+                <tspan x="31.440918" y="64">I like how Survey </tspan>
+                <tspan x="42.324707" y="104">Monkey does it</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(370.000000, 465.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="I-don’t-need-all-of" font-family="SFProText-Regular, SF Pro Text" font-size="30" font-weight="normal" line-spacing="40" fill="#787577">
+                <tspan x="26.6142578" y="44">I don’t need all of </tspan>
+                <tspan x="44.6245117" y="84">those question </tspan>
+                <tspan x="110.344727" y="124">types</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(30.000000, 275.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="Sometimes-I-send-out" font-family="SFProText-Regular, SF Pro Text" font-size="30" font-weight="normal" line-spacing="40" fill="#787577">
+                <tspan x="24.4775391" y="44">Sometimes I send </tspan>
+                <tspan x="67.434082" y="84">out polls on </tspan>
+                <tspan x="59.5825195" y="124">Twitter or FB</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(30.000000, 465.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="What-if-I-want-to-ad" font-family="SFProText-Regular, SF Pro Text" font-size="30" font-weight="normal" line-spacing="40" fill="#787577">
+                <tspan x="34.7094727" y="64">What if I want to </tspan>
+                <tspan x="47.3803711" y="104">add an image?</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

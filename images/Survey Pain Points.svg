@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="230px" viewBox="0 0 1400 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Survey Pain Points</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Survey-Pain-Points" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="1400" height="230"></rect>
+        <g id="Group" transform="translate(1060.000000, 40.000000)">
+            <rect id="Rectangle" fill="#4E4B4E" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="Can-surveys-be-in-th" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#FFFFFF">
+                <tspan x="36.9707031" y="64">Can surveys be </tspan>
+                <tspan x="63.2060547" y="104">in the feed?</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(40.000000, 40.000000)">
+            <rect id="Rectangle" fill="#4E4B4E" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="It’s-so-hard-to-crea" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#FFFFFF">
+                <tspan x="48.8652344" y="64">It’s so hard to </tspan>
+                <tspan x="36.7070312" y="104">create a survey</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(380.000000, 40.000000)">
+            <rect id="Rectangle" fill="#4E4B4E" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="I-only-want-to-ask-o" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#FFFFFF">
+                <tspan x="51.5478516" y="64">I only want to </tspan>
+                <tspan x="25.1879883" y="104">ask one question</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(720.000000, 40.000000)">
+            <rect id="Rectangle" fill="#4E4B4E" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="It-takes-3-or-4-step" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#FFFFFF">
+                <tspan x="48.8984375" y="44">It takes 3 or 4 </tspan>
+                <tspan x="20.1728516" y="84">steps just to start </tspan>
+                <tspan x="88.5737305" y="124">a survey</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

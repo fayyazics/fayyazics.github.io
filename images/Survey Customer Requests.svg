@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="230px" viewBox="0 0 1400 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Customer Requests</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Customer-Requests" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="1400" height="230"></rect>
+        <g id="Group" transform="translate(1060.000000, 40.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="I-like-how-Survey-Mo" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#787577">
+                <tspan x="26.21875" y="64">I like how Survey </tspan>
+                <tspan x="38.2744141" y="104">Monkey does it</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(40.000000, 40.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="My-employees-should" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#787577">
+                <tspan x="44.5678711" y="44">My employees </tspan>
+                <tspan x="13.6523438" y="84">should know when </tspan>
+                <tspan x="14.9487305" y="124">the survey expires</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(380.000000, 40.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="They-need-to-know-ho" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#787577">
+                <tspan x="11.1694336" y="44">They need to know </tspan>
+                <tspan x="25.7592773" y="84">how many points </tspan>
+                <tspan x="57.4072266" y="124">they can win</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(720.000000, 40.000000)">
+            <rect id="Rectangle" fill="#E8E8E8" x="0" y="0" width="300" height="150" rx="30"></rect>
+            <text id="Sometimes-I-send-out" font-family="SFProText-Semibold, SF Pro Text" font-size="30" font-weight="500" line-spacing="40" fill="#787577">
+                <tspan x="19.4604492" y="44">Sometimes I send </tspan>
+                <tspan x="64.1748047" y="84">out polls on </tspan>
+                <tspan x="55.2172852" y="124">Twitter or FB</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

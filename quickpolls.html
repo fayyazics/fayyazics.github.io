@@ -52,17 +52,16 @@
             <section>
                 <div class="container">
                     <div class="row">
-                            <h1 class="mb64 text-center">[Under Construction]</h1>
                         <div class="col-sm-12 text-center">
                                 <img src="images/DS-App-Icon.svg" />
                             <h1 class="mb64 mb-xs-32" style="letter-spacing: 1px;">
                                 Quick Polls for Dynamic Signal
                             </h1>
                             <p class="lead">
-                                Dynamic Signal is an employee communications platform dedicated towards engaging and 
-                                activating employees. For this project, I was tasked with designing
-                                the end to end flows of a new feature: quick polls. This includes  the creation of the poll, its 
-                                distribution method, responding to the poll, and tracking results.
+                                Quick Polls is a revival of an existing feature, surveys. Surveys were the most effective
+                                way to receive feedback from employees, but it was difficult to use and achieved less
+                                than a 12% response rate on average. I had the chance to recreate this core experience, working
+                                in tandem with the Product Manager leading the Content Distribution swimlane.
                             </p>
                         </div>
                     </div>
@@ -108,70 +107,44 @@
                         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                             <h6 class="camelcase" style="font-size:1.2em;">The Situation</h6>
                             <p class="lead sup">
-                                The news feed is the first thing that users see when entering the app. Our research 
-                                showed that 60% of employees didn’t find much value in the feed because the content wasn’t 
-                                relevant to them. 
-                            </p>
-							<p class="lead sup">
-                                Communication managers (those creating the content) were looking for better ways to engage their 
-                                employees in addition to just pushing out company-related content to a news feed. They were also 
-                                interested in receiving feedback from employees as a way to empower them.
+                                Less than 10% of customers were actively using the surveys feature due to its clunky creation flow
+                                and multi-step process to complete a survey. 
                             </p>
 
-                            <img alt="Project Image" class="col-xs-12 p0" src="images/DS-Users.svg" />
+                            <a href="images/Multi-Step Survey.svg"><img alt="Project Image" class="col-xs-12 p0 sup" src="images/Multi-Step Survey.svg"/></a>
+
+							<p class="lead sup">
+                                Communication managers (those creating the surveys) were looking for better ways to engage their 
+                                employees and receive quick pieces of feedback without creating a survey that could only
+                                be sent through a notification.
+                            </p>
+
+                            <a href="images/Survey Pain Points.svg"><img alt="Project Image" class="col-xs-12 p0 sup" src="images/Survey Pain Points.svg"/></a>
 
 				        </div>
                     </div>
 
-
-
                     <div class="row mb80 mb-xs-40">
                         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                            <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Product Brainstorming</h6>
+                            <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Research & Feedback</h6>
 
                             <p class="lead sup">
-                                Once it was clear that app engagement was an issue, the product team held a brainstorming session to explore 
-                                some ways that we could boost engagement. Ideas from this brainstorm included requests heard firsthand from 
-                                customers, 2nd hand from customer success managers, roadmap requests from sales, marketing, and other internal 
-                                teams, and original ideas from the product team.
+                                As we explored the survey flow, and continued to conduct customer interviews, we realized there were varying 
+                                preferences based on the amount of simplicity vs. advanced features. An advanced survey has 10+ feature requirements 
+                                whereas a simple one question survey only requires 5 of those same features. 
                             </p>
 
-                            <p class="lead sup">
-                                For this session, it was important to ensure the proper context and goals, that we agreed on a framework for 
-                                assessing ideas, and that we were able to efficiently organize the best ideas across major themes in the platform.
+                            <a href="images/SurveyTradeOffs.svg"><img alt="Project Image" class="col-xs-6 p0 sup" src="images/SurveyTradeOffs.svg"/></a>
+                            <a href="images/SurveysCommentary.svg"><img alt="Project Image" class="col-xs-4 p0 sup" src="images/SurveysCommentary.svg"/></a>
+
+                            <p class="col-xs-12 lead sup">
+                                It simply wasn't possible to make one sweeping improvement to surveys to satisfy the advanced survey use case (35% occurrence)
+                                and the simple survey use case of one or two questions (65% occurrence). 
                             </p>
 
-                            <!-- <strong>Show image of post it notes and ideas</strong> -->
-                        
-
-                            <p class="lead sup">
-                                Quick Polls was one of the consistent ideas made across the board.  Me and a fellow PM picked up on this idea to 
-                                vet with customers as a potential feature.
-                            </p>                           
-                        </div>
-                    </div>
-
-                    <div class="row mb80 mb-xs-40">
-                        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                            <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Customer Calls</h6>
-
-                            <p class="lead sup">
-                                For these calls, we wanted to make sure that we were asking the right questions. It’s easy to talk about a shiny 
-                                new feature and receive a quick ‘yes’ from customers saying they would use it. But that doesn’t necessarily equate 
-                                to us solving a problem. 
-                            </p>
-
-                            <p class="lead sup">
-                                We started by talking about some of the challenges that communication managers deal with in trying to engage their 
-                                employees. This allowed the conversation to flow into a brainstorming session with the customer. 
-                            </p>
-
-                            <p class="lead sup">
-                                The key piece of feedback we consistently heard is that communication managers have no way of receiving feedback 
-                                from employees. They were simply looking to find a pulse in their employees, and a feature like polls would be able 
-                                to solve for that.
-                            </p>
-
+                            <h6 class="text-center col-xs-12" style="font-size:2em; line-height:1.5em;">
+                                Using data, we were able to validate our assumptions of building a new survey-type: quick polls.
+                            </h6>
                         </div>
                     </div>
 
@@ -180,8 +153,8 @@
                             <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Competitive Analysis</h6>
 
                             <p class="lead sup">
-                                Many customers referred to polls on other sites as useful engagement tools, so I decided to look into those prominent 
-                                social platforms to understand what consistency standards there were for polls. 
+                                With a clear line of sight to build polls as an extension of surveys, I decided to look into a few prominent social 
+                                platforms to understand what consistency standards there were for polls (if any). 
                             </p>
 
                             <p class="lead sup">
@@ -210,23 +183,23 @@
                                     <li class="sup reqs">Be able to set an end date to respond to the question</li>
                                     <li class="sup reqs">Determine whether the results can be shown to employees</li>
                                     <li class="sup reqs">Be able to see who has responded and for which option</li>
+                                    <li class="sup reqs">Allow responses from the news feed</li>
                             </p>
 
                             <p class="lead sup">
-                                    The employee, on the other hand, simply should be able to identify this poll in a news feed, be able to easily respond to it and see the 
-                                    results.
+                                The employee, on the other hand, should be able to identify this poll from the news feed, a notification
+                                message, or from an email, and take 2 of fewer steps to respond.
                             </p>
                         </div>
                     </div>
 
                     <div class="row mb80 mb-xs-40">
                         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                            <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Creating a Poll</h6>
+                            <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">The Solution</h6>
 
-                            <p class="lead sup">
-                                
-
-                            </p>
+                            <h6 class="text-center col-xs-12" style="font-size:2em; line-height:1.5em;">
+                                Creating a Quick Poll
+                            </h6>
 
                         </div>
                         <img alt="Project Image" class="col-xs-12 p0 mb10" src="images/CreatePoll.svg" />
@@ -234,8 +207,9 @@
 
                     <div class="row mb80 mb-xs-40">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Answering a Poll</h6>
-    
+                                    <h6 class="text-center col-xs-12" style="font-size:2em; line-height:1.5em;">
+                                            Answering a Quick Poll
+                                        </h6>    
                                 <p class="lead sup">
                                     
     
@@ -247,21 +221,27 @@
 
                     <div class="row mb80 mb-xs-40">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Handling Variations in Poll Settings</h6>
-    
+
+                                <h6 class="text-center col-xs-12" style="font-size:2em; line-height:1.5em;">
+                                    Handling Variations in Poll Settings
+                                </h6>
+
                                 <p class="lead sup">
                                     
     
                                 </p>
     
                             </div>
-                            <img alt="Project Image" class="col-xs-12 p0 mb10" src="images/EdgeCasesPoll.svg" />
+                            <img alt="Project Image" class="col-xs-12 p0 mb10" src="images/EdgeCases.svg" />
+
                     </div>
 
                     <div class="row mb80 mb-xs-40">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Track Results</h6>
-    
+
+                                <h6 class="text-center col-xs-12" style="font-size:2em; line-height:1.5em;">
+                                    Manager's Requirement to Track Results
+                                </h6>
                                 <p class="lead sup">
                                     
     
@@ -273,15 +253,34 @@
 
                     <div class="row mb80 mb-xs-40">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                                <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">Adapting Across Platforms</h6>
-    
-                                <p class="lead sup">
-                                    
-    
-                                </p>
+                                <h6 class="text-center col-xs-12" style="font-size:2em; line-height:1.5em;">
+                                    A consistent experience to reach employees no matter what platform they're on
+                                </h6>    
     
                             </div>
                             <img alt="Project Image" class="col-xs-12 p0 mb10" src="images/PollsCrossPlatform.svg" />
+                    </div>
+
+                    <div class="row mb80 mb-xs-40">
+                            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                                <h6 class="camelcase" style="font-size:1.2em; font-weight:800;">The Result</h6>
+
+                                <p class="lead sup">
+                                    I'm incredibly proud of the final product which resulted in a near 65% adoption
+                                    across all of Dynamic Signal's customers. There was great value in designing 
+                                    this feature across multiple platforms and delivery methods. Quick Polls is one of
+                                    the few pieces of content in the platform that could be posted in a news feed,
+                                    broadcasted out in the form of a notification, sent through email, or shared via 
+                                    direct messaging. 
+                                </p>
+                                <p class="lead sup">
+                                    From a design perspective, this was an incredibly rewarding experience where I was
+                                    able to own the complete end to end design experience from the initial problem statement
+                                    to ideation to user research to crafting user flows to designing the UI across platforms
+                                    to final prototypes.
+                                </p>
+    
+                            </div>
                     </div>
 
 
