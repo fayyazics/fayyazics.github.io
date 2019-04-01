@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="1090px" viewBox="0 0 1400 1090" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>PollsUserFlow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="PollsUserFlow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E8E8E8" x="0" y="0" width="1400" height="1090"></rect>
+        <text id="Quick-Polls-Flow" font-family="SFProText-Light, SF Pro Text" font-size="40" font-weight="300" fill="#787577">
+            <tspan x="50.2480469" y="63">Quick Polls Flow</tspan>
+        </text>
+        <rect id="Rectangle" fill="#FFFFFF" x="50" y="98" width="1300" height="464"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" x="50" y="582" width="1300" height="464"></rect>
+        <text id="Start" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="75" y="820">Start</tspan>
+        </text>
+        <text id="Mobile-or-Web?" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#A6A5A6">
+            <tspan x="171.257812" y="807">Mobile</tspan>
+            <tspan x="182.141602" y="819">or </tspan>
+            <tspan x="173.914062" y="831">Web?</tspan>
+        </text>
+        <text id="Mobile-App" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="257.560547" y="685">Mobile App</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#979797" x="237.5" y="656.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="237.5" y="862.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="237.5" y="943.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="814.5" y="655.5" width="104" height="49"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="613.5" y="768.5" width="104" height="49"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="613.5" y="974.5" width="104" height="49"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="858.5" y="892.5" width="104" height="49"></rect>
+        <rect id="Rectangle" stroke="#979797" x="508.5" y="616.5" width="78" height="32" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="1221.5" y="762.5" width="118" height="39" rx="5"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="1221.5" y="852.5" width="118" height="39" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="982.5" y="773.5" width="107" height="39" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="706.5" y="648.5" width="78" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="886.5" y="737.5" width="94" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="886.5" y="816.5" width="94" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="858.5" y="979.5" width="107" height="39" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="470.5" y="778.5" width="78" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="470.5" y="984.5" width="78" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="706.5" y="684.5" width="78" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="523.5" y="826.5" width="78" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="734.5" y="870.5" width="78" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="523.5" y="916.5" width="78" height="29" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="508.5" y="713.5" width="78" height="32" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="237.5" y="737.5" width="104" height="49" rx="5"></rect>
+        <text id="Community-Website" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="257.299805" y="884">Community </tspan>
+            <tspan x="266.692383" y="898">Website</tspan>
+        </text>
+        <text id="Posted" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="460.142578" y="851">Posted</tspan>
+        </text>
+        <text id="Broadcasted" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="446.741699" y="941">Broadcasted</tspan>
+        </text>
+        <text id="New-Notification!" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="549.972656" y="927">New </tspan>
+            <tspan x="527.961914" y="941">Notification!</tspan>
+        </text>
+        <text id="View-&amp;-Open-Notifica" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="583.479004" y="909">View &amp; Open Notification</tspan>
+        </text>
+        <text id="Find-in-News-Feed" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="598.40918" y="869">Find in News Feed</tspan>
+        </text>
+        <text id="View-Poll" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="746.920898" y="889">View Poll</tspan>
+        </text>
+        <text id="Did-you-receive-a-pu" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#A6A5A6">
+            <tspan x="390.213379" y="678">Did you receive </tspan>
+            <tspan x="396.075195" y="690">a push notif?</tspan>
+        </text>
+        <text id="Posted-or-Broadcaste" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#A6A5A6">
+            <tspan x="403.873047" y="884">Posted or </tspan>
+            <tspan x="394.178223" y="896">Broadcasted?</tspan>
+        </text>
+        <text id="are-responses-anonym" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#A6A5A6">
+            <tspan x="1124.32861" y="824">are responses </tspan>
+            <tspan x="1127.92969" y="836">anonymous?</tspan>
+        </text>
+        <text id="Is-the-app-downloade" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#A6A5A6">
+            <tspan x="779.728516" y="790">Is the app </tspan>
+            <tspan x="771.747559" y="802">downloaded?</tspan>
+        </text>
+        <polygon id="Path-2" stroke="#D2D2D2" points="426.5 648 373 681.5 426.5 713 480 681.5"></polygon>
+        <polygon id="Path-2" stroke="#D2D2D2" points="426.5 854 373 887.5 426.5 919 480 887.5"></polygon>
+        <polygon id="Path-2" stroke="#D2D2D2" points="1157.5 794 1104 827.5 1157.5 859 1211 827.5"></polygon>
+        <polygon id="Path-2" stroke="#D2D2D2" points="804 760 750 793.5 804 825 858 793.5"></polygon>
+        <text id="Open-Email-from-Mana" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="368.479004" y="775">Open Email from </tspan>
+            <tspan x="386.887207" y="787">Manager</tspan>
+        </text>
+        <text id="Open-Email-from-Mana" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="368.479004" y="981">Open Email from </tspan>
+            <tspan x="386.887207" y="993">Manager</tspan>
+        </text>
+        <text id="Redirect-to-Communit" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="762.652832" y="984">Redirect to </tspan>
+            <tspan x="741.249023" y="996">Community Website</tspan>
+        </text>
+        <text id="Open-Notification-De" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="862.923828" y="998">Open Notification </tspan>
+            <tspan x="896.237305" y="1012">Detail</tspan>
+        </text>
+        <text id="Open-Mobile-Web" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="891.737305" y="756">Open Mobile Web</tspan>
+        </text>
+        <text id="Open-App" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="909.950195" y="835">Open App</tspan>
+        </text>
+        <text id="View-Notification-De" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="988.541016" y="792">View Notification </tspan>
+            <tspan x="1020.2373" y="806">Detail</tspan>
+        </text>
+        <text id="yes" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="462.40918" y="630">yes</tspan>
+        </text>
+        <text id="yes" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="840.40918" y="750">yes</tspan>
+        </text>
+        <text id="no" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="840.628418" y="829">no</tspan>
+        </text>
+        <text id="yes" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="1185.40918" y="776">yes</tspan>
+        </text>
+        <text id="Open-Push" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="521.730957" y="636">Open Push</tspan>
+        </text>
+        <text id="view-notification-de" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="577.58252" y="664">view notification detail</tspan>
+        </text>
+        <text id="view-news-feed" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="600.335449" y="696">view news feed</tspan>
+        </text>
+        <text id="Find-Poll" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="721.417969" y="703">Find Poll</tspan>
+        </text>
+        <text id="News-Feed" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="531.251953" y="845">News Feed</tspan>
+        </text>
+        <text id="View-Poll" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="719.920898" y="667">View Poll</tspan>
+        </text>
+        <text id="View-Poll" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="483.920898" y="797">View Poll</tspan>
+        </text>
+        <text id="View-Poll" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="483.920898" y="1003">View Poll</tspan>
+        </text>
+        <text id="Select-Option" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="827.006836" y="684">Select Option</tspan>
+        </text>
+        <text id="Select-Option" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="626.006836" y="797">Select Option</tspan>
+        </text>
+        <text id="Select-Option" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="626.006836" y="1003">Select Option</tspan>
+        </text>
+        <text id="Select-Option" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="871.006836" y="921">Select Option</tspan>
+        </text>
+        <text id="Selection-is-Filled" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="1231.14062" y="779">Selection is Filled </tspan>
+            <tspan x="1231.72949" y="793">and Poll Disabled</tspan>
+        </text>
+        <text id="View-Responses" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="1232.52637" y="876">View Responses</tspan>
+        </text>
+        <text id="Open-App" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="524.950195" y="734">Open App</tspan>
+        </text>
+        <text id="no" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="464.628418" y="727">no</tspan>
+        </text>
+        <text id="no" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="1187.62842" y="873">no</tspan>
+        </text>
+        <text id="Email-on-Mobile" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="245.083008" y="766">Email on Mobile</tspan>
+        </text>
+        <text id="Email" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="274.40625" y="972">Email</tspan>
+        </text>
+        <polygon id="Path-2" stroke="#D2D2D2" points="187.5 782 138 815.5 187.5 847 237 815.5"></polygon>
+        <rect id="Rectangle" stroke="#979797" x="265.5" y="247.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="403.5" y="197.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="532.5" y="250.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="792.5" y="247.5" width="104" height="52"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="652.5" y="412.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="792.5" y="390.5" width="104" height="49"></rect>
+        <rect id="Rectangle" stroke="#979797" x="1070.5" y="332.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="1218.5" y="391.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#026DAF" x="995.5" y="247.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="1070.5" y="447.5" width="104" height="49" rx="5"></rect>
+        <rect id="Rectangle" stroke="#979797" x="265.5" y="362.5" width="104" height="49" rx="5"></rect>
+        <text id="MANAGER" font-family="SFProText-Semibold, SF Pro Text" font-size="25" font-weight="500" fill="#787577">
+            <tspan x="75" y="152">MANAGER</tspan>
+        </text>
+        <text id="EMPLOYEE" font-family="SFProText-Semibold, SF Pro Text" font-size="25" font-weight="500" fill="#787577">
+            <tspan x="75" y="636">EMPLOYEE</tspan>
+        </text>
+        <text id="Start" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="75" y="334">Start</tspan>
+        </text>
+        <text id="Mobile" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="214" y="269">Mobile</tspan>
+        </text>
+        <text id="Web" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="220" y="401">Web</tspan>
+        </text>
+        <text id="Mobile-or-Web?" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#A6A5A6">
+            <tspan x="181.257812" y="322">Mobile</tspan>
+            <tspan x="192.141602" y="334">or </tspan>
+            <tspan x="183.914062" y="346">Web?</tspan>
+        </text>
+        <text id="How-do-you-want-to-s" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#A6A5A6">
+            <tspan x="676.22168" y="346">How do you </tspan>
+            <tspan x="666.668457" y="358">want to send it?</tspan>
+        </text>
+        <text id="Open-Mobile-App" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="302.289062" y="269">Open </tspan>
+            <tspan x="285.560547" y="283">Mobile App</tspan>
+        </text>
+        <text id="View-News-Feed" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="317.220703" y="217">View News Feed</tspan>
+        </text>
+        <text id="View-Dashboard" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="342.599121" y="447">View Dashboard</tspan>
+        </text>
+        <circle id="Oval" stroke="#979797" fill="#D8D8D8" cx="448.5" cy="436.5" r="4.5"></circle>
+        <text id="Launch-Content-Creat" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="410.579102" y="219">Launch Content </tspan>
+            <tspan x="416.854492" y="233">Creation Flow</tspan>
+        </text>
+        <text id="Tap-on-Poll-attachme" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="467.767578" y="283">Tap on Poll </tspan>
+            <tspan x="466.64209" y="295">attachment</tspan>
+        </text>
+        <text id="Select-Categories" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="670.183594" y="270">Select Categories</tspan>
+        </text>
+        <text id="Create-a-Poll" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="547.298828" y="279">Create a Poll</tspan>
+        </text>
+        <text id="Create-a-Poll" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="667.298828" y="441">Create a Poll</tspan>
+        </text>
+        <text id="Post-to-News-Feed" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="805.933594" y="272">Post to News </tspan>
+            <tspan x="830.06543" y="286">Feed</tspan>
+        </text>
+        <text id="Click-Content-Dropdo" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="469.841797" y="420">Click Content Dropdown &gt; Surveys </tspan>
+            <tspan x="502.598145" y="432">&gt; Create a Quick Poll</tspan>
+        </text>
+        <text id="Broadcast-(Send-as-N" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="795.430664" y="412">Broadcast (Send </tspan>
+            <tspan x="799.245117" y="426">as Notification)</tspan>
+        </text>
+        <text id="Email-and-Push-Notif" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="1079.50391" y="354">Email and Push </tspan>
+            <tspan x="1094.0498" y="368">Notif Sent</tspan>
+        </text>
+        <text id="View-Broadcast-Stats" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="1224.61816" y="413">View Broadcast </tspan>
+            <tspan x="1255.08105" y="427">Stats</tspan>
+        </text>
+        <text id="View-Post-Stats" font-family="SFProText-Semibold, SF Pro Text" font-size="12" font-weight="500" fill="#026DAF">
+            <tspan x="1001.42188" y="274">View Post Stats</tspan>
+        </text>
+        <text id="Only-Push-Notif-Sent" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="1078.37305" y="469">Only Push Notif </tspan>
+            <tspan x="1109.56836" y="483">Sent</tspan>
+        </text>
+        <text id="Send-an-Email?" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#A6A5A6">
+            <tspan x="949.194336" y="419">Send an Email?</tspan>
+        </text>
+        <text id="Go-to-Manager-Portal" font-family="SFProText-Regular, SF Pro Text" font-size="12" font-weight="normal" fill="#787577">
+            <tspan x="275.672852" y="384">Go to Manager </tspan>
+            <tspan x="300.768555" y="398">Portal</tspan>
+        </text>
+        <polygon id="Path-2" stroke="#D2D2D2" points="197.5 297 148 330.5 197.5 362 247 330.5"></polygon>
+        <polygon id="Path-2" stroke="#D2D2D2" points="704.5 317 651 350.5 704.5 382 758 350.5"></polygon>
+        <polygon id="Path-2" stroke="#D2D2D2" points="990.5 382 937 415.5 990.5 447 1044 415.5"></polygon>
+        <path id="Path-3" d="M256.5,272.5 L197.5,272.5 L197.5,297 L196.5,297 L196.5,272 L196.5,271.5 L197,271.5 L256.5,271.5 L256.5,267.5 L265.5,272 L256.5,276.5 L256.5,272.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-4" d="M256.5,389.5 L197,389.5 L196.5,389.5 L196.5,389 L196.5,362 L197.5,362 L197.5,388.5 L256.5,388.5 L256.5,384.5 L265.5,389 L256.5,393.5 L256.5,389.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-5" d="M394.5,222.5 L317.5,222.5 L317.5,247 L316.5,247 L316.5,222 L316.5,221.5 L317,221.5 L394.5,221.5 L394.5,217.5 L403.5,222 L394.5,226.5 L394.5,222.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-6" d="M523.5,272.5 L455,272.5 L454.5,272.5 L454.5,272 L454.5,247 L455.5,247 L455.5,271.5 L523.5,271.5 L523.5,267.5 L532.5,272 L523.5,276.5 L523.5,272.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <polyline id="Path-7" stroke="#979797" points="318 412 318 437 444 437"></polyline>
+        <path id="Path-8" d="M643.5,438 L453,438 L453,437 L643.5,437 L643.5,433 L652.5,437.5 L643.5,442 L643.5,438 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-9" d="M705,390.5 L705,412 L704,412 L704,390.5 L700,390.5 L704.5,381.5 L709,390.5 L705,390.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-10" d="M783.5,276 L637,276 L637,275 L783.5,275 L783.5,271 L792.5,275.5 L783.5,280 L783.5,276 Z" fill="#979797" fill-rule="nonzero"></path>
+        <polyline id="Path-11" stroke="#979797" points="758 349.5 844.5 349.5 844.5 300 845 390"></polyline>
+        <path d="M897,415.5 L937,415.5" id="Path-12" stroke="#979797"></path>
+        <path id="Path-13" d="M1061.5,357.5 L991.5,357.5 L991.5,382 L990.5,382 L990.5,357 L990.5,356.5 L991,356.5 L1061.5,356.5 L1061.5,352.5 L1070.5,357 L1061.5,361.5 L1061.5,357.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-14" d="M1061.5,472.5 L991,472.5 L990.5,472.5 L990.5,472 L990.5,446 L991.5,446 L991.5,471.5 L1061.5,471.5 L1061.5,467.5 L1070.5,472 L1061.5,476.5 L1061.5,472.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-15" d="M1270.5,382.5 L1270.5,357.5 L1175,357.5 L1175,356.5 L1271,356.5 L1271.5,356.5 L1271.5,357 L1271.5,382.5 L1275.5,382.5 L1271,391.5 L1266.5,382.5 L1270.5,382.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-16" d="M1271.5,449.5 L1271.5,472 L1271.5,472.5 L1271,472.5 L1175,472.5 L1175,471.5 L1270.5,471.5 L1270.5,449.5 L1266.5,449.5 L1271,440.5 L1275.5,449.5 L1271.5,449.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-17" d="M986.504075,274.690034 L897.003826,275.374985 L896.996174,274.375015 L986.496422,273.690064 L986.465811,269.690181 L995.499985,274.121174 L986.534687,278.689917 L986.504075,274.690034 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-18" d="M110.5,330 L148,330 L148,331 L110.5,331 L110.5,334.5 L109.5,334.5 L109.5,326.5 L110.5,326.5 L110.5,330 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-19" d="M228.5,681.5 L187.5,681.5 L187.5,782 L186.5,782 L186.5,681 L186.5,680.5 L187,680.5 L228.5,680.5 L228.5,676.5 L237.5,681 L228.5,685.5 L228.5,681.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <text id="Mobile" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="194" y="728">Mobile</tspan>
+        </text>
+        <text id="Web" font-family="SFProText-Regular, SF Pro Text" font-size="10" font-weight="normal" fill="#787577">
+            <tspan x="194" y="934">Web</tspan>
+        </text>
+        <path id="Path-20" d="M228.5,764 L187,764 L187,763 L228.5,763 L228.5,759 L237.5,763.5 L228.5,768 L228.5,764 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-21" d="M364.5,682 L342,682 L342,681 L364.5,681 L364.5,677 L373.5,681.5 L364.5,686 L364.5,682 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-22" d="M499.5,633.5 L426.5,633.5 L426.5,648 L425.5,648 L425.5,633 L425.5,632.5 L426,632.5 L499.5,632.5 L499.5,628.5 L508.5,633 L499.5,637.5 L499.5,633.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-22" d="M514.5,842.5 L426.5,842.5 L426.5,854 L425.5,854 L425.5,842 L425.5,841.5 L426,841.5 L514.5,841.5 L514.5,837.5 L523.5,842 L514.5,846.5 L514.5,842.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-22" d="M514.5,919.5 L426.5,919.5 L426.5,931 L425.5,931 L425.5,919 L425.5,918.5 L426,918.5 L514.5,918.5 L514.5,914.5 L523.5,919 L514.5,923.5 L514.5,919.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-22" d="M877.5,753.5 L804.5,753.5 L804.5,760 L803.5,760 L803.5,753 L803.5,752.5 L804,752.5 L877.5,752.5 L877.5,748.5 L886.5,753 L877.5,757.5 L877.5,753.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-22" d="M877.5,825.5 L804.5,825.5 L804.5,832 L803.5,832 L803.5,825 L803.5,824.5 L804,824.5 L877.5,824.5 L877.5,820.5 L886.5,825 L877.5,829.5 L877.5,825.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-22" d="M1212.5,779.5 L1157.5,779.5 L1157.5,794 L1156.5,794 L1156.5,779 L1156.5,778.5 L1157,778.5 L1212.5,778.5 L1212.5,774.5 L1221.5,779 L1212.5,783.5 L1212.5,779.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-23" d="M499.5,730.5 L426,730.5 L425.5,730.5 L425.5,730 L425.5,712 L426.5,712 L426.5,729.5 L499.5,729.5 L499.5,725.5 L508.5,730 L499.5,734.5 L499.5,730.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-23" d="M1212.5,876.5 L1157,876.5 L1156.5,876.5 L1156.5,876 L1156.5,858 L1157.5,858 L1157.5,875.5 L1212.5,875.5 L1212.5,871.5 L1221.5,876 L1212.5,880.5 L1212.5,876.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-24" d="M697.5,666.5 L547,666.5 L546.5,666.5 L546.5,666 L546.5,649 L547.5,649 L547.5,665.5 L697.5,665.5 L697.5,661.5 L706.5,666 L697.5,670.5 L697.5,666.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <polyline id="Path-24" stroke="#979797" points="562 855 562 872 721 872"></polyline>
+        <polyline id="Path-24" stroke="#979797" transform="translate(641.500000, 907.500000) scale(1, -1) translate(-641.500000, -907.500000) " points="562 899 562 916 721 916"></polyline>
+        <path id="Path-25" d="M697.5,699.5 L547.5,699.5 L547.5,713 L546.5,713 L546.5,699 L546.5,698.5 L547,698.5 L697.5,698.5 L697.5,694.5 L706.5,699 L697.5,703.5 L697.5,699.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-26" d="M805.5,681.5 L799,681.5 L799,699 L799,699.5 L798.5,699.5 L785,699.5 L785,698.5 L798,698.5 L798,681 L798,680.5 L798.5,680.5 L805.5,680.5 L805.5,676.5 L814.5,681 L805.5,685.5 L805.5,681.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path d="" id="Path-27" stroke="#979797"></path>
+        <polyline id="Path-28" stroke="#979797" points="798.5 681 798.5 666 784.5 666"></polyline>
+        <polyline id="Path-29" stroke="#979797" points="919 681 1103 681 1103 723"></polyline>
+        <path id="Path-30" d="M508.5,769.5 L508.5,763.497015 L341.997006,762.499991 L342.002994,761.500009 L509.002994,762.500009 L509.5,762.502985 L509.5,763 L509.5,769.5 L513.5,769.5 L509,778.5 L504.5,769.5 L508.5,769.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-30" d="M508.5,975.5 L508.5,969.497015 L341.997006,968.499991 L342.002994,967.500009 L509.002994,968.500009 L509.5,968.502985 L509.5,969 L509.5,975.5 L513.5,975.5 L509,984.5 L504.5,975.5 L508.5,975.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-31" d="M604.5,794 L578.5,794 L549,794 L549,793 L578.5,793 L604.5,793 L604.5,789 L613.5,793.5 L604.5,798 L604.5,794 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-31" d="M604.5,1000 L578.5,1000 L549,1000 L549,999 L578.5,999 L604.5,999 L604.5,995 L613.5,999.5 L604.5,1004 L604.5,1000 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-32" d="M741.5,794 L718,794 L718,793 L741.5,793 L741.5,789 L750.5,793.5 L741.5,798 L741.5,794 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-33" d="M1043.5,764.5 L1043.5,752.5 L981,752.5 L981,751.5 L1044,751.5 L1044.5,751.5 L1044.5,752 L1044.5,764.5 L1048.5,764.5 L1044,773.5 L1039.5,764.5 L1043.5,764.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-34" d="M1044.5,821.5 L1044.5,831 L1044.5,831.5 L1044,831.5 L981,831.5 L981,830.5 L1043.5,830.5 L1043.5,821.5 L1039.5,821.5 L1044,812.5 L1048.5,821.5 L1044.5,821.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path d="" id="Path-35" stroke="#979797"></path>
+        <path d="" id="Path-37" stroke="#979797"></path>
+        <path d="" id="Path-36" stroke="#979797"></path>
+        <polyline id="Path-38" stroke="#979797" points="1090 793 1103 793 1103 723"></polyline>
+        <path id="Path-39" d="M137.5,816 L109,816 L109,815 L137.5,815 L137.5,811.5 L138.5,811.5 L138.5,819.5 L137.5,819.5 L137.5,816 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-40" d="M228.5,968.5 L187,968.5 L186.5,968.5 L186.5,968 L186.5,847 L187.5,847 L187.5,967.5 L228.5,967.5 L228.5,963.5 L237.5,968 L228.5,972.5 L228.5,968.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-41" d="M228.5,888 L187,888 L187,887 L228.5,887 L228.5,883 L237.5,887.5 L228.5,892 L228.5,888 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-42" d="M364.5,888 L342,888 L342,887 L364.5,887 L364.5,883 L373.5,887.5 L364.5,892 L364.5,888 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path d="M720.5,872 L720.5,899" id="Path-43" stroke="#979797"></path>
+        <path d="" id="Path-44" stroke="#979797"></path>
+        <path d="M720,885.5 L734,885.5" id="Path-45" stroke="#979797"></path>
+        <path id="Path-46" d="M849.5,917.5 L772,917.5 L771.5,917.5 L771.5,917 L771.5,900 L772.5,900 L772.5,916.5 L849.5,916.5 L849.5,912.5 L858.5,917 L849.5,921.5 L849.5,917.5 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path id="Path-47" d="M849.5,1000 L718,1000 L718,999 L849.5,999 L849.5,995 L858.5,999.5 L849.5,1004 L849.5,1000 Z" fill="#979797" fill-rule="nonzero"></path>
+        <path d="M1103.5,793 L1103.5,827" id="Path-48" stroke="#979797"></path>
+        <polyline id="Path-49" stroke="#979797" points="962 917 1103 917 1103 827"></polyline>
+        <polyline id="Path-50" stroke="#979797" points="966 999 1103 999 1103 917"></polyline>
+        <path d="" id="Path-51" stroke="#979797"></path>
+    </g>
+</svg>
