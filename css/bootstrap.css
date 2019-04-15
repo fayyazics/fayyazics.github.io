@@ -2810,10 +2810,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .breadcrumb {
-  padding: 8px 15px;
-  margin-bottom: 20px;
+  padding: 8px 2px;
+  margin-bottom: 10px;
   list-style: none;
-  background-color: #f5f5f5;
   border-radius: 4px;
 }
 .breadcrumb > li {
