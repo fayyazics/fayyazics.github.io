@@ -21,9 +21,9 @@ Primary style
 
 body {
   font-size: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'SF Pro Display', sans-serif;
   font-weight: 300;
-  color: rgba(2, 23, 37, 0.7);
+  color: rgba(2, 23, 37, 0.8);
   background-color: white;
 }
 body.overflow-hidden {
@@ -45,11 +45,11 @@ b {
 
 strong {
   font-weight: 600;
-  color: #222;
+  color: rgba(2, 23, 37, 0.8);
 }
 
 p {
-	font-size: 100%;
+	font-size: 105%;
 }
 
 h1 {
@@ -85,8 +85,8 @@ h6 {
 }
 
 h1.project-title {
-  font-size: 1.5em;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-family: 'SF Pro Display', sans-serif;
   font-weight: 400;
   color: rgba(2, 23, 37, 0.7);
 }
@@ -283,9 +283,8 @@ Foundry
 }
 
 .camelcase {
-  font-weight: 800;
-  margin-left: 1em;
-  font-size: 1.2em;
+  font-weight: 400;
+  font-size: 1.5em;
 }
 
 .mb64 {
@@ -311,19 +310,14 @@ Foundry
 }
 
 p.lead {
-  font-size: 16px;
-  font-weight: 400;
   line-height: 28px;
-  color: #888888;
-  opacity: 0.9;
+  color: rgba(2, 23, 37, 0.8);
 }
 
 li.reqs {
-  font-size: 16px;
-  font-weight: 400;
   line-height: 28px;
-  color: #888888;
-  opacity: 0.9;
+  color: rgba(2, 23, 37, 0.8);
+  font-size: 110%;
 }
 
 @media all and (max-width: 767px) {
@@ -359,16 +353,21 @@ li.reqs {
   margin-bottom: 80px;
 }
 
+@media all and (max-width: 780px) {
+  .mb80 {
+      padding: 0 1.5em;
+  }
+}
 .pt120 {
   padding-top: 120px;
 }
 
 .makespace {
-  margin: 5em 0em 1.5em 1em;
+  margin: 5em 0em 1em 0em;
 }
 
 .sup {
-  margin: 0em 1em 1em 1em;
+  margin: 0em 1em 1em 0em;
 }
 
 .fs-vid-background {
@@ -736,7 +735,7 @@ Modules
   max-width: 768px;
   margin: 0 auto;
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 }
 .cd-container:after {
   content: "";
@@ -757,25 +756,36 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(2, 23, 37, 0.7);
-  height: 60px;
+  height: 55px;
   width: 100%;
   z-index: 5;
- 
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 400;
+  color: rgba(2, 23, 37, 0.8);
+  letter-spacing: 0.25em;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  overflow: hidden;
 }
-.cd-header-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(50,50,50,0.7);
-  height: 60px;
-  width: 100%;
-  z-index: 5;
- 
+.cd-header li {
+  float: right;
 }
+.cd-header li a {
+  display: block;
+  font-size: 0.85em;
+  color: rgba(2, 23, 37, 0.8);
+  text-align: center;
+  padding: 25px 20px;
+  text-decoration: none;
+}
+.cd-header li a:hover {
+  color: #000;
+  font-weight: 500;
+}
+
 @media only screen and (min-width: 768px) {
   .cd-header {
-    height: 80px;
+    height: 65px;
     background: transparent;
     box-shadow: none;
   }
@@ -798,11 +808,12 @@ html, body {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -80px;
-    background-color: rgba(2, 23, 37, 0.7);
+    background-color: #fff;
+    color: #fff;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   .cd-header.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -824,46 +835,19 @@ html, body {
     box-shadow: none;
   }
 }
-@media only screen and (min-width: 1170px) {
-  .cd-header-1 {
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  .cd-header-1.is-fixed {
-    /* when the user scrolls down, we hide the header right above the viewport */
-    position: fixed;
-    top: -80px;
-    background-color: rgba(2, 23, 37, 0.7);
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
-    opacity: 0.8;
-  }
-  .cd-header-1.is-visible {
-    /* if the user changes the scrolling direction, we show the header */
-    -webkit-transform: translate3d(0, 100%, 0);
-    -moz-transform: translate3d(0, 100%, 0);
-    -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  .cd-header-1.menu-is-open {
-    /* add a background color to the header when the navigation is open */
-    background-color: rgb(45, 48, 53);
-  }
+
+.home-logo {
+  font-size: 1.25em;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 400;
+  color: rgba(2, 23, 37, 0.8);
+  letter-spacing: 0.25em;
+  scroll-behavior: smooth;
+  margin-top: 10px;
 }
 .cd-logo {
-  display: block;
   position: absolute;
+  letter-spacing: 0.25em;
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
@@ -873,15 +857,77 @@ html, body {
   transform: translateY(-50%);
   left: .875em;
 }
-.cd-logo img {
-  display: block;
+.home-logo:hover {
+  color: rgba(2, 23, 37);
 }
+
 @media only screen and (min-width: 768px) {
   .cd-logo {
     left: 2.6em;
   }
 }
 
+.cd-menu-icon {
+  display: hidden;
+}
+
+@media only screen and (max-width : 640px) {
+  .cd-menu-icon {
+    display: inline-block;
+    color: rgba(2, 23, 37, 0.8);
+    right: 0;
+    top: 0;
+    position: absolute;   
+  }
+  nav ul, nav:active ul { 
+
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+
+	}
+
+	nav li {
+
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+
+	}
+
+	nav:hover ul {
+		display: block;
+  }
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .cd-primary-nav-trigger a.cd-menu-icon {
+    float: right;
+    display: block;
+  }
+}
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .cd-primary-nav-trigger.responsive {position: relative;}
+  .cd-primary-nav-trigger.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .cd-primary-nav-trigger.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 .cd-primary-nav-trigger {
   position: absolute;
   right: 0;
@@ -939,7 +985,7 @@ html, body {
   background-color: rgba(255, 255, 255, 0);
 }
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255, 255, 255, 0);
 }
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
   top: 0;
@@ -957,7 +1003,7 @@ html, body {
   -o-transform: rotate(225deg);
   transform: rotate(225deg);
 }
-@media only screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
   .cd-primary-nav-trigger {
     width: 100px;
     padding-left: 1em;
@@ -989,18 +1035,12 @@ html, body {
 
 .cd-primary-nav {
   /* by default it's hidden - on top of the viewport */
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgb(45, 48, 53);
-  z-index: 4;
-  text-align: center;
-  padding: 50px 0;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  overflow: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  text-align: right;
+  overflow: hidden;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translateY(-100%);
@@ -1017,6 +1057,7 @@ html, body {
 }
 .cd-primary-nav li {
   font-size: 3em;
+  float: right;
   font-size: 50px;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -1024,31 +1065,29 @@ html, body {
   margin: .2em 0;
   text-transform: capitalize;
 }
-.cd-primary-nav a {
-  display: inline-block;
+.cd-primary-nav li a {
+  display: block;
+  text-align: center;
   padding: .4em 1em;
   border-radius: 0.25em;
   -webkit-transition: background 0.2s;
   -moz-transition: background 0.2s;
   transition: background 0.2s;
-  color: rgb(33,142,225);
+  color: rgba(2, 23, 37, 0.8);
 }
 .no-touch .cd-primary-nav a:hover {
   font-weight: 400;
 }
-.cd-primary-nav .cd-label {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  font-size: 0.875rem;
-  margin: 2.4em 0 .8em;
-}
-.cd-primary-nav .cd-social {
+.cd-social {
   display: inline-block;
   margin: 0 .4em;
 }
-.cd-primary-nav .cd-social a {
+.cd-social ul {
+  display: inline-block;
+  text-align: center;
+  width: 100%
+}
+.cd-social a {
   width: 30px;
   height: 44px;
   padding: 0;
@@ -1059,16 +1098,16 @@ html, body {
   text-indent: 100%;
   white-space: nowrap;
 }
-.cd-primary-nav .cd-facebook a {
+.cd-facebook a {
   background-position: 0 0;
 }
-.cd-primary-nav .cd-instagram a {
+.cd-instagram a {
   background-position: -38px 0;
 }
-.cd-primary-nav .cd-dribbble a {
+.cd-dribbble a {
   background-position: -79px 0;
 }
-.cd-primary-nav .cd-twitter a {
+.cd-twitter a {
   background-position: -120px 0;
 }
 .cd-primary-nav.is-visible {
@@ -1171,6 +1210,7 @@ The .cd-intro change the background image
   z-index: 1;
 }
 .cd-main-content p {
+  font-family: 'SF Pro Display', sans-serif;
   line-height: 1.6;
   margin: 1em 0;
 }
@@ -1197,8 +1237,7 @@ The .cd-intro change the background image
   height: 100px;
 }
 .cd-container h1 {
-	font-family: 'Open Sans', serif;
-	font-weight: 700;
+	font-weight: 300;
 }
 .cd-container-1 h1 {
   font-family: 'Open Sans', serif;
@@ -1233,6 +1272,10 @@ The .cd-intro change the background image
 	margin: 0 auto;
 	text-align: center;
   background-position:center center;
+}
+.cd-container-more-about p {
+  color: rgba(2, 23, 37, 0.8);
+  font-size: 1em;
 }
 .row {
   margin-top: 0.2rem;

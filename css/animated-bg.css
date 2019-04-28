@@ -3,6 +3,7 @@
 	position: relative;
 	width: 100%;
 	background-image: url(images/coverpic.jpg);
+	/* background-color: #fff; */
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
