@@ -735,6 +735,7 @@ Modules
   max-width: 768px;
   margin: 0 auto;
   margin-top: 5rem;
+  background-image: none;
   /* margin-bottom: 5rem; */
 }
 .cd-container:after {
@@ -1081,6 +1082,7 @@ html, body {
 .cd-social {
   display: inline-block;
   margin: 0 .4em;
+ 
 }
 .cd-social ul {
   display: inline-block;
@@ -1090,13 +1092,17 @@ html, body {
 .cd-social a {
   width: 30px;
   height: 44px;
-  padding: 0;
-  background-image: url(images/cd-socials.svg);
+  padding: .4em 1em;
+  background-image: url(images/cd-socials2.svg);
   background-repeat: no-repeat;
   /* image replacement */
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
+}
+.cd-social li:hover {
+  color: rgb(19, 84, 134);
+  opacity: 0.5;
 }
 .cd-facebook a {
   background-position: 0 0;
@@ -1104,7 +1110,7 @@ html, body {
 .cd-instagram a {
   background-position: -38px 0;
 }
-.cd-dribbble a {
+.cd-linkedin a {
   background-position: -79px 0;
 }
 .cd-twitter a {
