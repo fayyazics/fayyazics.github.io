@@ -85,7 +85,7 @@ h6 {
 }
 
 h1.project-title {
-  font-size: 1em;
+  font-size: 0.80em;
   font-family: 'SF Pro Display', sans-serif;
   font-weight: 400;
   color: rgba(2, 23, 37, 0.7);
@@ -1386,13 +1386,13 @@ Photo Thumbnails
 .cd-container-clmn-9 {
 	width: 100%;
   height: 400px;
-	background-image: url(images/agproject2.jpg);
+	background-image: url(images/agrity-intro.png);
 	background-size: cover;
 	display: inline-block;
 }
 
 .cd-container-clmn-9:hover {
-	opacity: .5;
+	opacity: .8;
 }
 .cd-container-clmn-9:hover .mofo {
   filter: alpha(opacity=100);
@@ -1408,14 +1408,14 @@ Photo Thumbnails
 
 .cd-container-clmn-10 {
 	width: 100%;
-	height: 400px;
-	background-image: url(images/bubbacover.jpg);
+	height: 465px;
+	background-image: url(images/bubbacover.png);
 	background-size: cover;
 	display: inline-block;
 }
 
 .cd-container-clmn-10:hover {
-	opacity: .5;
+	opacity: .8;
 }
 .cd-container-clmn-10:hover .mofo {
   filter: alpha(opacity=100);
@@ -1426,14 +1426,14 @@ Photo Thumbnails
 
 .cd-container-clmn-11 {
 	width: 100%;
-	height: 400px;
-	background-image: url(images/masar_cover.jpg);
+	height: 465px;
+	background-image: url(images/masarcover2.png);
 	background-size: cover;
 	display: inline-block;
 }
 
 .cd-container-clmn-11:hover {
-	opacity: .5;
+	opacity: .8;
 }
 .cd-container-clmn-11:hover .mofo {
   filter: alpha(opacity=100);
@@ -1444,26 +1444,26 @@ Photo Thumbnails
 
 .cd-container-clmn-12 {
 	width: 100%;
-  height: 400px;
-	background-image: url(images/qp-heroimg.jpg);
+  height: 700px;
+	background-image: url(images/qp-heroimg3.png);
 	background-size: cover;
   display: inline-block;
 }
 
 .cd-container-clmn-12:hover {
-	opacity: .5;
+	opacity: .8;
 }
 
 .cd-container-clmn-13 {
 	width: 100%;
-	height: 400px;
-	background-image: url(images/bbmockup.jpg);
+	height: 350px;
+	background-image: url(images/bluebearintro.png);
 	background-size: cover;
 	display: inline-block;
 }
 
 .cd-container-clmn-13:hover {
-	opacity: .5;
+	opacity: .8;
 }
 .cd-container-clmn-13:hover .mofo {
   filter: alpha(opacity=100);
@@ -1475,13 +1475,13 @@ Photo Thumbnails
 .cd-container-clmn-14 {
   width: 100%;
   height: 400px;
-	background-image: url(images/mobileredesign.jpg);
+	background-image: url(images/redesign-intro.png);
 	background-size: cover;
   display: inline-block;
 }
 
 .cd-container-clmn-14:hover {
-	opacity: .5;
+	opacity: .8;
 }
 .cd-container-clmn-14:hover .mofo {
   filter: alpha(opacity=100);
