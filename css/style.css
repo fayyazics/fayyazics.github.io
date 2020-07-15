@@ -9,8 +9,8 @@ Primary style
 }
 
 ::selection {
-    color: white; 
-    background: #DADFE1;
+    color: black; 
+    background: #9cd4eb;
 }
 
 *, *:after, *:before {
@@ -23,7 +23,7 @@ body {
   font-size: 100%;
   font-family: 'SF Pro Display', sans-serif;
   font-weight: 300;
-  color: rgba(2, 23, 37, 0.8);
+  color: rgba(2, 23, 37, 0.9);
   background-color: white;
 }
 body.overflow-hidden {
@@ -49,7 +49,7 @@ strong {
 }
 
 p {
-	font-size: 105%;
+	font-size: 120%;
 }
 
 h1 {
