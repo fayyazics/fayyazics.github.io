@@ -138,3 +138,67 @@
 
 
 </body>
+
+<!-- Section 5 (Footer) -->
+		
+<div class="footer bg-dark">
+    <div class="footer-content">
+        <div class="col-md-12 text-center">
+            <div>© 2020 Designed and Developed by Fayyaz Mukarram</div>
+        </div>
+    </div>
+</div>
+
+<a id="contact"></a>
+
+</main>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
+
+<script src="js/TweenLite.min.js"></script>
+<script src="js/EasePack.min.js"></script>
+<script src="js/rAF.js"></script>
+<script src="js/demo-1.js"></script>
+
+<!-- Script for smooth scrolling -->
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+if (target.length) {
+$('html,body').animate({
+  scrollTop: target.offset().top
+}, 1000);
+return false;
+}
+}
+});
+});
+
+// Append .background-image-holder <img>'s as CSS backgrounds
+
+$('.background-image-holder').each(function() {
+var imgSrc = $(this).children('img').attr('src');
+$(this).css('background', 'url("' + imgSrc + '")');
+$(this).children('img').hide();
+$(this).css('background-position', 'initial');
+});
+
+// Fade in background images
+
+setTimeout(function(){
+$('.background-image-holder').each(function() {
+    $(this).addClass('fadeIn');
+});
+},200);
+
+</script>
+
+</body>
+</html>
