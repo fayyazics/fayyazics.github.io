@@ -310,7 +310,7 @@ Foundry
 }
 
 p.lead {
-  line-height: 28px;
+  line-height: 30px;
   color: rgba(2, 23, 37, 0.8);
 }
 
@@ -1259,7 +1259,7 @@ The .cd-intro change the background image
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
 	margin: 0 auto;
-	width: 15rem;
+	width: 80%;
 	border: rgb(33,142,225) solid 1px;
 	padding: 15px 20px 15px 20px;
 	color: rgb(33,142,225);
@@ -1426,7 +1426,7 @@ Photo Thumbnails
 
 .cd-container-clmn-11 {
 	width: 100%;
-	height: 400px;
+	height: 700px;
 	background-image: url(images/chorusintro.png);
 	background-size: cover;
 	display: inline-block;
@@ -1444,7 +1444,7 @@ Photo Thumbnails
 
 .cd-container-clmn-12 {
 	width: 100%;
-  height: 700px;
+  height: 400px;
 	background-image: url(images/qp-heroimg3.png);
 	background-size: cover;
   display: inline-block;
