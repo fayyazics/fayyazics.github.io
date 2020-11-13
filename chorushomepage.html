@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="images/shortcut-icon.png">
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/component.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/animated-bg.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizer -->
+
+	<title>Fayyaz Mukarram | Chorus Homepage</title>
+</head>
+
+<body>
+
+    <header class="cd-header">
+        <div class="cd-logo">
+            <a href="http://fayyazmukarram.com">
+                <p class="home-logo">FAYYAZ M.</p>
+            </a>
+        </div>
+
+        <nav>
+            <a href="#0">
+                <i class="cd-menu-icon"></i>
+            </a>
+
+            <ul>
+                <li><a href="http://fayyazmukarram.com/index.html#contact">Contact</a></li>
+                <li><a href="http://fayyazmukarram.com/index.html#photography">Photography</a></li>
+                <li><a href="http://fayyazmukarram.com/index.html#projects">Projects</a></li>
+                <li><a href="http://fayyazmukarram.com">Home</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <!-- Section 1 Title -->
+    <section>
+        <div class="cd-container cd-main-content">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                        <img src="images/chorus-app-icon.svg" />
+                    <h1>
+                        Rethinking the Homepage
+                    </h1>
+                    <p>
+                        Chorus.ai is a conversation intelligence platform that helps sales, customer success, and marketing teams capture every 
+                        meeting to deliver better business outcomes. In May 2020, I kicked off my first "remote" design sprint focused on 
+                        designing a new homepage experience for Chorus users on desktop. The homepage aimed to provide relevant content to our 
+                        many user types, funnel those users into various parts of the platform, and help users better understand the value they can 
+                        receive from Chorus.
+                    </p>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+
+
+
+    <section class="pt0 pb0 text-center">
+        <img alt="Feature Image" class="col-xs-12 p0" src="images/chorushomepage-cover.png" />
+    </section>
+
+    <!-- Section 2 Case Study -->
+
+    <div class="row mb80 mb-xs-40">
+        <div class="col-md-8 col-md-offset-2 col-sm-10">
+            <h6 class="camelcase">Contact me for more info</h6>
+            <p class="lead sup">
+                We designed the new Chorus homepage from May 2020 - July 2020 with a focus on two personas: sales reps and sales managers.  
+            </p>
+            <p class="lead sup">
+                Simultaneously, the component driven design has allowed this large behemoth to be deconstructed and built in segments starting 
+                with a calendar component. The calendar gives Chorus users the power to stay on top of their calls that will be captured in Chorus 
+                while also giving managers a view to stay on top of the team's calls. 
+            </p>
+            <p class="lead sup">
+                The full case study is private. If you'd like to know more about my work at Chorus.ai, please reach out. I'd love to hear from you!
+            </p>
+        </div>
+    </div>
+
+    <div class="cd-container">
+        <a href="mailto:fayyazmukarram@gmail.com"><div class="read-more-btn">email me: fayyazmukarram@gmail.com</div></a>
+    </div>
+
+    <div class="mb80">
+	</div>
+
+
+
+
+
+<!-- Section 5 (Footer) -->
+		
+<div class="footer bg-dark">
+    <div class="footer-content">
+        <div class="col-md-12 text-center">
+            <div>© 2020 Designed and Developed by Fayyaz Mukarram</div>
+        </div>
+    </div>
+</div>
+
+<a id="contact"></a>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
+
+<script src="js/TweenLite.min.js"></script>
+<script src="js/EasePack.min.js"></script>
+<script src="js/rAF.js"></script>
+<script src="js/demo-1.js"></script>
+
+<!-- Script for smooth scrolling -->
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+if (target.length) {
+$('html,body').animate({
+  scrollTop: target.offset().top
+}, 1000);
+return false;
+}
+}
+});
+});
+
+// Append .background-image-holder <img>'s as CSS backgrounds
+
+$('.background-image-holder').each(function() {
+var imgSrc = $(this).children('img').attr('src');
+$(this).css('background', 'url("' + imgSrc + '")');
+$(this).children('img').hide();
+$(this).css('background-position', 'initial');
+});
+
+// Fade in background images
+
+setTimeout(function(){
+$('.background-image-holder').each(function() {
+    $(this).addClass('fadeIn');
+});
+},200);
+
+</script>
+
+</body>
+</html>
