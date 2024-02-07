@@ -29,7 +29,16 @@
 							
 							return function(r){e._q.push({name:t,args:Array.prototype.slice.call(n,0),resolve:r})}},o=function(e,t,n){e[t]=function(){if(n)
 								
-								return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);for(var n=0;n<g.length;n++)o(e,g[n],!0)};n.invoked=!0;var u=t.createElement("script");u.type="text/javascript",u.integrity="sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);for(var c=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;l<p.length;l++)r(c,p[l]);n.Identify=c;for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);n.Revenue=d;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
+								return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);
+									for(var n=0;n<g.length;n++)o(e,g[n],!0)};
+									n.invoked=!0;var u=t.createElement("script");
+									u.type="text/javascript",u.integrity="sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};
+									var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);
+									for(var c=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;
+									l<p.length;l++)r(c,p[l]);n.Identify=c;
+									for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);
+									n.Revenue=d;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];
+									i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
 		
 		amplitude.init('1ce437130da0f6268eb2efbf0375ee14');
 	</script>
@@ -168,51 +177,6 @@
 
 		</div>
 
-		<!-- <a id="photography" name="photography"></a>
-
-		<main id="more" class="cd-main-content">
-			<div class="cd-container" style="margin-bottom: 1rem;">
-				<a href="http://fayyazmukarram.com/photography"></a>
-					<h1>
-					Photography 📷
-					</h1>
-				<p>
-					Photography allows me to express my design and creative efforts from a different perspective. 
-					Each and every pixel has a reason for filling the frame, broken down into the colors, objects, 
-					motion, and lighting with one single purpose -- to catch a viewer's eye that evokes one or 
-					many emotions, thereby, building a connection with the viewer.			
-				</p>
-			</div>
-		</main>
-
-		<div class="cd-container-more-about">
-			<div class="row">
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-1">
-				</div></a>
-
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-2">
-				</div></a>
-				
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-3">
-				</div></a>
-				
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-4">
-				</div></a>
-			</div>
-
-			<div class="row">
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-5">
-				</div></a>
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-6">
-				</div></a>
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-7">
-				</div></a>
-				<a href="http://fayyazmukarram.com/photography"><div class="cd-container-clmn-8">
-				</div></a>
-			</div>
-		</div> -->
-
-
 <!-- Section 2 (Contact) -->
 
 <a id="contact" name="contact"></a>
@@ -221,7 +185,6 @@
 		<div class="cd-container">
 			<h1>Let's chat</h1>
 			<p class="lead sup">If you're interested in working with me, I'd love to hear from you! You can reach me at <strong>fayyazmukarram@gmail.com</strong></p>
-			<!-- <a href="mailto:fayyazmukarram@gmail.com"><div class="read-more-btn">OPEN EMAIL</div></a> -->
 		</div>
 </section>
 
