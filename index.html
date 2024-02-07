@@ -21,6 +21,14 @@
 		
 		amplitude.init('1ce437130da0f6268eb2efbf0375ee14');
 	</script>
+	<script src="https://cdn.amplitude.com/libs/analytics-browser-2.1.3-min.js.gz"></script>
+	<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-0.10.1-min.js.gz"></script>
+	<script>
+	window.amplitude.init('1ce437130da0f6268eb2efbf0375ee1');
+	const sessionReplayTracking = window.sessionReplay.plugin();
+	window.amplitude.add(sessionReplayTracking);
+	</script>
+	
 	<script src="js/modernizr.js"></script> <!-- Modernizer -->
 	<script src="js/parallax.js"></script>  
 	
