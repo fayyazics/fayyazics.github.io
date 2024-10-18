@@ -43,7 +43,7 @@
 									i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
 		
 	</script>
-	<script src="https://cdn.amplitude.com/libs/analytics-browser-2.1.3-min.js.gz"></script>
+	<script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.7-min.js.gz"></script>
 	<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz"></script>
 	<script>
 	window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14')
@@ -51,6 +51,12 @@
 		sampleRate: 1,
 	});
 	window.amplitude.add(sessionReplayTracking);
+	</script>
+
+	<script>  
+		window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14', {      
+			autocapture: { elementInteractions: true }  
+		});
 	</script>
 
 	<script type="text/javascript" src="https://cdn.amplitude.com/script/1ce437130da0f6268eb2efbf0375ee14.experiment.js"></script>
