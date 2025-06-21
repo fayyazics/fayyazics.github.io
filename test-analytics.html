@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Analytics Test Page</title>
+    
+    <!-- Amplitude Setup -->
+    <script type="text/javascript">
+        !function()
+            {"use strict";
+                !function(e,t){
+                    var n=e.amplitude||{_q:[],_iq:{}};
+                        if(n.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");
+                        
+                        else{var r=function(e,t){e.prototype[t]=function(){
+                            
+                            return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,n){
+                            
+                            return function(r){e._q.push({name:t,args:Array.prototype.slice.call(n,0),resolve:r})}},o=function(e,t,n){e[t]=function(){if(n)
+                                
+                                return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);
+                                    for(var n=0;n<g.length;n++)o(e,g[n],!0)};
+                                    n.invoked=!0;var u=t.createElement("script");
+                                    u.type="text/javascript",u.integrity="sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};
+                                    var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);
+                                    for(var c=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;
+                                    l<p.length;l++)r(c,p[l]);n.Identify=c;
+                                    for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);
+                                    n.Revenue=d;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];
+                                    i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
+        
+    </script>
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.7-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz"></script>
+    <script>
+    window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14')
+    const sessionReplayTracking = window.sessionReplay.plugin({
+        sampleRate: 1,
+    });
+    window.amplitude.add(sessionReplayTracking);
+    </script>
+
+    <script>  
+        window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14', {      
+            autocapture: { elementInteractions: true }  
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.amplitude.com/script/1ce437130da0f6268eb2efbf0375ee14.experiment.js"></script>
+    
+    <script src="js/analytics.js"></script> <!-- Custom Analytics -->
+    
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+        a { color: blue; text-decoration: underline; }
+        video { width: 300px; height: 200px; background: #000; }
+    </style>
+</head>
+<body>
+    <h1>Analytics Test Page</h1>
+    <p>This page tests all the custom analytics events. Open the browser console to see the events being tracked.</p>
+    
+    <div class="test-section">
+        <h2>Project Click Test</h2>
+        <a href="bluebear.html">
+            <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                <h3 class="project-title">BLUE BEAR iMESSAGE STICKERS</h3>
+                <p>Test project click tracking</p>
+            </div>
+        </a>
+    </div>
+    
+    <div class="test-section">
+        <h2>Social Media Links Test</h2>
+        <a href="https://www.instagram.com/fayyaz.svg/">Instagram</a> |
+        <a href="http://www.linkedin.com/in/fayyazm">LinkedIn</a> |
+        <a href="https://twitter.com/fayyazics">Twitter</a>
+    </div>
+    
+    <div class="test-section">
+        <h2>Contact Interaction Test</h2>
+        <a href="mailto:fayyazmukarram@gmail.com">Send Email</a>
+    </div>
+    
+    <div class="test-section">
+        <h2>Navigation Test</h2>
+        <a href="index.html">Home</a> |
+        <a href="photography.html">Photography</a> |
+        <a href="index.html#projects">Projects</a> |
+        <a href="index.html#contact">Contact</a>
+    </div>
+    
+    <div class="test-section">
+        <h2>Video Interaction Test</h2>
+        <video controls>
+            <source src="video/bb_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="test-section">
+        <h2>Manual Event Test</h2>
+        <button onclick="testManualEvent()">Test Manual Event</button>
+        <button onclick="testCustomProperties()">Test Custom Properties</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Scroll Test</h2>
+        <p>Scroll down this page to test scroll depth tracking...</p>
+        <div style="height: 1000px; background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);">
+            <p style="padding: 20px;">Scroll content...</p>
+        </div>
+    </div>
+    
+    <script>
+        function testManualEvent() {
+            if (window.PortfolioAnalytics) {
+                window.PortfolioAnalytics.trackEvent('Manual Test Event', {
+                    test_type: 'manual',
+                    timestamp: new Date().toISOString()
+                });
+                alert('Manual event tracked! Check console.');
+            } else {
+                alert('PortfolioAnalytics not loaded!');
+            }
+        }
+        
+        function testCustomProperties() {
+            if (window.PortfolioAnalytics) {
+                window.PortfolioAnalytics.trackEvent('Custom Properties Test', {
+                    string_prop: 'test value',
+                    number_prop: 42,
+                    boolean_prop: true,
+                    array_prop: ['item1', 'item2'],
+                    object_prop: { nested: 'value' }
+                });
+                alert('Custom properties event tracked! Check console.');
+            } else {
+                alert('PortfolioAnalytics not loaded!');
+            }
+        }
+        
+        // Test page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Analytics test page loaded');
+            if (window.PortfolioAnalytics) {
+                console.log('PortfolioAnalytics loaded successfully');
+            } else {
+                console.error('PortfolioAnalytics not loaded');
+            }
+        });
+    </script>
+</body>
+</html> 
