@@ -1,0 +1,56 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/chorusmobile",
+      "destination": "/chorusmobile.html"
+    },
+    {
+      "source": "/quickpolls", 
+      "destination": "/quickpolls.html"
+    },
+    {
+      "source": "/mobileredesign",
+      "destination": "/mobileredesign.html"
+    },
+    {
+      "source": "/chorushomepage",
+      "destination": "/chorushomepage.html"
+    },
+    {
+      "source": "/agrity",
+      "destination": "/agrity.html"
+    },
+    {
+      "source": "/bluebear",
+      "destination": "/bluebear.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/chorusmobile",
+      "destination": "/chorusmobile.html"
+    },
+    {
+      "source": "/quickpolls",
+      "destination": "/quickpolls.html"
+    },
+    {
+      "source": "/mobileredesign", 
+      "destination": "/mobileredesign.html"
+    },
+    {
+      "source": "/chorushomepage",
+      "destination": "/chorushomepage.html"
+    },
+    {
+      "source": "/agrity",
+      "destination": "/agrity.html"
+    },
+    {
+      "source": "/bluebear",
+      "destination": "/bluebear.html"
+    }
+  ]
+}
