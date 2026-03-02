@@ -1,0 +1,311 @@
+/* ============================================
+   Fun page — Built for fun + Photography
+   ============================================ */
+
+.fun-main {
+  margin-left: 0;
+  max-width: 72rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.fun-section {
+  margin-bottom: var(--space-3xl);
+}
+
+.fun-section .section-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.fun-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-md);
+  color: var(--color-text);
+}
+
+.fun-section .section-desc {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.fun-section .section-desc a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.fun-section .section-desc a:hover {
+  text-decoration: underline;
+}
+
+/* ----- Built for fun grid ----- */
+.fun-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.fun-card {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+
+.fun-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+}
+
+.fun-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.fun-card:hover .fun-card-bg {
+  transform: scale(1.08);
+}
+
+.fun-card-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-lg);
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+}
+
+.fun-card-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 0.25rem;
+}
+
+.fun-card-content p {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.fun-card--bluebear .fun-card-bg {
+  background-image: url('../images/bbcover.jpg');
+}
+
+.fun-card--dxball .fun-card-bg {
+  background-image: url('../images/dx-ball.png');
+}
+
+.fun-card--bigtwo .fun-card-bg {
+  background-image: url('../images/bigtwo.png');
+}
+
+.fun-card--photo .fun-card-bg {
+  background-image: url('../css/images/goldengate.jpg');
+}
+
+.fun-card--ig .fun-card-bg {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+}
+
+.fun-card--soon {
+  background: var(--color-bg-alt);
+  border: 1px dashed var(--color-border);
+  box-shadow: none;
+  cursor: default;
+}
+
+.fun-card--soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.fun-card--soon .fun-card-content {
+  background: none;
+  color: var(--color-text-muted);
+}
+
+.fun-card--soon .fun-card-content h3 {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+/* ----- Photography grid ----- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.photo-tile {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.photo-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.photo-tile::after {
+  content: attr(data-title);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo-tile:hover::after {
+  opacity: 1;
+}
+
+.photo-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.photo-tile:hover img {
+  transform: scale(1.1);
+}
+
+/* Lightbox */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.photo-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.photo-lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+}
+
+.photo-lightbox-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.photo-lightbox-title {
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  margin-top: var(--space-sm);
+}
+
+.photo-lightbox-close,
+.photo-lightbox-prev,
+.photo-lightbox-next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.photo-lightbox-close:hover,
+.photo-lightbox-prev:hover,
+.photo-lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.photo-lightbox-close {
+  top: var(--space-md);
+  right: var(--space-md);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.photo-lightbox-prev {
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.photo-lightbox-next {
+  right: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .fun-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .fun-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .fun-card {
+    aspect-ratio: 16/10;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs);
+  }
+}
