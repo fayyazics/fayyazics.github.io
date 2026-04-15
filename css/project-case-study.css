@@ -166,3 +166,13 @@
   padding-left: 0;
 }
 .project-case-study .reqs::before { content: "• "; color: var(--color-accent); }
+
+/* When loaded inside a modal iframe, hide the site header/footer and adjust spacing */
+.in-modal .work-header { display: none; }
+.in-modal .work-footer { display: none; }
+.in-modal .project-case-study { padding-top: 2.5rem; }
+
+/* Center the email CTA button */
+.project-case-study .cd-container:has(.read-more-btn) {
+  text-align: center;
+}

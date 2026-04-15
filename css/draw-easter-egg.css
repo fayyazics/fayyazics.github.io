@@ -17,6 +17,23 @@ body.draw-mode {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z'/%3E%3C/svg%3E") 4 20, crosshair;
 }
 
+body.draw-mode a,
+body.draw-mode button,
+body.draw-mode input,
+body.draw-mode select,
+body.draw-mode textarea,
+body.draw-mode [role="button"],
+body.draw-mode [tabindex],
+body.draw-mode .section-link,
+body.draw-mode .hero-headline-trigger,
+body.draw-mode .philosophy-card-v2,
+body.draw-mode .project-card,
+body.draw-mode .draw-toolbar,
+body.draw-mode .draw-toolbar *,
+body.draw-mode .project-modal-close {
+  cursor: pointer;
+}
+
 body.draw-mode.eraser-mode {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%235c5c5c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 21h10'/%3E%3Cpath d='M5 11l4-4 8 8-4 4-4-4'/%3E%3Cpath d='M19 15l-4-4'/%3E%3C/svg%3E") 12 12, cell;
 }
