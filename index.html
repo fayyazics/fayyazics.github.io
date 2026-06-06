@@ -6,10 +6,10 @@
   <title>Fayyaz Mukarram — Work</title>
   <link rel="icon" href="images/favicon.png" type="image/png">
 
-  <!-- Typography: DM Serif Display + DM Sans + JetBrains Mono -->
+  <!-- Typography: DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/work.css">
@@ -37,194 +37,241 @@
   </header>
 
   <div class="work-layout">
-    <aside class="work-side-nav" aria-label="Jump to project">
-      <a href="#foundations" class="nav-philosophy-link">How I Design</a>
-      <p class="nav-label">Work History</p>
-
-      <div class="nav-group">
-        <p class="nav-group-label">Amplitude</p>
-        <ul>
-          <li><a href="#ai-first-experimentation"><span class="nav-year">2025–current</span><br>AI First Experimentation</a></li>
-          <li><a href="#session-replay"><span class="nav-year">2024</span><br>Session Replay</a></li>
-          <li><a href="#journeys"><span class="nav-year">2022</span><br>Journeys</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-group">
-        <p class="nav-group-label">Chorus.ai</p>
-        <ul>
-          <li><a href="#chorus-homepage"><span class="nav-year">2020</span><br>Homepage</a></li>
-          <li><a href="#chorus-ios"><span class="nav-year">2019</span><br>iOS App</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-group">
-        <p class="nav-group-label">Dynamic Signal</p>
-        <ul>
-          <li><a href="#mobile-redesign"><span class="nav-year">2019</span><br>Mobile Redesign</a></li>
-          <li><a href="#quickpolls"><span class="nav-year">2018</span><br>Quick Polls</a></li>
-        </ul>
-      </div>
-
-      <div class="nav-group">
-        <p class="nav-group-label">LSVP</p>
-        <ul>
-          <li><a href="#agrity"><span class="nav-year">2016</span><br>Agrity</a></li>
-        </ul>
-      </div>
-    </aside>
-
     <main class="work-main">
       <!-- Hero -->
       <section class="work-hero">
-        <div class="hero-profile-img">
-          <img src="images/profile.png" alt="Fayyaz Mukarram" />
-        </div>
-        <p class="hero-eyebrow">Hi, I'm Fayyaz Mukarram</p>
-        <div class="hero-headline-toggle">
-          <h1 class="hero-headline-trigger" tabindex="0" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Change headline">
-            <span class="typewriter-line"><span class="typewriter-text" data-typewriter="...let's build something great together"></span><span class="typewriter-cursor">|</span></span>
-          </h1>
-          <div class="hero-headline-dropdown" role="listbox" aria-hidden="true">
-            <button type="button" role="option" data-statement="...let's build something great together">...let's build something great together</button>
-            <button type="button" role="option" data-statement="principal designer, AI first,systems thinker">principal designer, AI first, systems thinker</button>
-            <button type="button" role="option" data-statement="crafting clarity at scale">crafting clarity at scale</button>
-            <button type="button" role="option" data-statement="designing things & tinkering 🎨">designing things & tinkering 🎨</button>
-            <button type="button" role="option" data-statement="owning design since 2009">owning design since 2009</button>
-            <button type="button" role="option" data-statement="thriving in 0 -> 1 spaces">thriving in 0 → 1 spaces</button>
+        <div class="hero-profile-deck" aria-label="Profile photos">
+          <div class="hero-profile-card">
+            <img src="images/profile.png" alt="Fayyaz Mukarram" />
+          </div>
+          <div class="hero-profile-card" aria-hidden="true">
+            <img src="images/profile-mountain.png" alt="" />
+          </div>
+          <div class="hero-profile-card" aria-hidden="true">
+            <img src="images/profile-bridge.png" alt="" />
+          </div>
+          <div class="hero-profile-card" aria-hidden="true">
+            <img src="images/profile-colosseum.png" alt="" />
           </div>
         </div>
-        <p class="one-liner">I'm a Product Designer / Photographer / NBA Superfan based in Los Angeles and currently working at Amplitude. My past experience includes design roles at Chorus.ai, 
+        <div class="hero-name-row">
+          <h1 class="hero-name">Fayyaz Mukarram</h1>
+          <ul class="hero-socials t-avatar-group" aria-label="Social links">
+            <li class="cd-social cd-instagram t-avatar"><a href="https://www.instagram.com/fayyaz.svg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a></li>
+            <li class="cd-social cd-linkedin t-avatar"><a href="https://www.linkedin.com/in/fayyazm" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a></li>
+            <li class="cd-social cd-twitter t-avatar"><a href="https://twitter.com/fayyazics" target="_blank" rel="noopener noreferrer" aria-label="Twitter"></a></li>
+          </ul>
+        </div>
+        <p class="hero-title">Product Designer</p>
+        <p class="hero-bio">
+          I've been designing for 10+ years with an emphasis on complex SaaS products across early stage startups and
+          scaleups. I'm currently a Principal Designer at <a href="https://amplitude.com" class="hero-brand-pill" target="_blank" rel="noopener noreferrer" aria-label="Amplitude"><span class="hero-brand-pill-label">Amplitude</span><img src="images/amplitude-logo.svg" alt="" width="28" height="28" /></a>,
+          building the future of product analytics and experimentation. My past experience includes design roles at Chorus.ai,
           Dynamic Signal, LSVP, and Localwise after studying CS and HCI at UC Berkeley.</p>
-        <p class="scroll-hint">Scroll to explore my work</p>
       </section>
 
-      <!-- Section: Foundations (design philosophy as “foundations”) -->
-      <section class="work-section" id="foundations">
-        <div class="section-inner parallax-content">
-          <div class="philosophy-section-header">
-            <div>
-              <p class="section-label">Design Philosophy</p>
-              <h2>How I Approach Design</h2>
-            </div>
-            <span class="philosophy-line"></span>
-          </div>
-          <div class="philosophy-cards-v2">
-            <div class="philosophy-card-v2 philosophy-card-v2--craft">
-              <div class="card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <!-- Experience -->
+      <section class="work-experience" id="experience">
+        <h2 class="experience-label">Experience</h2>
+        <p class="experience-intro">Here's a brief overview of my journey.</p>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <span class="experience-dates">2021 — NOW</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Principal Designer at
+                <a href="https://amplitude.com" class="experience-brand-pill" target="_blank" rel="noopener noreferrer">
+                  <img src="images/amplitude-logo.svg" alt="" width="28" height="28" />
+                  <span>Amplitude</span>
+                </a>
+              </p>
+              <p class="experience-desc">Building product analytics from core features to Session Replay and Experiment — including AI-first workflows and web experimentation.</p>
+              <div class="experience-projects-row experience-projects-row--primary">
+                <div id="ai-first-experimentation" class="project-tile project-tile--featured project-tile--ai" data-modal-open data-modal-title="Experimentation" role="button" tabindex="0" aria-haspopup="dialog">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Experimentation</span>
+                    <p class="project-desc">Simplifying workflows & integrating AI touchpoints</p>
+                  </div>
+                  <div class="project-tile-visual">
+                    <img src="images/experiment-hero.png" data-gif="images/experiment-hero.gif" alt="" class="project-tile-gif" decoding="async" />
+                  </div>
+                </div>
+                <div id="session-replay" class="project-tile project-tile--featured project-tile--session" data-modal-open data-modal-title="Session Replay" role="button" tabindex="0" aria-haspopup="dialog">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Session Replay</span>
+                    <p class="project-desc">Reenforcing behavioral data with qualitative context</p>
+                  </div>
+                  <div class="project-tile-visual">
+                    <img src="images/session-replay-hero.png" data-gif="images/session-replay-hero.gif" alt="" class="project-tile-gif" decoding="async" />
+                  </div>
+                </div>
+                <div id="journeys" class="project-tile project-tile--featured project-tile--journeys" data-modal-open data-modal-title="Journeys" role="button" tabindex="0" aria-haspopup="dialog">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Journeys</span>
+                    <p class="project-desc">Analyze how users flow through your product</p>
+                  </div>
+                  <div class="project-tile-visual">
+                    <img src="images/journeys-hero.png" data-gif="images/journeys-hero.gif" alt="" class="project-tile-gif" decoding="async" />
+                  </div>
+                </div>
               </div>
-              <h3>Craft is leadership</h3>
-              <p>I hold a high bar for craft, systems thinking, and clarity — and make that bar visible. Quality isn't decoration; it's how trust gets built.</p>
             </div>
-            <div class="philosophy-card-v2 philosophy-card-v2--context">
-              <div class="card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </li>
+          <li class="experience-item">
+            <span class="experience-dates">2019 — 2021</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Product Designer at
+                <a href="https://www.zoominfo.com/products/chorus?ch_source=chorus" class="experience-brand-pill" target="_blank" rel="noopener noreferrer">
+                  <img src="images/chorus-app-icon.svg" alt="" width="28" height="28" />
+                  <span>Chorus.ai</span>
+                </a>
+              </p>
+              <p class="experience-desc">Redesigned the iOS app and homepage for meeting prep and call review on-the-go. Later acquired by ZoomInfo.</p>
+              <div class="experience-projects-row experience-projects-row--secondary">
+                <a href="chorusmobile.html" id="chorus-ios" class="project-tile project-tile--chorus-ios" data-modal-src="chorusmobile.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">iOS Redesign</span>
+                    <p class="project-desc">Meeting prep &amp; call review on-the-go</p>
+                  </div>
+                </a>
+                <a href="chorushomepage.html" id="chorus-homepage" class="project-tile project-tile--chorus-hp" data-modal-src="chorushomepage.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Homepage</span>
+                    <p class="project-desc">Delivering the right content to you</p>
+                  </div>
+                </a>
               </div>
-              <h3>Context over control</h3>
-              <p>Strong teams need context, not micromanagement. I align design to strategy, customer needs, and technical realities so designers can make autonomous decisions.</p>
             </div>
-            <div class="philosophy-card-v2 philosophy-card-v2--clarity">
-              <div class="card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </li>
+          <li class="experience-item">
+            <span class="experience-dates">2017 — 2019</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Product Designer at
+                <a href="https://firstup.io/platform/employee-app/" class="experience-brand-pill" target="_blank" rel="noopener noreferrer">
+                  <img src="images/DS-App-Icon.svg" alt="" width="28" height="28" />
+                  <span>Dynamic Signal</span>
+                </a>
+              </p>
+              <p class="experience-desc">Led the mobile redesign and Quick Polls — lightweight employee feedback at scale. Later rebranded to FirstUp.</p>
+              <div class="experience-projects-row experience-projects-row--secondary">
+                <a href="quickpolls.html" id="quickpolls" class="project-tile project-tile--quickpolls" data-modal-src="quickpolls.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Quick Polls</span>
+                    <p class="project-desc">Get meaningful feedback from your employees</p>
+                  </div>
+                </a>
+                <a href="mobileredesign.html" id="mobile-redesign" class="project-tile project-tile--mobile" data-modal-src="mobileredesign.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Mobile Redesign</span>
+                    <p class="project-desc">Receive company news &amp; updates on-the-go</p>
+                  </div>
+                </a>
               </div>
-              <h3>Clarity creates momentum</h3>
-              <p>Ambiguity slows teams down. I push for sharp problem framing, clear success metrics, and intentional trade-offs. We solve problems, not just ship screens.</p>
             </div>
-            <div class="philosophy-card-v2 philosophy-card-v2--feedback">
-              <div class="card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </li>
+          <li class="experience-item">
+            <span class="experience-dates">Summer 2016</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Product Designer at
+                <span class="experience-brand-pill">
+                  <img src="images/LS-App-Icon.svg" alt="" width="28" height="28" />
+                  <span>LSVP</span>
+                </span>
+              </p>
+              <p class="experience-desc">Designed Agrity, a bid tracking console for complex agricultural workflows.</p>
+              <div class="experience-projects-row experience-projects-row--secondary experience-projects-row--single">
+                <a href="agrity.html" id="agrity" class="project-tile project-tile--agrity" data-modal-src="agrity.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Agrity Bid Tracking Console</span>
+                    <p class="project-desc">Create and manage your agricultural bids</p>
+                  </div>
+                </a>
               </div>
-              <h3>Feedback is fuel</h3>
-              <p>Direct, thoughtful feedback accelerates growth. Critique is about the work, never the person. Psychological safety and high standards coexist.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
 
-      <!-- AI First Experimentation (2025–current) -->
-      <section class="work-section" id="ai-first-experimentation">
-        <div class="section-inner parallax-content">
-          <p class="section-label">Amplitude</p>
-          <h2>AI First Experimentation</h2>
-          <p class="section-desc">Exploring how AI-first workflows shape product design, research, and delivery — from ideation to shipped experiences.</p>
-        </div>
-      </section>
-
-      <!-- Session Replay (2024) -->
-      <section class="work-section" id="session-replay">
-        <div class="section-inner parallax-content">
-          <div class="project-hero-image"><img src="images/session-replay-hero.png" alt="Session Replay" /></div>
-          <p class="section-label">Amplitude</p>
-          <h2>Session Replay</h2>
-          <p class="section-desc">Understanding real user behavior through replay — turning qualitative signals into product clarity.</p>
-        </div>
-      </section>
-
-      <!-- Journeys (2022) -->
-      <section class="work-section" id="journeys">
-        <div class="section-inner parallax-content">
-          <p class="section-label">Amplitude</p>
-          <h2>Journeys</h2>
-          <p class="section-desc">Mapping paths across the product so teams can see where users succeed, stall, or drop off.</p>
-        </div>
-      </section>
-
-      <!-- Chorus Homepage (2020) -->
-      <section class="work-section" id="chorus-homepage">
-        <div class="section-inner parallax-content">
-          <div class="project-hero-image"><img src="images/chorushomepageintro.png" alt="Chorus Homepage" /></div>
-          <p class="section-label">Components · Chorus</p>
-          <h2>Chorus Homepage</h2>
-          <p class="section-desc">Delivering the right content to the right people — clarity in the first impression.</p>
-          <a href="chorushomepage.html" class="section-link" data-modal-src="chorushomepage.html">View case study →</a>
-        </div>
-      </section>
-
-      <!-- Chorus iOS (2019) -->
-      <section class="work-section" id="chorus-ios">
-        <div class="section-inner parallax-content">
-          <div class="project-hero-image"><img src="css/images/chorusintro.png" alt="Chorus iOS app" /></div>
-          <p class="section-label">Components · Chorus</p>
-          <h2>Chorus iOS Redesign</h2>
-          <p class="section-desc">Meeting prep and call review on-the-go. A mobile experience that keeps sellers in flow.</p>
-          <a href="chorusmobile.html" class="section-link" data-modal-src="chorusmobile.html">View case study →</a>
-          <p class="tidbit">Sometimes the best design is the one that gets out of the way.</p>
-        </div>
-      </section>
-
-      <!-- Mobile Redesign (2019) -->
-      <section class="work-section" id="mobile-redesign">
-        <div class="section-inner parallax-content">
-          <div class="project-hero-image"><img src="css/images/redesign-intro.png" alt="Dynamic Signal Mobile Redesign" /></div>
-          <p class="section-label">Components · Dynamic Signal</p>
-          <h2>Dynamic Signal Mobile Redesign</h2>
-          <p class="section-desc">Company news and updates on-the-go. A refresh that put clarity and performance first.</p>
-          <a href="mobileredesign.html" class="section-link" data-modal-src="mobileredesign.html">View case study →</a>
-        </div>
-      </section>
-
-      <!-- Quick Polls (2018) -->
-      <section class="work-section" id="quickpolls">
-        <div class="section-inner parallax-content">
-          <div class="project-hero-image"><img src="css/images/qp-heroimg3.png" alt="Dynamic Signal Quick Polls" /></div>
-          <p class="section-label">Components · Dynamic Signal</p>
-          <h2>Dynamic Signal Quick Polls</h2>
-          <p class="section-desc">Get meaningful feedback from employees. Lightweight input, heavy impact.</p>
-          <a href="quickpolls.html" class="section-link" data-modal-src="quickpolls.html">View case study →</a>
-          <p class="tidbit">Good defaults + one clear CTA = less friction, more signal.</p>
-        </div>
-      </section>
-
-      <!-- Agrity (2016) -->
-      <section class="work-section" id="agrity">
-        <div class="section-inner parallax-content">
-          <div class="project-hero-image"><img src="css/images/agrity-intro.png" alt="Agrity Bid Tracking Console" /></div>
-          <p class="section-label">Components · LSVP</p>
-          <h2>Agrity Bid Tracking Console</h2>
-          <p class="section-desc">Create and manage agricultural bids. Complex workflows, simple mental model.</p>
-          <a href="agrity.html" class="section-link" data-modal-src="agrity.html">View case study →</a>
-        </div>
+      <!-- Musings -->
+      <section class="work-musings" id="musings">
+        <h2 class="musings-label">Musings</h2>
+        <p class="musings-intro">Things I've been tinkering with on the side.</p>
+        <ul class="musings-list">
+          <li class="musings-item">
+            <span class="musings-category">Latte art</span>
+            <div class="musings-detail">
+              <p class="musings-desc">I recently got into latte art and have gotten pretty decent at it — still chasing that perfect rosetta.</p>
+              <div class="musings-image-row" data-lightbox-group="latte-art" aria-label="Recent latte art">
+                <button type="button" class="musings-thumb" aria-label="View latte art with heart pattern"><img src="images/musings/latte-01.png" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb" aria-label="View latte art tulip in speckled mug"><img src="images/musings/latte-02.png" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb" aria-label="View latte art in blue ceramic mug"><img src="images/musings/latte-03.png" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb" aria-label="View latte art with natural light"><img src="images/musings/latte-04.png" alt="" loading="lazy" decoding="async" /></button>
+              </div>
+            </div>
+          </li>
+          <li class="musings-item">
+            <span class="musings-category">Photography</span>
+            <div class="musings-detail">
+              <p class="musings-desc">I've always enjoyed photography and now use it as an excuse to snap more pics of my daughter. I recently upgraded to mirrorless and I'm having fun relearning the craft.</p>
+            </div>
+          </li>
+          <li class="musings-item">
+            <span class="musings-category">Vibe coding</span>
+            <div class="musings-detail">
+              <p class="musings-desc">Vibe coding games for the nostalgia and sharing with my younger cousins.</p>
+              <div class="musings-chips">
+                <a href="dx-ball.html" class="musings-chip" target="_blank" rel="noopener">
+                  <span class="musings-chip-label">DX Ball</span>
+                  <span class="musings-chip-preview" aria-hidden="true">
+                    <span class="musings-chip-preview-image"><img src="images/dx-ball.png" alt="" loading="lazy" decoding="async" /></span>
+                    <span class="musings-chip-preview-meta">
+                      <span class="musings-chip-preview-title">DX Ball</span>
+                      <span class="musings-chip-preview-desc">Retro game</span>
+                    </span>
+                  </span>
+                </a>
+                <a href="bigtwo.html" class="musings-chip" target="_blank" rel="noopener">
+                  <span class="musings-chip-label">Big Two</span>
+                  <span class="musings-chip-preview" aria-hidden="true">
+                    <span class="musings-chip-preview-image"><img src="images/bigtwo.png" alt="" loading="lazy" decoding="async" /></span>
+                    <span class="musings-chip-preview-meta">
+                      <span class="musings-chip-preview-title">Big Two</span>
+                      <span class="musings-chip-preview-desc">Card game</span>
+                    </span>
+                  </span>
+                </a>
+                <a href="bluebear.html" class="musings-chip" target="_blank" rel="noopener">
+                  <span class="musings-chip-label">Blue Bear</span>
+                  <span class="musings-chip-preview" aria-hidden="true">
+                    <span class="musings-chip-preview-image"><img src="images/bbcover.jpg" alt="" loading="lazy" decoding="async" /></span>
+                    <span class="musings-chip-preview-meta">
+                      <span class="musings-chip-preview-title">Blue Bear</span>
+                      <span class="musings-chip-preview-desc">iMessage stickers</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="musings-item">
+            <span class="musings-category">Gallery</span>
+            <div class="musings-detail">
+              <p class="musings-desc">A sampling from my photography over the years — landscapes, long exposures, and quiet moments.</p>
+              <div class="musings-photo-preview" data-lightbox-group="gallery" aria-label="Photography preview">
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Golden Gate Bridge photo"><img src="css/images/goldengate.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Yosemite photo"><img src="css/images/yosemite.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View beach reflections photo"><img src="css/images/santacruz.JPG" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View blood moon photo"><img src="css/images/blood_moon.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Venice skies photo"><img src="css/images/venicesky.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Campanile photo"><img src="css/images/campanile.jpg" alt="" loading="lazy" decoding="async" /></button>
+              </div>
+              <a href="fun.html#photography" class="musings-gallery-link">View full gallery →</a>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <footer class="work-footer">
@@ -237,67 +284,136 @@
     (function() {
       var header = document.getElementById('global-header');
       var hero = document.querySelector('.work-hero');
-      var sections = document.querySelectorAll('.work-section');
-      var navLinks = document.querySelectorAll('.work-side-nav a[href^="#"]');
+      var sections = document.querySelectorAll('.work-section, .work-experience, .work-musings');
 
       if (hero) setTimeout(function() { hero.classList.add('is-visible'); }, 80);
 
-      function runTypewriter(text, delayStart) {
-        var el = document.querySelector('.typewriter-text');
-        if (!el) return;
-        el.setAttribute('data-typewriter', text);
-        el.textContent = '';
-        var i = 0;
-        var speed = 60;
-        function type() {
-          if (i < text.length) {
-            el.textContent += text.charAt(i);
-            i++;
-            var d = speed;
-            if (el.textContent === '...') d += 400;
-            setTimeout(type, d);
-          }
-        }
-        setTimeout(type, delayStart !== false ? 400 : 0);
-      }
+      (function avatarGroupHover() {
+        var group = document.querySelector('.hero-socials.t-avatar-group');
+        if (!group) return;
 
-      runTypewriter('...build with me!', true);
+        var items = group.querySelectorAll('.t-avatar');
+        var lift = -4;
+        var scale = 1.05;
+        var falloff = 0.45;
+        var easeIn = 'cubic-bezier(0.22, 1, 0.36, 1)';
+        var easeOut = 'cubic-bezier(0.34, 3.85, 0.64, 1)';
 
-      (function headlineDropdown() {
-        var trigger = document.querySelector('.hero-headline-trigger');
-        var dropdown = document.querySelector('.hero-headline-dropdown');
-        var typewriterEl = document.querySelector('.typewriter-text');
-        if (!trigger || !dropdown) return;
-
-        function open() {
-          dropdown.classList.add('open');
-          dropdown.setAttribute('aria-hidden', 'false');
-          trigger.setAttribute('aria-expanded', 'true');
-        }
-        function close() {
-          dropdown.classList.remove('open');
-          dropdown.setAttribute('aria-hidden', 'true');
-          trigger.setAttribute('aria-expanded', 'false');
+        function reset() {
+          items.forEach(function(el) {
+            el.style.transitionTimingFunction = easeOut;
+            el.style.setProperty('--shift', '0px');
+            el.style.setProperty('--scale-active', '1');
+          });
         }
 
-        trigger.addEventListener('click', function(e) {
-          e.stopPropagation();
-          dropdown.classList.contains('open') ? close() : open();
-        });
-
-        dropdown.querySelectorAll('button').forEach(function(btn) {
-          btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            var st = btn.getAttribute('data-statement');
-            if (st) {
-              runTypewriter(st, false);
-              close();
-            }
+        items.forEach(function(item, activeIdx) {
+          item.addEventListener('mouseenter', function() {
+            items.forEach(function(el, i) {
+              var distance = Math.abs(i - activeIdx);
+              var shift = lift * Math.pow(falloff, distance);
+              el.style.transitionTimingFunction = easeIn;
+              el.style.setProperty('--shift', shift.toFixed(3) + 'px');
+              el.style.setProperty('--scale-active', i === activeIdx ? String(scale) : '1');
+            });
           });
         });
 
-        document.addEventListener('click', function(e) {
-          if (!trigger.contains(e.target) && !dropdown.contains(e.target)) close();
+        group.addEventListener('mouseleave', reset);
+      })();
+
+      (function projectGifHover() {
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reducedMotion) return;
+
+        document.querySelectorAll('img.project-tile-gif').forEach(function(img) {
+          var gif = img.getAttribute('data-gif');
+          var still = img.getAttribute('src');
+          if (!gif || !still) return;
+
+          var tile = img.closest('.project-tile');
+          if (!tile) return;
+
+          var preloader = new Image();
+          preloader.src = gif;
+
+          tile.addEventListener('mouseenter', function() {
+            var gifSrc = gif + '?' + Date.now();
+            var loader = new Image();
+            loader.onload = function() {
+              img.src = gifSrc;
+            };
+            loader.src = gifSrc;
+          });
+
+          tile.addEventListener('mouseleave', function() {
+            img.src = still;
+          });
+        });
+      })();
+
+      (function experienceProjectRowHover() {
+        document.querySelectorAll('.experience-projects-row').forEach(function(row) {
+          var tiles = Array.prototype.slice.call(row.querySelectorAll('.project-tile'));
+          if (!tiles.length) return;
+
+          var collapseTimer = null;
+          var enteringTimer = null;
+
+          function applyActive(index) {
+            row.setAttribute('data-active', String(index));
+            tiles.forEach(function(tile, i) {
+              tile.classList.toggle('is-active', i === index);
+            });
+          }
+
+          function clearActive() {
+            row.removeAttribute('data-active');
+            row.classList.remove('is-entering');
+            tiles.forEach(function(tile) {
+              tile.classList.remove('is-active');
+            });
+          }
+
+          function setActive(index) {
+            clearTimeout(collapseTimer);
+            clearTimeout(enteringTimer);
+
+            if (index < 0) {
+              clearActive();
+              return;
+            }
+
+            var wasInactive = !row.hasAttribute('data-active');
+
+            if (wasInactive) {
+              row.classList.add('is-entering');
+              requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                  applyActive(index);
+                });
+              });
+              enteringTimer = setTimeout(function() {
+                row.classList.remove('is-entering');
+              }, 950);
+              return;
+            }
+
+            row.classList.remove('is-entering');
+            applyActive(index);
+          }
+
+          tiles.forEach(function(tile, index) {
+            tile.addEventListener('mouseenter', function() {
+              setActive(index);
+            });
+          });
+
+          row.addEventListener('mouseleave', function() {
+            collapseTimer = setTimeout(function() {
+              setActive(-1);
+            }, 120);
+          });
         });
       })();
 
@@ -311,25 +427,6 @@
           var trigger = window.innerHeight * 0.75;
           if (rect.top < trigger) section.classList.add('is-visible');
         });
-
-        var fromTop = y + 120;
-        navLinks.forEach(function(link) {
-          var id = link.getAttribute('href').slice(1);
-          var el = document.getElementById(id);
-          if (!el) return;
-          var top = el.offsetTop;
-          var height = el.offsetHeight;
-          if (fromTop >= top && fromTop < top + height) {
-            navLinks.forEach(function(l) {
-              l.classList.remove('active');
-              var li = l.closest('li');
-              if (li) li.classList.remove('timeline-active');
-            });
-            link.classList.add('active');
-            var activeLi = link.closest('li');
-            if (activeLi) activeLi.classList.add('timeline-active');
-          }
-        });
       }
 
       window.addEventListener('scroll', onScroll, { passive: true });
@@ -338,11 +435,16 @@
   </script>
   <!-- Project modal -->
   <div class="project-modal-overlay" id="project-modal" aria-hidden="true">
+    <div class="project-modal-backdrop"></div>
     <div class="project-modal-panel">
       <button class="project-modal-close" aria-label="Close modal">
         <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-      <iframe class="project-modal-iframe" id="project-modal-iframe" title="Case study"></iframe>
+      <iframe class="project-modal-iframe" id="project-modal-iframe" title="Case study" hidden></iframe>
+      <div class="project-modal-placeholder" id="project-modal-placeholder" hidden>
+        <h2 class="project-modal-title" id="project-modal-title"></h2>
+        <p class="project-modal-coming-soon">Coming soon</p>
+      </div>
     </div>
   </div>
 
@@ -350,26 +452,51 @@
     (function() {
       var overlay = document.getElementById('project-modal');
       var iframe = document.getElementById('project-modal-iframe');
+      var placeholder = document.getElementById('project-modal-placeholder');
+      var titleEl = document.getElementById('project-modal-title');
       var closeBtn = overlay.querySelector('.project-modal-close');
       var panel = overlay.querySelector('.project-modal-panel');
+      var backdrop = overlay.querySelector('.project-modal-backdrop');
+      var closeDuration = 400;
 
-      function openModal(src) {
-        iframe.src = src;
-        iframe.onload = function() {
-          try { iframe.contentDocument.body.classList.add('in-modal'); } catch(e) {}
-        };
+      function openModal(src, title) {
+        if (src) {
+          iframe.removeAttribute('hidden');
+          placeholder.setAttribute('hidden', '');
+          iframe.src = src;
+          iframe.onload = function() {
+            try { iframe.contentDocument.body.classList.add('in-modal'); } catch(e) {}
+          };
+        } else {
+          iframe.setAttribute('hidden', '');
+          iframe.src = 'about:blank';
+          placeholder.removeAttribute('hidden');
+          titleEl.textContent = title || '';
+        }
+
         overlay.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
+
         requestAnimationFrame(function() {
-          overlay.classList.add('is-open');
+          requestAnimationFrame(function() {
+            overlay.classList.add('is-open');
+          });
         });
       }
 
       function closeModal() {
+        if (!overlay.classList.contains('is-open')) return;
+
         overlay.classList.remove('is-open');
         overlay.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('modal-open');
-        setTimeout(function() { iframe.src = 'about:blank'; }, 350);
+
+        setTimeout(function() {
+          document.body.classList.remove('modal-open');
+          iframe.setAttribute('hidden', '');
+          iframe.src = 'about:blank';
+          placeholder.setAttribute('hidden', '');
+          titleEl.textContent = '';
+        }, closeDuration);
       }
 
       document.querySelectorAll('[data-modal-src]').forEach(function(link) {
@@ -379,10 +506,22 @@
         });
       });
 
+      document.querySelectorAll('[data-modal-open]').forEach(function(trigger) {
+        function activate(e) {
+          if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;
+          e.preventDefault();
+          e.stopPropagation();
+          openModal(null, trigger.getAttribute('data-modal-title'));
+        }
+
+        trigger.addEventListener('click', activate);
+        trigger.addEventListener('keydown', activate);
+      });
+
       closeBtn.addEventListener('click', closeModal);
 
       overlay.addEventListener('click', function(e) {
-        if (!panel.contains(e.target)) closeModal();
+        if (e.target === backdrop || e.target === overlay) closeModal();
       });
 
       document.addEventListener('keydown', function(e) {
@@ -391,6 +530,21 @@
     })();
   </script>
 
+  <!-- Musings image lightbox -->
+  <div class="musings-lightbox" id="musings-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="musings-lightbox-backdrop"></div>
+    <button type="button" class="musings-lightbox-close" aria-label="Close preview">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button type="button" class="musings-lightbox-prev" aria-label="Previous image">‹</button>
+    <button type="button" class="musings-lightbox-next" aria-label="Next image">›</button>
+    <div class="musings-lightbox-panel">
+      <img src="" alt="" id="musings-lightbox-img" />
+      <p class="musings-lightbox-caption" id="musings-lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="js/musings-lightbox.js"></script>
   <script src="js/draw-easter-egg.js"></script>
 </body>
 </html>
