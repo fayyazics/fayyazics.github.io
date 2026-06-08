@@ -31,7 +31,7 @@
     </a>
     <nav class="global-nav">
       <a href="index.html" class="active">Work</a>
-      <a href="fun.html">Fun</a>
+      <a href="index.html#musings">Musings</a>
       <a href="about.html">About</a>
     </nav>
   </header>
@@ -268,7 +268,7 @@
                 <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Venice skies photo"><img src="css/images/venicesky.jpg" alt="" loading="lazy" decoding="async" /></button>
                 <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Campanile photo"><img src="css/images/campanile.jpg" alt="" loading="lazy" decoding="async" /></button>
               </div>
-              <a href="fun.html#photography" class="musings-gallery-link">View full gallery →</a>
+              <a href="photography.html" class="musings-gallery-link">View full gallery →</a>
             </div>
           </li>
         </ul>
@@ -431,6 +431,16 @@
 
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
+
+      if (window.location.hash) {
+        var hashTarget = document.querySelector(window.location.hash);
+        if (hashTarget) {
+          hashTarget.classList.add('is-visible');
+          requestAnimationFrame(function() {
+            hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        }
+      }
     })();
   </script>
   <!-- Project modal -->
