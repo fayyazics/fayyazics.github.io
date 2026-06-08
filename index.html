@@ -88,7 +88,7 @@
               </p>
               <p class="experience-desc">Building product analytics from core features to Session Replay and Experiment — including AI-first workflows and web experimentation.</p>
               <div class="experience-projects-row experience-projects-row--primary">
-                <div id="ai-first-experimentation" class="project-tile project-tile--featured project-tile--ai" data-modal-open data-modal-title="Experimentation" role="button" tabindex="0" aria-haspopup="dialog">
+                <div id="ai-first-experimentation" class="project-tile project-tile--featured project-tile--ai" data-modal-open data-modal-title="Experimentation" data-modal-description="Experimentation is Amplitude's platform for running A/B tests, feature flags, and no-code web experiments. I'm currently leading design across the full product surface, covering everything from experiment creation and targeting rules to results analysis, statistical significance, and an AI-assisted Visual Editor built for growth marketers and PMs." role="button" tabindex="0" aria-haspopup="dialog">
                   <div class="project-tile-inner">
                     <span class="project-label">Experimentation</span>
                     <p class="project-desc">Simplifying workflows & integrating AI touchpoints</p>
@@ -97,7 +97,7 @@
                     <img src="images/experiment-hero.png" data-gif="images/experiment-hero.gif" alt="" class="project-tile-gif" decoding="async" />
                   </div>
                 </div>
-                <div id="session-replay" class="project-tile project-tile--featured project-tile--session" data-modal-open data-modal-title="Session Replay" role="button" tabindex="0" aria-haspopup="dialog">
+                <div id="session-replay" class="project-tile project-tile--featured project-tile--session" data-modal-open data-modal-title="Session Replay" data-modal-description="Amplitude's tool for watching real user sessions to understand behavior beyond the numbers. I led design from 0 to GA, owning everything from the core player and recordings list to event stream search, AI-powered replay discovery, Heatmaps, and integrations that brought replay into charts, dashboards, notebooks, and Journeys." role="button" tabindex="0" aria-haspopup="dialog">
                   <div class="project-tile-inner">
                     <span class="project-label">Session Replay</span>
                     <p class="project-desc">Reenforcing behavioral data with qualitative context</p>
@@ -106,7 +106,7 @@
                     <img src="images/session-replay-hero.png" data-gif="images/session-replay-hero.gif" alt="" class="project-tile-gif" decoding="async" />
                   </div>
                 </div>
-                <div id="journeys" class="project-tile project-tile--featured project-tile--journeys" data-modal-open data-modal-title="Journeys" role="button" tabindex="0" aria-haspopup="dialog">
+                <div id="journeys" class="project-tile project-tile--featured project-tile--journeys" data-modal-open data-modal-title="Journeys" data-modal-description="Amplitude's chart for visualizing the paths users take through a product, from first touch to conversion and beyond. I led the design consolidation of Amplitude's fragmented pathing tools into a unified Journeys chart experience, taking it through alpha, open beta, and GA, including research, directed graph explorations, and the integration that let teams jump from a journey path directly into a session replay." role="button" tabindex="0" aria-haspopup="dialog">
                   <div class="project-tile-inner">
                     <span class="project-label">Journeys</span>
                     <p class="project-desc">Analyze how users flow through your product</p>
@@ -454,7 +454,8 @@
       <iframe class="project-modal-iframe" id="project-modal-iframe" title="Case study" hidden></iframe>
       <div class="project-modal-placeholder" id="project-modal-placeholder" hidden>
         <h2 class="project-modal-title" id="project-modal-title"></h2>
-        <p class="project-modal-coming-soon">Coming soon</p>
+        <p class="project-modal-description" id="project-modal-description" hidden></p>
+        <p class="project-modal-coming-soon">More details to come</p>
         <div class="project-modal-preview">
           <img class="project-modal-gif" id="project-modal-gif" src="" alt="" hidden />
         </div>
@@ -468,6 +469,7 @@
       var iframe = document.getElementById('project-modal-iframe');
       var placeholder = document.getElementById('project-modal-placeholder');
       var titleEl = document.getElementById('project-modal-title');
+      var descEl = document.getElementById('project-modal-description');
       var gifEl = document.getElementById('project-modal-gif');
       var closeBtn = overlay.querySelector('.project-modal-close');
       var panel = overlay.querySelector('.project-modal-panel');
@@ -487,6 +489,17 @@
           iframe.src = 'about:blank';
           placeholder.removeAttribute('hidden');
           titleEl.textContent = title || '';
+
+          var description = trigger && trigger.getAttribute('data-modal-description');
+          if (descEl) {
+            if (description) {
+              descEl.textContent = description;
+              descEl.removeAttribute('hidden');
+            } else {
+              descEl.textContent = '';
+              descEl.setAttribute('hidden', '');
+            }
+          }
 
           var previewImg = trigger && trigger.querySelector('img[data-gif]');
           if (gifEl && previewImg) {
@@ -525,6 +538,10 @@
           iframe.src = 'about:blank';
           placeholder.setAttribute('hidden', '');
           titleEl.textContent = '';
+          if (descEl) {
+            descEl.textContent = '';
+            descEl.setAttribute('hidden', '');
+          }
           if (gifEl) {
             gifEl.setAttribute('hidden', '');
             gifEl.src = '';
