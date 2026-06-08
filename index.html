@@ -1,275 +1,561 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fayyaz Mukarram — Work</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
 
-	<link rel="shortcut icon" href="images/shortcut-icon.png">
-	
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Typography: DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/component.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
-	<link rel="stylesheet" href="css/animated-bg.css"> <!-- Resource style -->
-	<script type="text/javascript">
-		!function()
-			{"use strict";
-				!function(e,t){
-					var n=e.amplitude||{_q:[],_iq:{}};
-						if(n.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");
-						
-						else{var r=function(e,t){e.prototype[t]=function(){
-							
-							return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,n){
-							
-							return function(r){e._q.push({name:t,args:Array.prototype.slice.call(n,0),resolve:r})}},o=function(e,t,n){e[t]=function(){if(n)
-								
-								return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);
-									for(var n=0;n<g.length;n++)o(e,g[n],!0)};
-									n.invoked=!0;var u=t.createElement("script");
-									u.type="text/javascript",u.integrity="sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};
-									var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);
-									for(var c=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;
-									l<p.length;l++)r(c,p[l]);n.Identify=c;
-									for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);
-									n.Revenue=d;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];
-									i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
-		
-	</script>
-	<script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.7-min.js.gz"></script>
-	<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz"></script>
-	<script>
-	window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14')
-	const sessionReplayTracking = window.sessionReplay.plugin({
-		sampleRate: 1,
-	});
-	window.amplitude.add(sessionReplayTracking);
-	</script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/draw-easter-egg.css">
 
-	<script>  
-		window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14', {      
-			autocapture: { elementInteractions: true }  
-		});
-	</script>
-
-	<script type="text/javascript" src="https://cdn.amplitude.com/script/1ce437130da0f6268eb2efbf0375ee14.experiment.js"></script>
-	
-	<script src="js/analytics.js"></script> <!-- Custom Analytics -->
-	<script src="js/modernizr.js"></script> <!-- Modernizer -->
-	<script src="js/parallax.js"></script>  
-	
-  	
-	<title>Fayyaz Mukarram | Portfolio</title>
+  <link rel="stylesheet" href="css/portfolio-gate.css">
+  <!-- Amplitude: Analytics, Web Experiment, Feature Flags -->
+  <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.7-min.js.gz"></script>
+  <script src="https://cdn.amplitude.com/script/1ce437130da0f6268eb2efbf0375ee14.experiment.js"></script>
+  <script src="js/experiment-browser.min.js"></script>
+  <script src="js/amplitude-setup.js"></script>
+  <script src="js/portfolio-gate.js"></script>
+  <script src="js/analytics.js"></script>
 </head>
-<body>
-	<header class="cd-header">
-		<div class="cd-logo">
-			<a href="https://fayyazmukarram.com">
-				<p class="home-logo">FAYYAZ M.</p>
-			</a>
-		</div>
+<body class="work-page">
+  <header class="work-header" id="global-header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Fayyaz Mukarram" class="logo-img" />
+      <span class="logo-text">Fayyaz M.</span>
+    </a>
+    <nav class="global-nav">
+      <a href="index.html" class="active">Work</a>
+      <a href="index.html#musings">Musings</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
-		<nav>
-		<a href="#0">
-			<i class="cd-menu-icon"></i>
-		</a>
+  <div class="work-layout">
+    <main class="work-main">
+      <!-- Hero -->
+      <section class="work-hero">
+        <div class="hero-profile-deck" aria-label="Profile photos">
+          <div class="hero-profile-card">
+            <img src="images/profile.png" alt="Fayyaz Mukarram" />
+          </div>
+          <div class="hero-profile-card" aria-hidden="true">
+            <img src="images/profile-mountain.png" alt="" />
+          </div>
+          <div class="hero-profile-card" aria-hidden="true">
+            <img src="images/profile-bridge.png" alt="" />
+          </div>
+          <div class="hero-profile-card" aria-hidden="true">
+            <img src="images/profile-colosseum.png" alt="" />
+          </div>
+        </div>
+        <div class="hero-name-row">
+          <h1 class="hero-name">Fayyaz Mukarram</h1>
+          <ul class="hero-socials t-avatar-group" aria-label="Social links">
+            <li class="cd-social cd-instagram t-avatar"><a href="https://www.instagram.com/fayyaz.svg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"></a></li>
+            <li class="cd-social cd-linkedin t-avatar"><a href="https://www.linkedin.com/in/fayyazm" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a></li>
+            <li class="cd-social cd-twitter t-avatar"><a href="https://twitter.com/fayyazics" target="_blank" rel="noopener noreferrer" aria-label="Twitter"></a></li>
+          </ul>
+        </div>
+        <p class="hero-title">Product Designer</p>
+        <p class="hero-bio">
+          I've been designing for 10+ years with an emphasis on complex SaaS products across early stage startups and
+          scaleups. I'm currently a Principal Designer at <a href="https://amplitude.com" class="hero-brand-pill" target="_blank" rel="noopener noreferrer" aria-label="Amplitude"><span class="hero-brand-pill-label">Amplitude</span><img src="images/amplitude-logo.svg" alt="" width="28" height="28" /></a>,
+          building the future of product analytics and experimentation. My past experience includes design roles at Chorus.ai,
+          Dynamic Signal, LSVP, and Localwise after studying CS and HCI at UC Berkeley.</p>
+      </section>
 
-		<ul>
-			<li><a href="https://fayyazmukarram.com/index.html#contact">Contact</a></li>
-			<li><a href="https://fayyazmukarram.com/photography.html">Photography</a></li>
-			<li><a href="https://fayyazmukarram.com/index.html#projects">Projects</a></li>
-			<li><a href="https://fayyazmukarram.com">Home</a></li>
-		</ul>
+      <!-- Experience -->
+      <section class="work-experience" id="experience">
+        <h2 class="experience-label">Experience</h2>
+        <p class="experience-intro">Here's a brief overview of my journey.</p>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <span class="experience-dates">2021 — NOW</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Principal Designer at
+                <a href="https://amplitude.com" class="experience-brand-pill" target="_blank" rel="noopener noreferrer">
+                  <img src="images/amplitude-logo.svg" alt="" width="28" height="28" />
+                  <span>Amplitude</span>
+                </a>
+              </p>
+              <p class="experience-desc">Building product analytics from core features to Session Replay and Experiment — including AI-first workflows and web experimentation.</p>
+              <div class="experience-projects-row experience-projects-row--primary">
+                <div id="ai-first-experimentation" class="project-tile project-tile--featured project-tile--ai" data-modal-open data-modal-title="Experimentation" role="button" tabindex="0" aria-haspopup="dialog">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Experimentation</span>
+                    <p class="project-desc">Simplifying workflows & integrating AI touchpoints</p>
+                  </div>
+                  <div class="project-tile-visual">
+                    <img src="images/experiment-hero.png" data-gif="images/experiment-hero.gif" alt="" class="project-tile-gif" decoding="async" />
+                  </div>
+                </div>
+                <div id="session-replay" class="project-tile project-tile--featured project-tile--session" data-modal-open data-modal-title="Session Replay" role="button" tabindex="0" aria-haspopup="dialog">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Session Replay</span>
+                    <p class="project-desc">Reenforcing behavioral data with qualitative context</p>
+                  </div>
+                  <div class="project-tile-visual">
+                    <img src="images/session-replay-hero.png" data-gif="images/session-replay-hero.gif" alt="" class="project-tile-gif" decoding="async" />
+                  </div>
+                </div>
+                <div id="journeys" class="project-tile project-tile--featured project-tile--journeys" data-modal-open data-modal-title="Journeys" role="button" tabindex="0" aria-haspopup="dialog">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Journeys</span>
+                    <p class="project-desc">Analyze how users flow through your product</p>
+                  </div>
+                  <div class="project-tile-visual">
+                    <img src="images/journeys-hero.png" data-gif="images/journeys-hero.gif" alt="" class="project-tile-gif" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <span class="experience-dates">2019 — 2021</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Product Designer at
+                <a href="https://www.zoominfo.com/products/chorus?ch_source=chorus" class="experience-brand-pill" target="_blank" rel="noopener noreferrer">
+                  <img src="images/chorus-app-icon.svg" alt="" width="28" height="28" />
+                  <span>Chorus.ai</span>
+                </a>
+              </p>
+              <p class="experience-desc">Redesigned the iOS app and homepage for meeting prep and call review on-the-go. Later acquired by ZoomInfo.</p>
+              <div class="experience-projects-row experience-projects-row--secondary">
+                <a href="chorusmobile.html" id="chorus-ios" class="project-tile project-tile--chorus-ios" data-modal-src="chorusmobile.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">iOS Redesign</span>
+                    <p class="project-desc">Meeting prep &amp; call review on-the-go</p>
+                  </div>
+                </a>
+                <a href="chorushomepage.html" id="chorus-homepage" class="project-tile project-tile--chorus-hp" data-modal-src="chorushomepage.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Homepage</span>
+                    <p class="project-desc">Delivering the right content to you</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <span class="experience-dates">2017 — 2019</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Product Designer at
+                <a href="https://firstup.io/platform/employee-app/" class="experience-brand-pill" target="_blank" rel="noopener noreferrer">
+                  <img src="images/DS-App-Icon.svg" alt="" width="28" height="28" />
+                  <span>Dynamic Signal</span>
+                </a>
+              </p>
+              <p class="experience-desc">Led the mobile redesign and Quick Polls — lightweight employee feedback at scale. Later rebranded to FirstUp.</p>
+              <div class="experience-projects-row experience-projects-row--secondary">
+                <a href="quickpolls.html" id="quickpolls" class="project-tile project-tile--quickpolls" data-modal-src="quickpolls.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Quick Polls</span>
+                    <p class="project-desc">Get meaningful feedback from your employees</p>
+                  </div>
+                </a>
+                <a href="mobileredesign.html" id="mobile-redesign" class="project-tile project-tile--mobile" data-modal-src="mobileredesign.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Mobile Redesign</span>
+                    <p class="project-desc">Receive company news &amp; updates on-the-go</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="experience-item">
+            <span class="experience-dates">Summer 2016</span>
+            <div class="experience-detail">
+              <p class="experience-role">
+                Product Designer at
+                <span class="experience-brand-pill">
+                  <img src="images/LS-App-Icon.svg" alt="" width="28" height="28" />
+                  <span>LSVP</span>
+                </span>
+              </p>
+              <p class="experience-desc">Designed Agrity, a bid tracking console for complex agricultural workflows.</p>
+              <div class="experience-projects-row experience-projects-row--secondary experience-projects-row--single">
+                <a href="agrity.html" id="agrity" class="project-tile project-tile--agrity" data-modal-src="agrity.html">
+                  <div class="project-tile-inner">
+                    <span class="project-label">Agrity Bid Tracking Console</span>
+                    <p class="project-desc">Create and manage your agricultural bids</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-		</nav>
+      <!-- Musings -->
+      <section class="work-musings" id="musings">
+        <h2 class="musings-label">Musings</h2>
+        <p class="musings-intro">Things I've been tinkering with on the side.</p>
+        <ul class="musings-list">
+          <li class="musings-item">
+            <span class="musings-category">Latte art</span>
+            <div class="musings-detail">
+              <p class="musings-desc">I recently got into latte art and have gotten pretty decent at it — still chasing that perfect rosetta.</p>
+              <div class="musings-image-row" data-lightbox-group="latte-art" aria-label="Recent latte art">
+                <button type="button" class="musings-thumb" aria-label="View latte art with heart pattern"><img src="images/musings/latte-01.png" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb" aria-label="View latte art tulip in speckled mug"><img src="images/musings/latte-02.png" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb" aria-label="View latte art in blue ceramic mug"><img src="images/musings/latte-03.png" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb" aria-label="View latte art with natural light"><img src="images/musings/latte-04.png" alt="" loading="lazy" decoding="async" /></button>
+              </div>
+            </div>
+          </li>
+          <li class="musings-item">
+            <span class="musings-category">Photography</span>
+            <div class="musings-detail">
+              <p class="musings-desc">I've always enjoyed photography and now use it as an excuse to snap more pics of my daughter. I recently upgraded to mirrorless and I'm having fun relearning the craft.</p>
+            </div>
+          </li>
+          <li class="musings-item">
+            <span class="musings-category">Vibe coding</span>
+            <div class="musings-detail">
+              <p class="musings-desc">Vibe coding games for the nostalgia and sharing with my younger cousins.</p>
+              <div class="musings-chips">
+                <a href="dx-ball.html" class="musings-chip" target="_blank" rel="noopener">
+                  <span class="musings-chip-label">DX Ball</span>
+                  <span class="musings-chip-preview" aria-hidden="true">
+                    <span class="musings-chip-preview-image"><img src="images/dx-ball.png" alt="" loading="lazy" decoding="async" /></span>
+                    <span class="musings-chip-preview-meta">
+                      <span class="musings-chip-preview-title">DX Ball</span>
+                      <span class="musings-chip-preview-desc">Retro game</span>
+                    </span>
+                  </span>
+                </a>
+                <a href="bigtwo.html" class="musings-chip" target="_blank" rel="noopener">
+                  <span class="musings-chip-label">Big Two</span>
+                  <span class="musings-chip-preview" aria-hidden="true">
+                    <span class="musings-chip-preview-image"><img src="images/bigtwo.png" alt="" loading="lazy" decoding="async" /></span>
+                    <span class="musings-chip-preview-meta">
+                      <span class="musings-chip-preview-title">Big Two</span>
+                      <span class="musings-chip-preview-desc">Card game</span>
+                    </span>
+                  </span>
+                </a>
+                <a href="bluebear.html" class="musings-chip" target="_blank" rel="noopener">
+                  <span class="musings-chip-label">Blue Bear</span>
+                  <span class="musings-chip-preview" aria-hidden="true">
+                    <span class="musings-chip-preview-image"><img src="images/bbcover.jpg" alt="" loading="lazy" decoding="async" /></span>
+                    <span class="musings-chip-preview-meta">
+                      <span class="musings-chip-preview-title">Blue Bear</span>
+                      <span class="musings-chip-preview-desc">iMessage stickers</span>
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="musings-item">
+            <span class="musings-category">Gallery</span>
+            <div class="musings-detail">
+              <p class="musings-desc">A sampling from my photography over the years — landscapes, long exposures, and quiet moments.</p>
+              <div class="musings-photo-preview" data-lightbox-group="gallery" aria-label="Photography preview">
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Golden Gate Bridge photo"><img src="css/images/goldengate.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Yosemite photo"><img src="css/images/yosemite.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View beach reflections photo"><img src="css/images/santacruz.JPG" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View blood moon photo"><img src="css/images/blood_moon.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Venice skies photo"><img src="css/images/venicesky.jpg" alt="" loading="lazy" decoding="async" /></button>
+                <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Campanile photo"><img src="css/images/campanile.jpg" alt="" loading="lazy" decoding="async" /></button>
+              </div>
+              <a href="photography.html" class="musings-gallery-link">View full gallery →</a>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-	</header>
+      <footer class="work-footer">
+        <p>Designed and developed by Fayyaz Mukarram · <a href="mailto:fayyazmukarram@gmail.com">Say hi</a></p>
+      </footer>
+    </main>
+  </div>
 
+  <script>
+    (function() {
+      var header = document.getElementById('global-header');
+      var hero = document.querySelector('.work-hero');
+      var sections = document.querySelectorAll('.work-section, .work-experience, .work-musings');
 
-<!-- Section 1 (Hello World) -->
-<!-- <canvas id="demo-canvas" id="cd-container"></canvas> -->
+      if (hero) setTimeout(function() { hero.classList.add('is-visible'); }, 80);
 
-	<main id="more" class="cd-main-content" style="margin: 8rem 0rem 3rem 0rem;">									
-			<div class="cd-container">
-				<h1>Hi 👋🏽, I'm Fayyaz</h1>
-				<p>
-					I'm a Product Designer / Photographer / NBA Superfan / LA Native 
-					based in SF and currently working at 
-					<a href="https://amplitude.com/"style="font-weight: 400">Amplitude</a>. 
-					My past experience includes roles at Chorus.ai, Dynamic Signal, LSVP, and Localwise after studying CS and HCI
-					at UC Berkeley. 
-				</p>
-				<ul style="padding-top:10px">
-					<!-- <li class="cd-social cd-facebook"><a href="https://www.facebook.com/fayyaz.mukarram"></a></li> -->
-					<li class="cd-social cd-instagram"><a href="https://www.instagram.com/fayyaz.svg/"></a></li>
-					<li class="cd-social cd-linkedin"><a href="https://www.linkedin.com/in/fayyazm"></a></li>
-					<li class="cd-social cd-twitter"><a href="https://twitter.com/fayyazics"></a></li>
-				</ul>	
-			</div>	
-	</main>
+      (function avatarGroupHover() {
+        var group = document.querySelector('.hero-socials.t-avatar-group');
+        if (!group) return;
 
-	<a id="projects" name="projects"></a>
+        var items = group.querySelectorAll('.t-avatar');
+        var lift = -4;
+        var scale = 1.05;
+        var falloff = 0.45;
+        var easeIn = 'cubic-bezier(0.22, 1, 0.36, 1)';
+        var easeOut = 'cubic-bezier(0.34, 3.85, 0.64, 1)';
 
-		<div class="cd-container-more-about" style="background: #fff;">
-			<div class="row">
-				<div class="col-md-8 breadcrumb">
+        function reset() {
+          items.forEach(function(el) {
+            el.style.transitionTimingFunction = easeOut;
+            el.style.setProperty('--shift', '0px');
+            el.style.setProperty('--scale-active', '1');
+          });
+        }
 
-					<a href="https://fayyazmukarram.com/chorusmobile">
-						<div class="cd-container-clmn-11">
-							<div style="text-align: left; margin: 30px 30px;">
-								<h1 class="project-title">CHORUS iOS REDESIGN</h1>
-									<p>Meeting prep & call review on-the-go</p>
-							</div>
-						</div>
-					</a>	
+        items.forEach(function(item, activeIdx) {
+          item.addEventListener('mouseenter', function() {
+            items.forEach(function(el, i) {
+              var distance = Math.abs(i - activeIdx);
+              var shift = lift * Math.pow(falloff, distance);
+              el.style.transitionTimingFunction = easeIn;
+              el.style.setProperty('--shift', shift.toFixed(3) + 'px');
+              el.style.setProperty('--scale-active', i === activeIdx ? String(scale) : '1');
+            });
+          });
+        });
 
-					<div class="col-md-6 breadcrumb">
-						<a href="https://fayyazmukarram.com/chorushomepage">
-							<div class="cd-container-clmn-9">
-								<div style="text-align: left; margin: 30px 30px;">
-									<h1 class="project-title">CHORUS HOMEPAGE</h1>
-									<p>Delivering the right content to you</p>
-								</div>
-							</div>
-						</a>
-					</div>
+        group.addEventListener('mouseleave', reset);
+      })();
 
-					<div class="col-md-6 breadcrumb">
-						<a href="https://fayyazmukarram.com/agrity">
-							<div class="cd-container-clmn-10">
-								<div style="text-align: left; margin: 30px 30px">
-										<h1 class="project-title">AGRITY BID TRACKING CONSOLE [LSVP]</h1>
-										<p>Create and manage your agricultural bids</p>
-								</div>
-							</div>								
-						</a>
-					</div>
-	
+      (function projectGifHover() {
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reducedMotion) return;
 
-				</div>
-				
-				<div class="col-md-4 breadcrumb">
+        document.querySelectorAll('img.project-tile-gif').forEach(function(img) {
+          var gif = img.getAttribute('data-gif');
+          var still = img.getAttribute('src');
+          if (!gif || !still) return;
 
-					<a href="https://fayyazmukarram.com/quickpolls">
-						<div class="cd-container-clmn-12">
-							<div style="text-align: left; margin: 30px 30px">
-								<h1 class="project-title">DYNAMIC SIGNAL QUICK POLLS</h1>
-								<p>Get meaningful feedback from your employees</p>
-							</div>
-						</div>
-					</a>
+          var tile = img.closest('.project-tile');
+          if (!tile) return;
 
+          var preloader = new Image();
+          preloader.src = gif;
 
-					<div class="col-md-12 breadcrumb">
+          tile.addEventListener('mouseenter', function() {
+            var gifSrc = gif + '?' + Date.now();
+            var loader = new Image();
+            loader.onload = function() {
+              img.src = gifSrc;
+            };
+            loader.src = gifSrc;
+          });
 
-						<a href="https://fayyazmukarram.com/mobileredesign">
-							<div class="cd-container-clmn-14">
-								<div style="text-align: left; margin: 30px 30px">
-									<h1 class="project-title">DYNAMIC SIGNAL MOBILE REDESIGN</h1>
-									<p>Receive company news & updates on-the-go</p>
-								</div>
-							</div>
-						</a>
+          tile.addEventListener('mouseleave', function() {
+            img.src = still;
+          });
+        });
+      })();
 
-					</div>
+      (function experienceProjectRowHover() {
+        document.querySelectorAll('.experience-projects-row').forEach(function(row) {
+          var tiles = Array.prototype.slice.call(row.querySelectorAll('.project-tile'));
+          if (!tiles.length) return;
 
-					<div class="breadcrumb">
-						<a href="https://fayyazmukarram.com/bluebear">
-							<div class="cd-container-clmn-13">
-								<div style="text-align: left; margin: 30px 30px;">
-									<h1 class="project-title">BLUE BEAR iMESSAGE STICKERS</h1>
-									<p>Humor your iMessage convos with Blue Bear</p>
-								</div>
-							</div>
-						</a>
-					</div>
+          var collapseTimer = null;
+          var enteringTimer = null;
 
-				</div>
+          function applyActive(index) {
+            row.setAttribute('data-active', String(index));
+            tiles.forEach(function(tile, i) {
+              tile.classList.toggle('is-active', i === index);
+            });
+          }
 
-			</div>
+          function clearActive() {
+            row.removeAttribute('data-active');
+            row.classList.remove('is-entering');
+            tiles.forEach(function(tile) {
+              tile.classList.remove('is-active');
+            });
+          }
 
-		</div>
+          function setActive(index) {
+            clearTimeout(collapseTimer);
+            clearTimeout(enteringTimer);
 
-<!-- Section 2 (Contact) -->
+            if (index < 0) {
+              clearActive();
+              return;
+            }
 
-<a id="contact" name="contact"></a>
+            var wasInactive = !row.hasAttribute('data-active');
 
-<section class="contact-image">
-		<div class="cd-container">
-			<h1>Let's chat</h1>
-			<p class="lead sup">If you're interested in working with me, I'd love to hear from you! You can reach me at <strong>fayyazmukarram@gmail.com</strong></p>
-		</div>
-</section>
+            if (wasInactive) {
+              row.classList.add('is-entering');
+              requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                  applyActive(index);
+                });
+              });
+              enteringTimer = setTimeout(function() {
+                row.classList.remove('is-entering');
+              }, 950);
+              return;
+            }
 
-<div class="mb80">
-	</div>
-</div>
+            row.classList.remove('is-entering');
+            applyActive(index);
+          }
 
-<!-- Section 5 (Footer) -->
-		
-		<div class="footer bg-dark">
-			<div class="footer-content">
-				<div class="col-md-12 text-center">
-					<div>© 2023 Designed and Developed by Fayyaz Mukarram</div>
-				</div>
-			</div>
-		</div>
+          tiles.forEach(function(tile, index) {
+            tile.addEventListener('mouseenter', function() {
+              setActive(index);
+            });
+          });
 
-<a id="contact"></a>
-		
-	</main>
+          row.addEventListener('mouseleave', function() {
+            collapseTimer = setTimeout(function() {
+              setActive(-1);
+            }, 120);
+          });
+        });
+      })();
 
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        if (y > 60) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
-
-		<script src="js/TweenLite.min.js"></script>
-		<script src="js/EasePack.min.js"></script>
-		<script src="js/rAF.js"></script>
-		<script src="js/demo-1.js"></script>
-
-<!-- Script for smooth scrolling -->
-<script>
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+        sections.forEach(function(section) {
+          var rect = section.getBoundingClientRect();
+          var trigger = window.innerHeight * 0.75;
+          if (rect.top < trigger) section.classList.add('is-visible');
+        });
       }
-    }
-  });
-});
 
-	// Append .background-image-holder <img>'s as CSS backgrounds
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-    $('.background-image-holder').each(function() {
-        var imgSrc = $(this).children('img').attr('src');
-        $(this).css('background', 'url("' + imgSrc + '")');
-        $(this).children('img').hide();
-        $(this).css('background-position', 'initial');
-    });
-    
-    // Fade in background images
-	
-	setTimeout(function(){
-		$('.background-image-holder').each(function() {
-			$(this).addClass('fadeIn');
-		});
-    },200);
+      if (window.location.hash) {
+        var hashTarget = document.querySelector(window.location.hash);
+        if (hashTarget) {
+          hashTarget.classList.add('is-visible');
+          requestAnimationFrame(function() {
+            hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        }
+      }
+    })();
+  </script>
+  <!-- Project modal -->
+  <div class="project-modal-overlay" id="project-modal" aria-hidden="true">
+    <div class="project-modal-backdrop"></div>
+    <div class="project-modal-panel">
+      <button class="project-modal-close" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <iframe class="project-modal-iframe" id="project-modal-iframe" title="Case study" hidden></iframe>
+      <div class="project-modal-placeholder" id="project-modal-placeholder" hidden>
+        <h2 class="project-modal-title" id="project-modal-title"></h2>
+        <p class="project-modal-coming-soon">Coming soon</p>
+      </div>
+    </div>
+  </div>
 
-</script>
+  <script>
+    (function() {
+      var overlay = document.getElementById('project-modal');
+      var iframe = document.getElementById('project-modal-iframe');
+      var placeholder = document.getElementById('project-modal-placeholder');
+      var titleEl = document.getElementById('project-modal-title');
+      var closeBtn = overlay.querySelector('.project-modal-close');
+      var panel = overlay.querySelector('.project-modal-panel');
+      var backdrop = overlay.querySelector('.project-modal-backdrop');
+      var closeDuration = 400;
 
+      function openModal(src, title) {
+        if (src) {
+          iframe.removeAttribute('hidden');
+          placeholder.setAttribute('hidden', '');
+          iframe.src = src;
+          iframe.onload = function() {
+            try { iframe.contentDocument.body.classList.add('in-modal'); } catch(e) {}
+          };
+        } else {
+          iframe.setAttribute('hidden', '');
+          iframe.src = 'about:blank';
+          placeholder.removeAttribute('hidden');
+          titleEl.textContent = title || '';
+        }
+
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            overlay.classList.add('is-open');
+          });
+        });
+      }
+
+      function closeModal() {
+        if (!overlay.classList.contains('is-open')) return;
+
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+
+        setTimeout(function() {
+          document.body.classList.remove('modal-open');
+          iframe.setAttribute('hidden', '');
+          iframe.src = 'about:blank';
+          placeholder.setAttribute('hidden', '');
+          titleEl.textContent = '';
+        }, closeDuration);
+      }
+
+      document.querySelectorAll('[data-modal-src]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          openModal(link.getAttribute('data-modal-src'));
+        });
+      });
+
+      document.querySelectorAll('[data-modal-open]').forEach(function(trigger) {
+        function activate(e) {
+          if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;
+          e.preventDefault();
+          e.stopPropagation();
+          openModal(null, trigger.getAttribute('data-modal-title'));
+        }
+
+        trigger.addEventListener('click', activate);
+        trigger.addEventListener('keydown', activate);
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+
+      overlay.addEventListener('click', function(e) {
+        if (e.target === backdrop || e.target === overlay) closeModal();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+      });
+    })();
+  </script>
+
+  <!-- Musings image lightbox -->
+  <div class="musings-lightbox" id="musings-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="musings-lightbox-backdrop"></div>
+    <button type="button" class="musings-lightbox-close" aria-label="Close preview">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button type="button" class="musings-lightbox-prev" aria-label="Previous image">‹</button>
+    <button type="button" class="musings-lightbox-next" aria-label="Next image">›</button>
+    <div class="musings-lightbox-panel">
+      <img src="" alt="" id="musings-lightbox-img" />
+      <p class="musings-lightbox-caption" id="musings-lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="js/musings-lightbox.js"></script>
+  <script src="js/draw-easter-egg.js"></script>
 </body>
 </html>
