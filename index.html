@@ -455,6 +455,9 @@
       <div class="project-modal-placeholder" id="project-modal-placeholder" hidden>
         <h2 class="project-modal-title" id="project-modal-title"></h2>
         <p class="project-modal-coming-soon">Coming soon</p>
+        <div class="project-modal-preview">
+          <img class="project-modal-gif" id="project-modal-gif" src="" alt="" hidden />
+        </div>
       </div>
     </div>
   </div>
@@ -465,12 +468,13 @@
       var iframe = document.getElementById('project-modal-iframe');
       var placeholder = document.getElementById('project-modal-placeholder');
       var titleEl = document.getElementById('project-modal-title');
+      var gifEl = document.getElementById('project-modal-gif');
       var closeBtn = overlay.querySelector('.project-modal-close');
       var panel = overlay.querySelector('.project-modal-panel');
       var backdrop = overlay.querySelector('.project-modal-backdrop');
       var closeDuration = 400;
 
-      function openModal(src, title) {
+      function openModal(src, title, trigger) {
         if (src) {
           iframe.removeAttribute('hidden');
           placeholder.setAttribute('hidden', '');
@@ -483,6 +487,20 @@
           iframe.src = 'about:blank';
           placeholder.removeAttribute('hidden');
           titleEl.textContent = title || '';
+
+          var previewImg = trigger && trigger.querySelector('img[data-gif]');
+          if (gifEl && previewImg) {
+            var gif = previewImg.getAttribute('data-gif');
+            var still = previewImg.getAttribute('src');
+            var useStill = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            gifEl.src = useStill && still ? still : gif || still || '';
+            gifEl.alt = title ? title + ' preview' : '';
+            gifEl.removeAttribute('hidden');
+          } else if (gifEl) {
+            gifEl.setAttribute('hidden', '');
+            gifEl.src = '';
+            gifEl.alt = '';
+          }
         }
 
         overlay.setAttribute('aria-hidden', 'false');
@@ -507,6 +525,11 @@
           iframe.src = 'about:blank';
           placeholder.setAttribute('hidden', '');
           titleEl.textContent = '';
+          if (gifEl) {
+            gifEl.setAttribute('hidden', '');
+            gifEl.src = '';
+            gifEl.alt = '';
+          }
         }, closeDuration);
       }
 
@@ -522,7 +545,7 @@
           if (e.type === 'keydown' && e.key !== 'Enter' && e.key !== ' ') return;
           e.preventDefault();
           e.stopPropagation();
-          openModal(null, trigger.getAttribute('data-modal-title'));
+          openModal(null, trigger.getAttribute('data-modal-title'), trigger);
         }
 
         trigger.addEventListener('click', activate);
