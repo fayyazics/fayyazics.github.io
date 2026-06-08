@@ -1895,9 +1895,35 @@ a.project-tile:hover,
   padding: 3rem 2rem;
   text-align: center;
   box-sizing: border-box;
+  gap: 0.625rem;
 }
 
 .project-modal-placeholder[hidden] {
+  display: none !important;
+}
+
+.project-modal-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 32rem);
+  margin-top: 1.5rem;
+}
+
+.project-modal-gif {
+  display: block;
+  width: 100%;
+  max-width: 32rem;
+  max-height: min(38vh, 22rem);
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 28px rgba(26, 35, 48, 0.08);
+  object-fit: contain;
+  background: var(--color-bg-alt);
+}
+
+.project-modal-gif[hidden] {
   display: none !important;
 }
 
@@ -1908,11 +1934,11 @@ a.project-tile:hover,
   line-height: 1.25;
   letter-spacing: -0.01em;
   color: var(--color-text);
-  margin: 0 0 0.75rem;
+  margin: 0;
 }
 
 .project-modal-coming-soon {
-  font-size: var(--text-body);
+  font-size: var(--text-body-sm);
   color: var(--color-text-muted);
   margin: 0;
 }
