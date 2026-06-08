@@ -16,7 +16,14 @@
     return { x: e.clientX, y: e.clientY };
   }
 
+  var mobileQuery = window.matchMedia('(max-width: 640px)');
+
+  function isMobile() {
+    return mobileQuery.matches;
+  }
+
   function init() {
+    var drawModeEnabled = !isMobile();
     var canvas = document.createElement('canvas');
     canvas.className = 'draw-canvas';
     canvas.width = window.innerWidth;
@@ -58,7 +65,12 @@
       lastPoint = { x: x, y: y };
     }
 
+    function canDraw() {
+      return !isMobile() || drawModeEnabled;
+    }
+
     function handleStart(e) {
+      if (!canDraw()) return;
       var el = document.elementFromPoint(e.clientX, e.clientY);
       if (isClickable(el)) return;
       e.preventDefault();
@@ -74,7 +86,11 @@
 
     function handleMove(e) {
       var el = document.elementFromPoint(e.clientX, e.clientY);
-      document.body.classList.toggle('draw-mode', !isClickable(el));
+      if (canDraw()) {
+        document.body.classList.toggle('draw-mode', !isClickable(el));
+      } else {
+        document.body.classList.remove('draw-mode');
+      }
       if (drawing && lastPoint) {
         var coords = getCoords(e);
         draw(coords.x, coords.y);
@@ -113,6 +129,7 @@
       return { x: t.clientX, y: t.clientY };
     }
     document.addEventListener('touchstart', function(e) {
+      if (!canDraw()) return;
       var el = document.elementFromPoint(e.touches[0].clientX, e.touches[0].clientY);
       if (isClickable(el)) return;
       e.preventDefault();
@@ -126,7 +143,9 @@
       lastPoint = getTouchCoords(e);
     }, { passive: false });
     document.addEventListener('touchmove', function(e) {
+      if (!canDraw()) return;
       if (drawing && lastPoint) {
+        e.preventDefault();
         var coords = getTouchCoords(e);
         draw(coords.x, coords.y);
       }
@@ -137,6 +156,8 @@
     var toolbar = document.createElement('div');
     toolbar.className = 'draw-toolbar';
     toolbar.innerHTML = [
+      '<button class="draw-toggle-btn" title="Tap to draw on the page" aria-label="Toggle draw mode" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>',
+      '<span class="draw-divider draw-toggle-divider"></span>',
       '<div class="draw-colors">',
       PRESET_COLORS.map(function(c, i) {
         return '<button class="draw-color-swatch' + (i === 0 ? ' active' : '') + '" data-color="' + c + '" style="background:' + c + '" title="Color ' + (i + 1) + '"></button>';
@@ -154,6 +175,60 @@
     ].join('');
 
     document.body.appendChild(toolbar);
+
+    var toggleBtn = toolbar.querySelector('.draw-toggle-btn');
+    var mobileHint = null;
+
+    function dismissHint() {
+      if (!mobileHint) return;
+      mobileHint.classList.remove('visible');
+      try { localStorage.setItem('draw-hint-seen', '1'); } catch (err) { /* private browsing */ }
+    }
+
+    function updateDrawModeUI() {
+      toggleBtn.classList.toggle('active', drawModeEnabled);
+      toggleBtn.setAttribute('aria-pressed', drawModeEnabled ? 'true' : 'false');
+      toggleBtn.title = drawModeEnabled
+        ? 'Draw mode on — tap to scroll'
+        : 'Tap to draw on the page';
+      document.body.classList.toggle('draw-enabled', drawModeEnabled);
+      if (!canDraw()) {
+        document.body.classList.remove('draw-mode');
+        handleEnd();
+      }
+    }
+
+    toggleBtn.addEventListener('click', function() {
+      drawModeEnabled = !drawModeEnabled;
+      updateDrawModeUI();
+      dismissHint();
+    });
+
+    if (isMobile()) {
+      try {
+        if (!localStorage.getItem('draw-hint-seen')) {
+          mobileHint = document.createElement('div');
+          mobileHint.className = 'draw-mobile-hint';
+          mobileHint.textContent = 'Tap the pencil to doodle';
+          mobileHint.setAttribute('role', 'status');
+          document.body.appendChild(mobileHint);
+          requestAnimationFrame(function() {
+            mobileHint.classList.add('visible');
+          });
+        }
+      } catch (err) { /* private browsing */ }
+    }
+
+    mobileQuery.addEventListener('change', function(e) {
+      if (e.matches) {
+        drawModeEnabled = false;
+      } else {
+        drawModeEnabled = true;
+      }
+      updateDrawModeUI();
+    });
+
+    updateDrawModeUI();
 
     var swatches = toolbar.querySelectorAll('.draw-color-swatch');
     var wheelBtn = toolbar.querySelector('.draw-color-wheel-btn');
