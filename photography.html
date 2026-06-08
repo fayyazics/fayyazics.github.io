@@ -1,241 +1,83 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="icon" href="images/favicon.png" type="image/png">
-	
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/component.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/animated-bg.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="css/main.css" />
-	<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
-	<script src="js/modernizr.js"></script> <!-- Modernizer -->
-
-		<script type="text/javascript">
-		!function()
-			{"use strict";
-				!function(e,t){
-					var n=e.amplitude||{_q:[],_iq:{}};
-						if(n.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");
-						
-						else{var r=function(e,t){e.prototype[t]=function(){
-							
-							return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,n){
-							
-							return function(r){e._q.push({name:t,args:Array.prototype.slice.call(n,0),resolve:r})}},o=function(e,t,n){e[t]=function(){if(n)
-								
-								return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<m.length;t++)o(e,m[t],!1);
-									for(var n=0;n<g.length;n++)o(e,g[n],!0)};
-									n.invoked=!0;var u=t.createElement("script");
-									u.type="text/javascript",u.integrity="sha384-x0ik2D45ZDEEEpYpEuDpmj05fY91P7EOZkgdKmq4dKL/ZAVcufJ+nULFtGn0HIZE",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-2.0.0-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};
-									var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);
-									for(var c=function(){return this._q=[],this},p=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],l=0;
-									l<p.length;l++)r(c,p[l]);n.Identify=c;
-									for(var d=function(){return this._q=[],this},f=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],v=0;v<f.length;v++)r(d,f[v]);
-									n.Revenue=d;var m=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset","extendSession"],g=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];
-									i(n),n.createInstance=function(e){return n._iq[e]={_q:[]},i(n._iq[e]),n._iq[e]},e.amplitude=n}}(window,document)}();
-		
-	</script>
-	<script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.7-min.js.gz"></script>
-	<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz"></script>
-	<script>
-	window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14')
-	const sessionReplayTracking = window.sessionReplay.plugin({
-		sampleRate: 1,
-	});
-	window.amplitude.add(sessionReplayTracking);
-	</script>
-
-	<script>  
-		window.amplitude.init('1ce437130da0f6268eb2efbf0375ee14', {      
-			autocapture: { elementInteractions: true }  
-		});
-	</script>
-
-	<script type="text/javascript" src="https://cdn.amplitude.com/script/1ce437130da0f6268eb2efbf0375ee14.experiment.js"></script>
-
-	<script src="js/analytics.js"></script> <!-- Custom Analytics -->
-	<script src="js/modernizr.js"></script> <!-- Modernizer -->
-  	
-	<title>Fayyaz Mukarram | Photography</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fayyaz Mukarram — Photography</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/photography.css">
 </head>
-<body class="is-loading-0 is-loading-1 is-loading-2">
-<!-- Section 1 -->
+<body class="work-page photo-page">
+  <header class="work-header" id="global-header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Fayyaz Mukarram" class="logo-img" />
+      <span class="logo-text">Fayyaz M.</span>
+    </a>
+    <nav class="global-nav">
+      <a href="index.html">Work</a>
+      <a href="index.html#musings">Musings</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
-<div id="main">
+  <div class="work-layout">
+    <main class="work-main photo-main">
+      <a href="index.html" class="photo-back-link">← Back to home</a>
 
-					<div id="header">
-						<h1>#fmphotography</h1>
-						<a href="https://instagram.com/fayyaz.svg"><p>IG: @fayyaz.svg</p></a>
-						<ul class="icons">
-							<li><a href="https://fayyazmukarram.com">Home</span></a></li>
-							<li><a href="https://fayyazmukarram.com/index.html#projects">Projects</span></a></li>
-							<li><a href="https://fayyazmukarram.com/index.html#contact">Contact Me</span></a></li>
-						</ul>
-					</div>
+      <section class="photo-section">
+        <p class="section-label">#fmphotography</p>
+        <h1>Photography</h1>
+        <p class="photo-intro">A collection of landscapes, long exposures, and quiet moments from over the years — Bay Area skylines, road trips, and the occasional blood moon.</p>
+        <p class="photo-gear">These days my go-to setup is a <strong>Nikon Z series</strong> body with a <strong>40mm prime lens.</strong> It's small enough to bring everywhere, sharp enough to trust on a hike or a slow morning at home.</p>
+        <p class="photo-follow">More on <a href="https://instagram.com/fayyaz.svg" target="_blank" rel="noopener">Instagram @fayyaz.svg</a></p>
 
-				<!-- Thumbnail -->
-					<section id="thumbnails">
-						<article>
-							<a class="thumbnail" href="css/images/goldengate.jpg" data-position="center"><img src="css/images/goldengate.jpg" alt="" /></a>
-							<h2>golden gate bridge</h2>
-							<p>Nikon D7000 f/18 ISO 100 Exposure 1/30</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/santacruz.JPG" data-position="center"><img src="css/images/santacruz.JPG" alt="" /></a>
-							<h2>beach reflections</h2>
-							<p>Nikon D7000 f/11 ISO 800 Exposure 120/2500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/sunrise.JPG" data-position="center"><img src="css/images/sunrise.JPG" alt="" /></a>
-							<h2>sunrise</h2>
-							<p>Nikon D7000 f/20 ISO 100 Exposure 60/2500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/venicesky.jpg" data-position="center"><img src="css/images/venicesky.jpg" alt="" /></a>
-							<h2>Venice Skies</h2>
-							<p>Nikon D7000 f/10 ISO 100 Exposure 60/2500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/baybridge2.JPG" data-position="center"><img src="css/images/baybridge2.JPG" alt="" /></a>
-							<h2>another bridge</h2>
-							<p>Nikon D7000 f/15 ISO 100 Exposure 1/30</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/longexposure.JPG" data-position="center"><img src="css/images/longexposure.JPG" alt="" /></a>
-							<h2>long exposure</h2>
-							<p>Nikon D7000 f/10 ISO 100 Exposure 1/30</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/marin.JPG" data-position="center"><img src="css/images/marin.JPG" alt="" /></a>
-							<h2>marin sets</h2>
-							<p>Nikon D7000 f/10 ISO 600 Exposure 120/2500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/pier-39.jpg" data-position="center"><img src="css/images/pier-39.jpg" alt="" /></a>
-							<h2>pier 39</h2>
-							<p>Nikon D7000 f/8 ISO 140 Exposure 10/2500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/chitown.jpg" data-position="center"><img src="css/images/chitown.jpg" alt="" /></a>
-							<h2>chi town</h2>
-							<p>Canon EOS Rebel T2i f/5.6 ISO 6400 Exposure 1/40</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/skyline.jpg" data-position="center"><img src="css/images/skyline.jpg" alt="" /></a>
-							<h2>skyline</h2>
-							<p>Nikon D7000 f/9 ISO 100 Exposure 300/10</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/cordonices.jpg" data-position="center center"><img src="css/images/cordonices.jpg" alt="" /></a>
-							<h2>skies&sunsets</h2>
-							<p>Nikon D7000 f/2.4 ISO 100 Exposure 1/170</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/longdrive.JPG" data-position="center"><img src="css/images/longdrive.JPG" alt="" /></a>
-							<h2>the long drive</h2>
-							<p>Nikon D7000 f/8 ISO 180 Exposure 10/2500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/blood_moon.jpg" data-position="center"><img src="css/images/blood_moon.jpg" alt="" /></a>
-							<h2>blood moon</h2>
-							<p>Nikon D7000</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/berkeley_marina.jpg" data-position="center"><img src="css/images/berkeley_marina.jpg" alt="" /></a>
-							<h2>the marina</h2>
-							<p>Nikon D7000 f/11 ISO 100 Exposure 10/1600</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/fallshowers.jpg" data-position="center"><img src="css/images/fallshowers.jpg" alt="" /></a>
-							<h2>fall showers</h2>
-							<p>Canon EOS Rebel T2i f/5.6 ISO 2500 Exposure 1/400</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/campanile.jpg" data-position="center"><img src="css/images/campanile.jpg" alt="" /></a>
-							<h2>campanile</h2>
-							<p>Nikon D7000 f/9 ISO 100 Exposure 300/10</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/desktopsky.jpg" data-position="center"><img src="css/images/desktopsky.jpg" alt="" /></a>
-							<h2>desktop skies</h2>
-							<p>Nikon D7000 f/2.4 ISO 100 Exposure 1/500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/stars&bridges.jpg" data-position="center"><img src="css/images/stars&bridges.jpg" alt="" /></a>
-							<h2>stars&bridges</h2>
-							<p>Nikon D7000 f/4.5 ISO 400 Exposure 25/10</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/yosemite.jpg" data-position="center"><img src="css/images/yosemite.jpg" alt="" /></a>
-							<h2>yosemite</h2>
-							<p>Nikon D7000 f/18 ISO 100 Exposure 1/10</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/humming.jpg" data-position="center"><img src="css/images/humming.jpg" alt="" /></a>
-							<h2>humming</h2>
-							<p>Nikon D7000 f/5.6 ISO 800 Exposure 10/8000</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/passiflora.jpg" data-position="center"><img src="css/images/passiflora.jpg" alt="" /></a>
-							<h2>passiflora</h2>
-							<p>Canon EOS Rebel T2i f/5.6 ISO 800 Exposure 1/500</p>
-						</article>
-						<article>
-							<a class="thumbnail" href="css/images/baybridge.jpg" data-position="center"><img src="css/images/baybridge.jpg" alt="" /></a>
-							<h2>bay bridge</h2>
-							<p>Nikon D7000 f/2.4 ISO 100 Exposure 1/100</p>
-						</article>
-					</section>
+        <div class="photo-grid">
+          <div class="photo-tile" data-title="golden gate bridge"><img src="css/images/goldengate.jpg" alt="Golden Gate Bridge" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="beach reflections"><img src="css/images/santacruz.JPG" alt="Beach reflections" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="sunrise"><img src="css/images/sunrise.JPG" alt="Sunrise" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="Venice Skies"><img src="css/images/venicesky.jpg" alt="Venice Skies" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="another bridge"><img src="css/images/baybridge2.JPG" alt="Another bridge" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="long exposure"><img src="css/images/longexposure.JPG" alt="Long exposure" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="marin sets"><img src="css/images/marin.JPG" alt="Marin sets" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="pier 39"><img src="css/images/pier-39.jpg" alt="Pier 39" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="chi town"><img src="css/images/chitown.jpg" alt="Chi town" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="skyline"><img src="css/images/skyline.jpg" alt="Skyline" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="skies & sunsets"><img src="css/images/cordonices.jpg" alt="Skies and sunsets" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="the long drive"><img src="css/images/longdrive.JPG" alt="The long drive" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="blood moon"><img src="css/images/blood_moon.jpg" alt="Blood moon" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="the marina"><img src="css/images/berkeley_marina.jpg" alt="The marina" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="fall showers"><img src="css/images/fallshowers.jpg" alt="Fall showers" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="campanile"><img src="css/images/campanile.jpg" alt="Campanile" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="desktop skies"><img src="css/images/desktopsky.jpg" alt="Desktop skies" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="stars & bridges"><img src="css/images/stars&amp;bridges.jpg" alt="Stars and bridges" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="yosemite"><img src="css/images/yosemite.jpg" alt="Yosemite" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="humming"><img src="css/images/humming.jpg" alt="Humming" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="passiflora"><img src="css/images/passiflora.jpg" alt="Passiflora" loading="lazy" decoding="async" /></div>
+          <div class="photo-tile" data-title="bay bridge"><img src="css/images/baybridge.jpg" alt="Bay bridge" loading="lazy" decoding="async" /></div>
+        </div>
+      </section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; 2018 Designed and Developed by Fayyaz Mukarram</li>
-						</ul>
-					</footer>
+      <footer class="work-footer">
+        <p><a href="index.html">← Back to home</a></p>
+      </footer>
+    </main>
+  </div>
 
-			</div>
-	</main>
+  <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true">
+    <button class="photo-lightbox-close" aria-label="Close">×</button>
+    <button class="photo-lightbox-prev" aria-label="Previous">‹</button>
+    <button class="photo-lightbox-next" aria-label="Next">›</button>
+    <div class="photo-lightbox-content">
+      <img src="" alt="" />
+      <p class="photo-lightbox-title"></p>
+    </div>
+  </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
-
-		<script src="js/TweenLite.min.js"></script>
-		<script src="js/EasePack.min.js"></script>
-		<script src="js/rAF.js"></script>
-		<script src="js/demo-1.js"></script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/main.js"></script>
-
-<!-- Script for smooth scrolling -->
-<script>
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-</script>
-
+  <script src="js/photography.js"></script>
 </body>
 </html>
