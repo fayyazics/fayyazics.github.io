@@ -572,7 +572,7 @@ body.work-page .section-label {
 
 /* ----- Experience section ----- */
 .work-experience {
-  padding: var(--space-lg) var(--space-xl) var(--space-3xl);
+  padding: var(--space-lg) var(--space-xl) var(--space-2xl);
   max-width: var(--max-content);
   margin: 0 auto;
 }
@@ -609,6 +609,14 @@ body.work-page .section-label {
 .work-experience .experience-item:first-child {
   border-top: none;
   padding-top: 0;
+}
+
+.work-experience .experience-item:last-child {
+  padding-bottom: 0;
+}
+
+.work-experience .experience-item:last-child .experience-desc {
+  margin-bottom: 0;
 }
 
 .work-experience .experience-dates {
