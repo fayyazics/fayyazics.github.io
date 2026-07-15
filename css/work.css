@@ -2226,7 +2226,17 @@ body.modal-open {
   }
 
   .work-hero .hero-profile-deck {
-    --profile-card-size: 5.25rem;
+    --profile-card-gap: 0.5rem;
+    /* Fit all four cards inside the viewport so expand never causes horizontal scroll */
+    --profile-card-size: min(
+      5.25rem,
+      calc((100vw - 2 * var(--space-md) - 3 * var(--profile-card-gap)) / 4)
+    );
+  }
+
+  /* Keep layout width fixed; only the absolute cards fan out */
+  .work-hero .hero-profile-deck.is-expanded {
+    width: var(--profile-card-size);
   }
 
   .work-hero .hero-profile-card {
