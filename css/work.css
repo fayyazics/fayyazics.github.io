@@ -2174,8 +2174,27 @@ body.modal-open {
     --space-3xl: 6rem;
   }
 
+  html,
+  body.work-page {
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    max-width: 100%;
+  }
+
   .work-header {
     padding: var(--space-sm) var(--space-md);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .work-layout,
+  .work-main {
+    max-width: 100%;
+  }
+
+  .work-hero {
+    max-width: 100%;
+    overflow-x: clip;
   }
 
   .work-hero,
