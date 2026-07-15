@@ -342,7 +342,16 @@ body.work-page .section-label {
   cursor: pointer;
 }
 
-.work-hero .hero-profile-deck:hover {
+@media (hover: hover) and (pointer: fine) {
+  .work-hero .hero-profile-deck:hover {
+    width: calc(
+      var(--profile-card-count) * var(--profile-card-size) +
+      (var(--profile-card-count) - 1) * var(--profile-card-gap)
+    );
+  }
+}
+
+.work-hero .hero-profile-deck.is-expanded {
   width: calc(
     var(--profile-card-count) * var(--profile-card-size) +
     (var(--profile-card-count) - 1) * var(--profile-card-gap)
@@ -397,22 +406,44 @@ body.work-page .section-label {
   transition-delay: 0ms;
 }
 
-.work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(1) {
+@media (hover: hover) and (pointer: fine) {
+  .work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(1) {
+    transform: translateX(calc(0 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
+    transition-delay: 0ms;
+  }
+
+  .work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(2) {
+    transform: translateX(calc(1 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
+    transition-delay: 45ms;
+  }
+
+  .work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(3) {
+    transform: translateX(calc(2 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
+    transition-delay: 90ms;
+  }
+
+  .work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(4) {
+    transform: translateX(calc(3 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
+    transition-delay: 135ms;
+  }
+}
+
+.work-hero .hero-profile-deck.is-expanded .hero-profile-card:nth-child(1) {
   transform: translateX(calc(0 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
   transition-delay: 0ms;
 }
 
-.work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(2) {
+.work-hero .hero-profile-deck.is-expanded .hero-profile-card:nth-child(2) {
   transform: translateX(calc(1 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
   transition-delay: 45ms;
 }
 
-.work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(3) {
+.work-hero .hero-profile-deck.is-expanded .hero-profile-card:nth-child(3) {
   transform: translateX(calc(2 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
   transition-delay: 90ms;
 }
 
-.work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(4) {
+.work-hero .hero-profile-deck.is-expanded .hero-profile-card:nth-child(4) {
   transform: translateX(calc(3 * (var(--profile-card-size) + var(--profile-card-gap)))) rotate(0deg);
   transition-delay: 135ms;
 }
@@ -423,11 +454,13 @@ body.work-page .section-label {
     transition: none;
   }
 
-  .work-hero .hero-profile-deck:hover {
+  .work-hero .hero-profile-deck:hover,
+  .work-hero .hero-profile-deck.is-expanded {
     width: var(--profile-card-size);
   }
 
-  .work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(n) {
+  .work-hero .hero-profile-deck:hover .hero-profile-card:nth-child(n),
+  .work-hero .hero-profile-deck.is-expanded .hero-profile-card:nth-child(n) {
     transform: none;
     transition-delay: 0ms;
   }
@@ -572,7 +605,7 @@ body.work-page .section-label {
 
 /* ----- Experience section ----- */
 .work-experience {
-  padding: var(--space-lg) var(--space-xl) var(--space-3xl);
+  padding: var(--space-lg) var(--space-xl) var(--space-2xl);
   max-width: var(--max-content);
   margin: 0 auto;
 }
@@ -609,6 +642,14 @@ body.work-page .section-label {
 .work-experience .experience-item:first-child {
   border-top: none;
   padding-top: 0;
+}
+
+.work-experience .experience-item:last-child {
+  padding-bottom: 0;
+}
+
+.work-experience .experience-item:last-child .experience-desc {
+  margin-bottom: 0;
 }
 
 .work-experience .experience-dates {
@@ -2133,8 +2174,27 @@ body.modal-open {
     --space-3xl: 6rem;
   }
 
+  html,
+  body.work-page {
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    max-width: 100%;
+  }
+
   .work-header {
     padding: var(--space-sm) var(--space-md);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .work-layout,
+  .work-main {
+    max-width: 100%;
+  }
+
+  .work-hero {
+    max-width: 100%;
+    overflow-x: clip;
   }
 
   .work-hero,
@@ -2185,7 +2245,17 @@ body.modal-open {
   }
 
   .work-hero .hero-profile-deck {
-    --profile-card-size: 5.25rem;
+    --profile-card-gap: 0.5rem;
+    /* Fit all four cards inside the viewport so expand never causes horizontal scroll */
+    --profile-card-size: min(
+      5.25rem,
+      calc((100vw - 2 * var(--space-md) - 3 * var(--profile-card-gap)) / 4)
+    );
+  }
+
+  /* Keep layout width fixed; only the absolute cards fan out */
+  .work-hero .hero-profile-deck.is-expanded {
+    width: var(--profile-card-size);
   }
 
   .work-hero .hero-profile-card {
@@ -2243,6 +2313,11 @@ body.modal-open {
     opacity: 1;
   }
 
+  .experience-projects-row--primary .project-tile--featured.is-active {
+    outline: 2px solid rgba(26, 35, 48, 0.12);
+    outline-offset: 2px;
+  }
+
   .experience-projects-row--primary .project-tile--featured.is-active .project-tile-visual img {
     transform: none;
     filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.14));
@@ -2254,6 +2329,25 @@ body.modal-open {
     overflow: visible;
     text-overflow: clip;
     min-height: 0;
+  }
+
+  /* Secondary tiles: full-bleed images collide with overlay copy on narrow screens */
+  .experience-projects-row--secondary .project-desc {
+    display: none;
+  }
+
+  .experience-projects-row--secondary .project-tile {
+    background-position: center bottom;
+  }
+
+  .experience-projects-row--secondary .project-tile-inner {
+    padding-bottom: 0.75rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 255, 255, 0.55) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 }
 

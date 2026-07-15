@@ -16,8 +16,9 @@
   <link rel="stylesheet" href="css/draw-easter-egg.css">
 
   <link rel="stylesheet" href="css/portfolio-gate.css">
-  <!-- Amplitude: Analytics, Web Experiment, Feature Flags -->
-  <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.7-min.js.gz"></script>
+  <!-- Amplitude: Analytics, Session Replay, Web Experiment, Feature Flags -->
+  <script src="https://cdn.amplitude.com/libs/analytics-browser-2.44.6-min.js.gz"></script>
+  <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.33.2-min.js.gz"></script>
   <script src="https://cdn.amplitude.com/script/1ce437130da0f6268eb2efbf0375ee14.experiment.js"></script>
   <script src="js/experiment-browser.min.js"></script>
   <script src="js/amplitude-setup.js"></script>
@@ -41,7 +42,7 @@
     <main class="work-main">
       <!-- Hero -->
       <section class="work-hero">
-        <div class="hero-profile-deck" aria-label="Profile photos">
+        <div class="hero-profile-deck" role="button" tabindex="0" aria-expanded="false" aria-label="View profile photos">
           <div class="hero-profile-card">
             <img src="images/profile.png" alt="Fayyaz Mukarram" />
           </div>
@@ -183,14 +184,6 @@
                 </span>
               </p>
               <p class="experience-desc">Designed Agrity, a bid tracking console for complex agricultural workflows.</p>
-              <div class="experience-projects-row experience-projects-row--secondary experience-projects-row--single">
-                <a href="agrity.html" id="agrity" class="project-tile project-tile--agrity" data-modal-src="agrity.html">
-                  <div class="project-tile-inner">
-                    <span class="project-label">Agrity Bid Tracking Console</span>
-                    <p class="project-desc">Create and manage your agricultural bids</p>
-                  </div>
-                </a>
-              </div>
             </div>
           </li>
         </ul>
@@ -222,7 +215,7 @@
           <li class="musings-item">
             <span class="musings-category">Vibe coding</span>
             <div class="musings-detail">
-              <p class="musings-desc">Vibe coding games for the nostalgia and sharing with my younger cousins.</p>
+              <p class="musings-desc">Building games and side projects for the nostalgia</p>
               <div class="musings-chips">
                 <a href="dx-ball.html" class="musings-chip" target="_blank" rel="noopener">
                   <span class="musings-chip-label">DX Ball</span>
@@ -308,52 +301,102 @@
           });
         }
 
+        function activate(activeIdx) {
+          items.forEach(function(el, i) {
+            var distance = Math.abs(i - activeIdx);
+            var shift = lift * Math.pow(falloff, distance);
+            el.style.transitionTimingFunction = easeIn;
+            el.style.setProperty('--shift', shift.toFixed(3) + 'px');
+            el.style.setProperty('--scale-active', i === activeIdx ? String(scale) : '1');
+          });
+        }
+
         items.forEach(function(item, activeIdx) {
           item.addEventListener('mouseenter', function() {
-            items.forEach(function(el, i) {
-              var distance = Math.abs(i - activeIdx);
-              var shift = lift * Math.pow(falloff, distance);
-              el.style.transitionTimingFunction = easeIn;
-              el.style.setProperty('--shift', shift.toFixed(3) + 'px');
-              el.style.setProperty('--scale-active', i === activeIdx ? String(scale) : '1');
-            });
+            activate(activeIdx);
           });
+          item.addEventListener('focus', function() {
+            activate(activeIdx);
+          });
+          item.addEventListener('blur', reset);
         });
 
         group.addEventListener('mouseleave', reset);
       })();
 
-      (function projectGifHover() {
-        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reducedMotion) return;
+      (function profileDeckInteraction() {
+        var deck = document.querySelector('.hero-profile-deck');
+        if (!deck) return;
 
-        document.querySelectorAll('img.project-tile-gif').forEach(function(img) {
-          var gif = img.getAttribute('data-gif');
-          var still = img.getAttribute('src');
-          if (!gif || !still) return;
+        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-          var tile = img.closest('.project-tile');
-          if (!tile) return;
+        function setExpanded(open) {
+          if (reducedMotion.matches) open = false;
+          deck.classList.toggle('is-expanded', open);
+          deck.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
 
-          var preloader = new Image();
-          preloader.src = gif;
+        function toggleExpanded() {
+          setExpanded(!deck.classList.contains('is-expanded'));
+        }
 
-          tile.addEventListener('mouseenter', function() {
-            var gifSrc = gif + '?' + Date.now();
-            var loader = new Image();
-            loader.onload = function() {
-              img.src = gifSrc;
-            };
-            loader.src = gifSrc;
-          });
+        deck.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (finePointer.matches) return;
+          toggleExpanded();
+        });
 
-          tile.addEventListener('mouseleave', function() {
-            img.src = still;
-          });
+        deck.addEventListener('keydown', function(e) {
+          if (e.key !== 'Enter' && e.key !== ' ') return;
+          e.preventDefault();
+          toggleExpanded();
+        });
+
+        document.addEventListener('click', function() {
+          if (!finePointer.matches) setExpanded(false);
+        });
+
+        finePointer.addEventListener('change', function() {
+          setExpanded(false);
         });
       })();
 
-      (function experienceProjectRowHover() {
+      (function projectTileInteractions() {
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+        function playGif(tile) {
+          if (reducedMotion) return;
+          var img = tile.querySelector('img.project-tile-gif');
+          if (!img) return;
+          var gif = img.getAttribute('data-gif');
+          var still = img.getAttribute('data-still') || img.getAttribute('src');
+          if (!gif || !still) return;
+          img.setAttribute('data-still', still);
+          var gifSrc = gif + '?' + Date.now();
+          var loader = new Image();
+          loader.onload = function() {
+            img.src = gifSrc;
+          };
+          loader.src = gifSrc;
+        }
+
+        function stopGif(tile) {
+          var img = tile.querySelector('img.project-tile-gif');
+          if (!img) return;
+          var still = img.getAttribute('data-still');
+          if (still) img.src = still;
+        }
+
+        document.querySelectorAll('img.project-tile-gif').forEach(function(img) {
+          var gif = img.getAttribute('data-gif');
+          if (gif) {
+            var preloader = new Image();
+            preloader.src = gif;
+          }
+        });
+
         document.querySelectorAll('.experience-projects-row').forEach(function(row) {
           var tiles = Array.prototype.slice.call(row.querySelectorAll('.project-tile'));
           if (!tiles.length) return;
@@ -364,7 +407,10 @@
           function applyActive(index) {
             row.setAttribute('data-active', String(index));
             tiles.forEach(function(tile, i) {
-              tile.classList.toggle('is-active', i === index);
+              var active = i === index;
+              tile.classList.toggle('is-active', active);
+              if (active) playGif(tile);
+              else stopGif(tile);
             });
           }
 
@@ -373,6 +419,7 @@
             row.classList.remove('is-entering');
             tiles.forEach(function(tile) {
               tile.classList.remove('is-active');
+              stopGif(tile);
             });
           }
 
@@ -404,17 +451,70 @@
             applyActive(index);
           }
 
-          tiles.forEach(function(tile, index) {
-            tile.addEventListener('mouseenter', function() {
-              setActive(index);
+          function bindFinePointer() {
+            tiles.forEach(function(tile, index) {
+              tile.addEventListener('mouseenter', tile._onEnter = function() {
+                setActive(index);
+              });
             });
-          });
+            row.addEventListener('mouseleave', row._onLeave = function() {
+              collapseTimer = setTimeout(function() {
+                setActive(-1);
+              }, 120);
+            });
+          }
 
-          row.addEventListener('mouseleave', function() {
-            collapseTimer = setTimeout(function() {
-              setActive(-1);
-            }, 120);
-          });
+          function unbindFinePointer() {
+            tiles.forEach(function(tile) {
+              if (tile._onEnter) tile.removeEventListener('mouseenter', tile._onEnter);
+            });
+            if (row._onLeave) row.removeEventListener('mouseleave', row._onLeave);
+          }
+
+          function bindTouchPointer() {
+            tiles.forEach(function(tile, index) {
+              tile.addEventListener('click', tile._onTap = function(e) {
+                var alreadyActive = tile.classList.contains('is-active');
+                var hasGif = !!tile.querySelector('img.project-tile-gif');
+                var canExpand = window.matchMedia('(min-width: 769px)').matches;
+                var shouldPreview = hasGif || canExpand;
+
+                if (!alreadyActive && shouldPreview) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setActive(index);
+                  return;
+                }
+
+                // Open immediately when there's nothing to preview, or on second tap.
+                setTimeout(function() {
+                  setActive(-1);
+                }, 0);
+              }, true);
+            });
+
+            document.addEventListener('click', row._onDocTap = function(e) {
+              if (!row.contains(e.target)) setActive(-1);
+            });
+          }
+
+          function unbindTouchPointer() {
+            tiles.forEach(function(tile) {
+              if (tile._onTap) tile.removeEventListener('click', tile._onTap, true);
+            });
+            if (row._onDocTap) document.removeEventListener('click', row._onDocTap);
+          }
+
+          function syncPointerMode() {
+            unbindFinePointer();
+            unbindTouchPointer();
+            clearActive();
+            if (finePointer.matches) bindFinePointer();
+            else bindTouchPointer();
+          }
+
+          syncPointerMode();
+          finePointer.addEventListener('change', syncPointerMode);
         });
       })();
 

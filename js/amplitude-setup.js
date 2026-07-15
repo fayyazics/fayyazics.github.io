@@ -1,12 +1,21 @@
-// Amplitude: Analytics init, Web Experiment, and Feature Flags
+// Amplitude: Analytics init, Session Replay, Web Experiment, and Feature Flags
 (function () {
     'use strict';
 
     var API_KEY = '1ce437130da0f6268eb2efbf0375ee14';
     var DEPLOYMENT_KEY = 'client-Vfe82ZGCD6aZVoLOXJA1WosPUStnWJHd';
 
-    if (window.AMPLITUDE_SESSION_REPLAY && window.sessionReplay) {
+    if (!window.amplitude) {
+        console.error('[Amplitude] Browser SDK failed to load');
+        return;
+    }
+
+    // Install Session Replay before init so it shares analytics deviceId/sessionId.
+    // Do not pass deviceId here — overriding it causes device ID mismatch.
+    if (window.sessionReplay && typeof window.sessionReplay.plugin === 'function') {
         window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+    } else {
+        console.warn('[Amplitude] Session Replay plugin not loaded');
     }
 
     window.amplitude.init(API_KEY, {
