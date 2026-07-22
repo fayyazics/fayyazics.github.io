@@ -1,0 +1,217 @@
+/* About page — profile trading card */
+
+.about-content {
+  max-width: 52rem;
+}
+
+.about-intro {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.about-trading-card-wrap {
+  flex-shrink: 0;
+  width: 13.5rem;
+  perspective: 900px;
+}
+
+.about-trading-card {
+  --card-tilt-x: 0deg;
+  --card-tilt-y: 0deg;
+  --shine-x: 50%;
+  --shine-y: 50%;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  transform: rotateX(var(--card-tilt-x)) rotateY(var(--card-tilt-y));
+  transform-style: preserve-3d;
+  transition: transform 0.15s var(--ease-out, ease);
+  will-change: transform;
+}
+
+.about-trading-card-wrap.is-tilting .about-trading-card {
+  transition: transform 0.08s linear;
+}
+
+.about-trading-card__glow {
+  position: absolute;
+  inset: -18%;
+  border-radius: 1.25rem;
+  background: radial-gradient(
+    ellipse at 50% 55%,
+    rgba(0, 82, 204, 0.28) 0%,
+    rgba(0, 82, 204, 0.12) 45%,
+    rgba(26, 26, 26, 0.06) 75%,
+    transparent 100%
+  );
+  filter: blur(22px);
+  opacity: 0.7;
+  z-index: 0;
+  animation: about-card-glow-pulse 4s ease-in-out infinite;
+}
+
+.about-trading-card__frame {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.45rem;
+  border-radius: 0.85rem;
+  background: linear-gradient(145deg, #f5d76e 0%, #c9a227 35%, #f0e68c 65%, #b8860b 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.4),
+    0 8px 32px rgba(0, 82, 204, 0.18),
+    0 4px 16px rgba(26, 26, 26, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.about-trading-card__inner-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: 0.4rem;
+  border-radius: 0.55rem;
+  background: linear-gradient(160deg, #1a2a4a 0%, #0f1a30 100%);
+  box-shadow: inset 0 0 0 2px rgba(192, 192, 220, 0.35);
+}
+
+.about-trading-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding: 0.2rem 0.35rem;
+  border-radius: 0.3rem;
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.18), rgba(255, 215, 0, 0.05));
+  border: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+.about-trading-card__name {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f5f0d8;
+  line-height: 1.2;
+}
+
+.about-trading-card__hp {
+  flex-shrink: 0;
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #ffd700;
+  letter-spacing: 0.04em;
+}
+
+.about-trading-card__image {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  border: 2px solid rgba(255, 215, 0, 0.45);
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.35);
+}
+
+.about-trading-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.about-trading-card__shine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 0.85rem;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--shine-x) var(--shine-y),
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(0, 82, 204, 0.12) 22%,
+    rgba(26, 26, 26, 0.06) 40%,
+    transparent 55%
+  );
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.about-trading-card-wrap.is-tilting .about-trading-card__shine {
+  opacity: 1;
+}
+
+.about-trading-card__footer {
+  margin-top: 0.35rem;
+  padding: 0.3rem 0.35rem;
+  border-radius: 0.3rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.about-trading-card__title {
+  display: block;
+  font-size: 0.52rem;
+  font-weight: 500;
+  color: #c8d4e8;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.about-trading-card__rarity {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.48rem;
+  font-style: italic;
+  color: #7bdcb5;
+}
+
+.about-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-body h1 {
+  margin: 0 0 1.5rem;
+}
+
+.about-intro .bio {
+  min-width: 0;
+}
+
+@keyframes about-card-glow-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(0.98); }
+  50% { opacity: 0.65; transform: scale(1.02); }
+}
+
+@media (max-width: 640px) {
+  .about-intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about-trading-card-wrap {
+    width: 11.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-trading-card {
+    transition: none;
+  }
+
+  .about-trading-card__glow {
+    animation: none;
+    opacity: 0.4;
+  }
+
+  .about-trading-card__shine {
+    display: none;
+  }
+}

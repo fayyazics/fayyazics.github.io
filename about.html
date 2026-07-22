@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/about.css">
   <style>
-    .about-content { max-width: 42rem; margin: 0 auto; padding: 6rem 2rem 4rem; }
-    .about-content h1 { margin: 0 0 1.5rem; }
+    .about-content { margin: 0 auto; padding: 6rem 2rem 4rem; }
     .about-content .bio p { margin: 0 0 1.5rem; color: var(--color-text); }
     .about-content .bio p:last-of-type { margin-bottom: 0; }
     .about-content p { margin: 0 0 1rem; color: var(--color-text); }
@@ -29,6 +29,7 @@
   <script src="js/amplitude-setup.js"></script>
   <script src="js/portfolio-gate.js"></script>
   <script src="js/analytics.js"></script>
+  <script src="js/about-card.js" defer></script>
 </head>
 <body class="work-page">
   <header class="work-header" id="global-header">
@@ -46,9 +47,32 @@
   <div class="work-layout">
     <main class="work-main" style="margin-left: 0;">
       <article class="about-content">
-        <h1>About me</h1>
+        <div class="about-intro">
+          <div class="about-trading-card-wrap">
+            <div class="about-trading-card">
+              <div class="about-trading-card__glow" aria-hidden="true"></div>
+              <div class="about-trading-card__frame">
+                <div class="about-trading-card__inner-panel">
+                  <div class="about-trading-card__header">
+                    <span class="about-trading-card__name">Fayyaz Mukarram</span>
+                    <span class="about-trading-card__hp">PD ★</span>
+                  </div>
+                  <div class="about-trading-card__image">
+                    <img src="images/profile-mountain.png" alt="Fayyaz Mukarram" width="270" height="378" />
+                  </div>
+                  <div class="about-trading-card__footer">
+                    <span class="about-trading-card__title">Product Designer</span>
+                    <span class="about-trading-card__rarity">Holographic · Los Angeles</span>
+                  </div>
+                </div>
+              </div>
+              <div class="about-trading-card__shine" aria-hidden="true"></div>
+            </div>
+          </div>
 
-        <div class="bio">
+          <div class="about-body">
+            <h1>About me</h1>
+            <div class="bio">
           <p>I’m Fayyaz, product designer with 10 years of experience based in Los Angeles, curious about systems, impatient with unnecessary complexity, 
             and convinced the best work starts when you’re willing to put something imperfect in front of a real person 
             early.</p>
@@ -70,6 +94,8 @@
             screens, a few house projects, no agenda). I’m an introvert who genuinely likes collaboration. I show up having 
             already thought about the problem, I share WIP before anyone asks, and I’m often the one saying <em>let’s build 
               it and see</em>. Ask what I’m working on; I’ll send a prototype or a GIF.</p>
+            </div>
+          </div>
         </div>
 
         <div class="contact">
