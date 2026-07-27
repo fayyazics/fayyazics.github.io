@@ -69,14 +69,19 @@
     }
 
     function trackExposure(variantValue) {
-        if (!window.amplitude || !window.amplitude.track) {
-            return;
-        }
-        window.amplitude.track('Portfolio Redesign Flag Evaluated', {
+        var props = {
             flag_key: FLAG_KEY,
             variant: variantValue,
             page_path: window.location.pathname
-        });
+        };
+
+        if (window.amplitude && window.amplitude.track) {
+            window.amplitude.track('Portfolio Redesign Flag Evaluated', props);
+        }
+
+        if (window.PortfolioStatsig && typeof window.PortfolioStatsig.logEvent === 'function') {
+            window.PortfolioStatsig.logEvent('Portfolio Redesign Flag Evaluated', props);
+        }
     }
 
     function applyGate() {
