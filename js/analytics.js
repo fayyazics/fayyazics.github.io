@@ -13,7 +13,7 @@
         }
     }
 
-    // Helper function to track events
+    // Helper function to track events (Amplitude + Statsig dual-write)
     function trackEvent(eventName, eventProperties) {
         waitForAmplitude(function() {
             if (window.amplitude && window.amplitude.track) {
@@ -21,6 +21,16 @@
                 console.log('Amplitude Event:', eventName, eventProperties);
             }
         });
+
+        // Mirror custom events to Statsig for experiment metrics.
+        // Autocapture/session replay stay off on Statsig to avoid duplicate capture.
+        if (window.PortfolioStatsig && typeof window.PortfolioStatsig.logEvent === 'function') {
+            window.PortfolioStatsig.logEvent(eventName, eventProperties);
+            console.log('Statsig Event:', eventName, eventProperties);
+        } else if (window.statsigClient && typeof window.statsigClient.logEvent === 'function') {
+            window.statsigClient.logEvent(eventName, null, eventProperties);
+            console.log('Statsig Event:', eventName, eventProperties);
+        }
     }
 
     // Page view tracking

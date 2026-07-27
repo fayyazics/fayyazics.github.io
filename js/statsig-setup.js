@@ -1,6 +1,6 @@
-// Statsig: feature gates / experiments only.
-// Amplitude remains the source of truth for analytics events and session replay.
-// Do not enable Statsig Auto Capture or Session Replay here.
+// Statsig: feature gates / experiments + manual event logging.
+// Custom events are dual-written from PortfolioAnalytics (see analytics.js).
+// Do not enable Statsig Auto Capture or Session Replay — Amplitude owns those.
 (function () {
     'use strict';
 
@@ -20,6 +20,30 @@
         console.error('[Statsig] initializeAsync failed:', err);
     });
 
+    function toMetadata(properties) {
+        if (!properties || typeof properties !== 'object') {
+            return undefined;
+        }
+        var metadata = {};
+        Object.keys(properties).forEach(function (key) {
+            var value = properties[key];
+            metadata[key] = value == null ? '' : String(value);
+        });
+        return metadata;
+    }
+
+    function logEvent(eventName, value, metadata) {
+        if (!eventName) {
+            return;
+        }
+        // Statsig logEvent(eventName, value, metadata) — value is optional.
+        if (metadata === undefined && value !== null && typeof value === 'object') {
+            client.logEvent(eventName, null, toMetadata(value));
+            return;
+        }
+        client.logEvent(eventName, value == null ? null : value, toMetadata(metadata));
+    }
+
     window.statsigClient = client;
 
     window.PortfolioStatsig = {
@@ -34,6 +58,10 @@
         },
         getDynamicConfig: function (configName) {
             return client.getDynamicConfig(configName);
+        },
+        logEvent: logEvent,
+        flush: function () {
+            return client.flush();
         },
         getClient: function () {
             return client;
