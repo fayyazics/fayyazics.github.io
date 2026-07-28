@@ -23,7 +23,7 @@
   }
 
   function init() {
-    var drawModeEnabled = !isMobile();
+    var drawModeEnabled = false;
     var canvas = document.createElement('canvas');
     canvas.className = 'draw-canvas';
     canvas.width = window.innerWidth;
@@ -66,7 +66,7 @@
     }
 
     function canDraw() {
-      return !isMobile() || drawModeEnabled;
+      return drawModeEnabled;
     }
 
     function handleStart(e) {
@@ -156,7 +156,7 @@
     var toolbar = document.createElement('div');
     toolbar.className = 'draw-toolbar';
     toolbar.innerHTML = [
-      '<button class="draw-toggle-btn" title="Tap to draw on the page" aria-label="Toggle draw mode" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>',
+      '<button class="draw-toggle-btn" title="Draw on the page" aria-label="Toggle draw mode" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></button>',
       '<span class="draw-divider draw-toggle-divider"></span>',
       '<div class="draw-colors">',
       PRESET_COLORS.map(function(c, i) {
@@ -189,8 +189,8 @@
       toggleBtn.classList.toggle('active', drawModeEnabled);
       toggleBtn.setAttribute('aria-pressed', drawModeEnabled ? 'true' : 'false');
       toggleBtn.title = drawModeEnabled
-        ? 'Draw mode on — tap to scroll'
-        : 'Tap to draw on the page';
+        ? (isMobile() ? 'Draw mode on — tap to scroll' : 'Draw mode on — click to turn off')
+        : 'Draw on the page';
       document.body.classList.toggle('draw-enabled', drawModeEnabled);
       if (!canDraw()) {
         document.body.classList.remove('draw-mode');
@@ -219,12 +219,7 @@
       } catch (err) { /* private browsing */ }
     }
 
-    mobileQuery.addEventListener('change', function(e) {
-      if (e.matches) {
-        drawModeEnabled = false;
-      } else {
-        drawModeEnabled = true;
-      }
+    mobileQuery.addEventListener('change', function() {
       updateDrawModeUI();
     });
 

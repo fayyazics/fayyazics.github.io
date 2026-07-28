@@ -29,6 +29,7 @@
   <script src="js/analytics.js"></script>
 </head>
 <body class="work-page">
+  <canvas class="solar-flare" aria-hidden="true"></canvas>
   <header class="work-header" id="global-header">
     <a href="index.html" class="logo">
       <img src="images/logo.png" alt="Fayyaz Mukarram" class="logo-img" />
@@ -192,6 +193,77 @@
         </ul>
       </section>
 
+      <!-- Tool stack -->
+      <section class="work-tool-stack" id="tool-stack">
+        <h2 class="tool-stack-label">Tool stack</h2>
+        <p class="tool-stack-intro">The tools I reach for and where each one earns its keep.</p>
+        <div class="tool-stack-row" aria-label="My tool stack">
+          <div class="tool-stack-item">
+            <button type="button" class="tool-stack-tool" aria-label="Figma" aria-describedby="tool-opinion-figma">
+              <span class="tool-stack-logo"><img src="images/tool-figma.svg" alt="" width="34" height="34" /></span>
+            </button>
+            <span class="tool-stack-tooltip" id="tool-opinion-figma" role="tooltip">
+              <strong class="tool-stack-tooltip-name">Figma</strong>
+              <span>The canvas isn't dead. Sometimes starting from a blank slate without any bias from AI is the best place to be.</span>
+            </span>
+          </div>
+          <div class="tool-stack-item">
+            <button type="button" class="tool-stack-tool" aria-label="Claude Design and Claude Code" aria-describedby="tool-opinion-claude">
+              <span class="tool-stack-logo"><img src="images/tool-claude.svg" alt="" width="34" height="34" /></span>
+            </button>
+            <span class="tool-stack-tooltip" id="tool-opinion-claude" role="tooltip">
+              <strong class="tool-stack-tooltip-name">Claude Design + Code</strong>
+              <span>Design is my idea-generation workhorse once the DS is rebuilt. Code is for quick PRs.</span>
+            </span>
+          </div>
+          <div class="tool-stack-item">
+            <button type="button" class="tool-stack-tool" aria-label="Cursor" aria-describedby="tool-opinion-cursor">
+              <span class="tool-stack-logo"><img src="images/tool-cursor.svg" alt="" width="34" height="34" /></span>
+            </button>
+            <span class="tool-stack-tooltip" id="tool-opinion-cursor" role="tooltip">
+              <strong class="tool-stack-tooltip-name">Cursor</strong>
+              <span>When I'm working on a bigger project and need the IDE.</span>
+            </span>
+          </div>
+          <div class="tool-stack-item">
+            <button type="button" class="tool-stack-tool" aria-label="Wispr Flow" aria-describedby="tool-opinion-wispr-flow">
+              <span class="tool-stack-logo"><img src="images/tool-wispr-flow.png" alt="" width="34" height="34" /></span>
+            </button>
+            <span class="tool-stack-tooltip" id="tool-opinion-wispr-flow" role="tooltip">
+              <strong class="tool-stack-tooltip-name">Wispr Flow</strong>
+              <span>The most accurate voice dictation on the market. Saved me countless times when I'm holding a toddler and can't type.</span>
+            </span>
+          </div>
+          <div class="tool-stack-item">
+            <button type="button" class="tool-stack-tool" aria-label="Granola" aria-describedby="tool-opinion-granola">
+              <span class="tool-stack-logo"><img src="images/tool-granola.svg" alt="" width="34" height="34" /></span>
+            </button>
+            <span class="tool-stack-tooltip" id="tool-opinion-granola" role="tooltip">
+              <strong class="tool-stack-tooltip-name">Granola</strong>
+              <span>Notetaking in meetings was never difficult, but the magic with this tool is the synthesis.</span>
+            </span>
+          </div>
+          <div class="tool-stack-item">
+            <button type="button" class="tool-stack-tool" aria-label="Slack" aria-describedby="tool-opinion-slack">
+              <span class="tool-stack-logo"><img src="images/tool-slack.svg" alt="" width="34" height="34" /></span>
+            </button>
+            <span class="tool-stack-tooltip" id="tool-opinion-slack" role="tooltip">
+              <strong class="tool-stack-tooltip-name">Slack</strong>
+              <span>Love it some days, hate it on others, but it's where teams make the most decisions.</span>
+            </span>
+          </div>
+          <div class="tool-stack-item">
+            <button type="button" class="tool-stack-tool" aria-label="Google Docs" aria-describedby="tool-opinion-google-docs">
+              <span class="tool-stack-logo"><img src="images/tool-google-docs.svg" alt="" width="34" height="34" /></span>
+            </button>
+            <span class="tool-stack-tooltip" id="tool-opinion-google-docs" role="tooltip">
+              <strong class="tool-stack-tooltip-name">Google Docs</strong>
+              <span>Always writing...</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
       <!-- Musings -->
       <section class="work-musings" id="musings">
         <h2 class="musings-label">Musings</h2>
@@ -281,7 +353,7 @@
     (function() {
       var header = document.getElementById('global-header');
       var hero = document.querySelector('.work-hero');
-      var sections = document.querySelectorAll('.work-section, .work-experience, .work-musings');
+      var sections = document.querySelectorAll('.work-section, .work-experience, .work-tool-stack, .work-musings');
 
       if (hero) setTimeout(function() { hero.classList.add('is-visible'); }, 80);
 
@@ -362,6 +434,39 @@
 
         finePointer.addEventListener('change', function() {
           setExpanded(false);
+        });
+      })();
+
+      (function toolStackTooltips() {
+        var items = Array.prototype.slice.call(document.querySelectorAll('.tool-stack-item'));
+        if (!items.length) return;
+
+        function closeAll(except) {
+          items.forEach(function(item) {
+            if (item === except) return;
+            item.classList.remove('is-open');
+            item.querySelector('.tool-stack-tool').setAttribute('aria-expanded', 'false');
+          });
+        }
+
+        items.forEach(function(item) {
+          var button = item.querySelector('.tool-stack-tool');
+          button.setAttribute('aria-expanded', 'false');
+          button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var willOpen = !item.classList.contains('is-open');
+            closeAll(item);
+            item.classList.toggle('is-open', willOpen);
+            button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+          });
+        });
+
+        document.addEventListener('click', function() {
+          closeAll();
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') closeAll();
         });
       })();
 
@@ -699,6 +804,7 @@
   </div>
 
   <script src="js/musings-lightbox.js"></script>
+  <script src="js/solar-flare.js?v=3"></script>
   <script src="js/draw-easter-egg.js"></script>
 </body>
 </html>

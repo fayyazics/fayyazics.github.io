@@ -180,20 +180,12 @@ body.draw-mode.eraser-mode {
   height: 1.125rem;
 }
 
-/* Draw mode toggle — mobile only */
-@media (min-width: 641px) {
-  .draw-toggle-btn,
-  .draw-toggle-divider {
-    display: none;
-  }
+body.draw-enabled .draw-toolbar {
+  border-color: rgba(0, 82, 204, 0.35);
+  box-shadow: 0 4px 24px rgba(0, 82, 204, 0.12);
 }
 
 @media (max-width: 640px) {
-  body.draw-enabled .draw-toolbar {
-    border-color: rgba(0, 82, 204, 0.35);
-    box-shadow: 0 4px 24px rgba(0, 82, 204, 0.12);
-  }
-
   .draw-toolbar {
     bottom: 1rem;
     right: 1rem;
