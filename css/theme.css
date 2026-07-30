@@ -1,0 +1,306 @@
+/*
+ * Shared light/dark theme
+ * The page-specific styles keep ownership of layout; this layer only supplies
+ * color tokens, dark-surface fixes, and the fixed theme control.
+ */
+:root {
+  color-scheme: light;
+  --theme-bg: #fafafa;
+  --theme-bg-elevated: #ffffff;
+  --theme-bg-subtle: #f0f0f0;
+  --theme-text: #1a1a1a;
+  --theme-text-muted: #5c5c5c;
+  --theme-border: #e8e8e8;
+  --theme-accent: #0052cc;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-bg: #101114;
+  --theme-bg-elevated: #191b20;
+  --theme-bg-subtle: #23262d;
+  --theme-text: #f4f5f7;
+  --theme-text-muted: #aeb4bf;
+  --theme-border: #30343c;
+  --theme-accent: #82b4ff;
+
+  /* Tokens used throughout the current portfolio pages. */
+  --color-bg: var(--theme-bg);
+  --color-bg-alt: var(--theme-bg-subtle);
+  --color-text: var(--theme-text);
+  --color-text-muted: var(--theme-text-muted);
+  --color-border: var(--theme-border);
+  --color-accent: var(--theme-accent);
+}
+
+html,
+body {
+  background-color: var(--theme-bg);
+}
+
+:root[data-theme="dark"] body {
+  color: var(--theme-text);
+}
+
+:root[data-theme="dark"] .work-header {
+  background: rgb(16 17 20 / 88%);
+}
+
+:root[data-theme="dark"] .work-header.scrolled {
+  box-shadow: 0 1px 0 rgb(255 255 255 / 4%);
+}
+
+:root[data-theme="dark"] .work-header .logo-img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+:root[data-theme="dark"] .hero-brand-pill,
+:root[data-theme="dark"] .experience-brand-pill,
+:root[data-theme="dark"] .musings-card,
+:root[data-theme="dark"] .project-modal,
+:root[data-theme="dark"] .project-modal-content {
+  background-color: var(--theme-bg-elevated);
+  border-color: var(--theme-border);
+}
+
+:root[data-theme="dark"] .tool-stack-tooltip {
+  color: var(--theme-text);
+  background: #292d35;
+  border: 1px solid rgb(255 255 255 / 10%);
+  box-shadow: 0 12px 34px rgb(0 0 0 / 42%);
+}
+
+:root[data-theme="dark"] .tool-stack-tooltip::after {
+  border-top-color: #292d35;
+}
+
+/* Project tiles retain their individual hues, shifted onto dark surfaces. */
+:root[data-theme="dark"] .project-tile {
+  border: 1px solid rgb(255 255 255 / 7%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+
+:root[data-theme="dark"] .project-tile--ai {
+  background-color: #29263a;
+}
+
+:root[data-theme="dark"] .project-tile--session {
+  background-color: #202a35;
+}
+
+:root[data-theme="dark"] .project-tile--journeys {
+  background-color: #1f2e2a;
+}
+
+:root[data-theme="dark"] .experience-projects-row .project-tile--chorus-ios {
+  background-color: #25282e;
+}
+
+:root[data-theme="dark"] .experience-projects-row .project-tile--chorus-hp {
+  background-color: #2d2925;
+}
+
+:root[data-theme="dark"] .experience-projects-row .project-tile--quickpolls {
+  background-color: #202b33;
+}
+
+:root[data-theme="dark"] .experience-projects-row .project-tile--mobile {
+  background-color: #2c2925;
+}
+
+:root[data-theme="dark"] .experience-projects-row .project-tile--agrity {
+  background-color: #302923;
+}
+
+:root[data-theme="dark"] .project-tile .project-label {
+  color: #aeb6c2;
+}
+
+:root[data-theme="dark"] .project-tile .project-desc {
+  color: #f2f4f7;
+}
+
+:root[data-theme="dark"] .project-tile-visual img {
+  filter: drop-shadow(0 16px 40px rgb(0 0 0 / 34%));
+}
+
+/* Keep every modal close action legible against dark panels and imagery. */
+:root[data-theme="dark"] .project-modal-close,
+:root[data-theme="dark"] .musings-lightbox-close,
+:root[data-theme="dark"] .photo-lightbox-close {
+  color: #f4f5f7;
+  background: rgb(41 45 53 / 94%);
+  border: 1px solid rgb(255 255 255 / 14%);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 38%);
+  opacity: 1;
+  backdrop-filter: blur(10px);
+}
+
+:root[data-theme="dark"] .project-modal-close:hover,
+:root[data-theme="dark"] .musings-lightbox-close:hover,
+:root[data-theme="dark"] .photo-lightbox-close:hover {
+  background: #3a3f49;
+  border-color: rgb(255 255 255 / 24%);
+}
+
+:root[data-theme="dark"] .project-modal-close svg,
+:root[data-theme="dark"] .musings-lightbox-close svg {
+  stroke: #f4f5f7;
+  stroke-width: 2.25;
+}
+
+:root[data-theme="dark"] .photo-lightbox-close {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  place-items: center;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+:root[data-theme="dark"] .project-modal-close:focus-visible,
+:root[data-theme="dark"] .musings-lightbox-close:focus-visible,
+:root[data-theme="dark"] .photo-lightbox-close:focus-visible {
+  outline: 3px solid var(--theme-accent);
+  outline-offset: 3px;
+}
+
+/* Tool icons sit on a true dark-mode square instead of a white tile. */
+:root[data-theme="dark"] .tool-stack-logo {
+  background: #202329;
+  border-color: rgb(255 255 255 / 9%);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 24%),
+    0 8px 24px rgb(0 0 0 / 24%),
+    inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+
+:root[data-theme="dark"] .tool-stack-tool:hover .tool-stack-logo,
+:root[data-theme="dark"] .tool-stack-tool:focus-visible .tool-stack-logo {
+  background: #292d35;
+  border-color: rgb(255 255 255 / 17%);
+  box-shadow:
+    0 2px 4px rgb(0 0 0 / 28%),
+    0 14px 30px rgb(0 0 0 / 38%),
+    inset 0 1px 0 rgb(255 255 255 / 6%);
+}
+
+:root[data-theme="dark"] .philosophy-card,
+:root[data-theme="dark"] .project-gate-card,
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] select {
+  background-color: var(--theme-bg-elevated);
+  color: var(--theme-text);
+  border-color: var(--theme-border);
+}
+
+:root[data-theme="dark"] .project-case-study strong,
+:root[data-theme="dark"] .project-page strong,
+:root[data-theme="dark"] .about-content strong {
+  color: var(--theme-text);
+}
+
+:root[data-theme="dark"] .cast-shadow,
+:root[data-theme="dark"] .project-video,
+:root[data-theme="dark"] .project-case-study video {
+  box-shadow: 0 10px 36px rgb(0 0 0 / 38%);
+}
+
+/* Sensible fallback for older and utility pages that predate the shared tokens. */
+:root[data-theme="dark"] body:not(.work-page) {
+  background: var(--theme-bg) !important;
+  color: var(--theme-text);
+}
+
+:root[data-theme="dark"] body:not(.work-page) main,
+:root[data-theme="dark"] body:not(.work-page) section,
+:root[data-theme="dark"] body:not(.work-page) header,
+:root[data-theme="dark"] body:not(.work-page) footer {
+  border-color: var(--theme-border);
+}
+
+.theme-toggle {
+  position: fixed;
+  left: max(1rem, env(safe-area-inset-left));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 2147483647;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  color: #20232a;
+  background: rgb(255 255 255 / 90%);
+  border: 1px solid rgb(26 35 48 / 14%);
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgb(17 24 39 / 16%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  backdrop-filter: blur(12px);
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) rotate(-8deg);
+  box-shadow: 0 9px 30px rgb(17 24 39 / 22%);
+}
+
+.theme-toggle:active {
+  transform: scale(0.94);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--theme-accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  color: #f8d66d;
+  background: rgb(35 38 45 / 92%);
+  border-color: rgb(255 255 255 / 14%);
+  box-shadow: 0 6px 24px rgb(0 0 0 / 38%);
+}
+
+.theme-transition-circle {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483646;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .theme-toggle {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
