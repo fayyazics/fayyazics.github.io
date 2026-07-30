@@ -48,20 +48,29 @@ body.draw-mode.eraser-mode {
   z-index: 10001;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--color-border, #e8e8e8);
-  border-radius: 12px;
+  border-radius: 50%;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   font-family: var(--font-body, -apple-system, sans-serif);
+  color: var(--color-text, #1a1a1a);
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    border-radius 0.2s,
+    box-shadow 0.2s;
 }
 
 .draw-toolbar::before {
   content: '';
   position: absolute;
   inset: -1px;
-  border-radius: 13px;
+  border-radius: inherit;
   padding: 1px;
   background: linear-gradient(135deg, rgba(0,0,0,0.03), transparent);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -69,6 +78,26 @@ body.draw-mode.eraser-mode {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+/* The idle control is intentionally just one circular pencil button. */
+body:not(.draw-enabled) .draw-toolbar > :not(.draw-toggle-btn) {
+  display: none !important;
+}
+
+body:not(.draw-enabled) .draw-toolbar .draw-toggle-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+body.draw-enabled .draw-toolbar {
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
 }
 
 .draw-toolbar .draw-divider {
@@ -152,7 +181,7 @@ body.draw-mode.eraser-mode {
   bottom: calc(100% + 0.5rem);
   right: 0;
   padding: 0.75rem;
-  background: #fff;
+  background: var(--theme-bg-elevated, #fff);
   border: 1px solid var(--color-border, #e8e8e8);
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -185,10 +214,51 @@ body.draw-enabled .draw-toolbar {
   box-shadow: 0 4px 24px rgba(0, 82, 204, 0.12);
 }
 
+:root[data-theme="dark"] .draw-toolbar {
+  color: var(--theme-text);
+  background: rgb(32 35 41 / 95%);
+  border-color: rgb(255 255 255 / 10%);
+  box-shadow: 0 6px 24px rgb(0 0 0 / 30%);
+}
+
+:root[data-theme="dark"] body.draw-enabled .draw-toolbar {
+  border-color: rgb(130 180 255 / 42%);
+  box-shadow: 0 6px 26px rgb(0 0 0 / 34%);
+}
+
+:root[data-theme="dark"] .draw-toolbar button {
+  color: var(--theme-text);
+}
+
+:root[data-theme="dark"] .draw-toolbar button:hover {
+  background: rgb(255 255 255 / 9%);
+}
+
+:root[data-theme="dark"] .draw-toolbar button.active {
+  color: var(--theme-accent);
+  background: rgb(130 180 255 / 15%);
+}
+
+:root[data-theme="dark"] .draw-toolbar .draw-color-swatch.active {
+  border-color: #f4f5f7;
+  box-shadow: 0 0 0 1px rgb(16 17 20 / 90%);
+}
+
+:root[data-theme="dark"] .draw-toolbar .draw-color-popover {
+  color: var(--theme-text);
+  background: var(--theme-bg-elevated);
+  border-color: var(--theme-border);
+  box-shadow: 0 10px 36px rgb(0 0 0 / 38%);
+}
+
 @media (max-width: 640px) {
   .draw-toolbar {
     bottom: 1rem;
     right: 1rem;
+    gap: 0.35rem;
+  }
+
+  body.draw-enabled .draw-toolbar {
     padding: 0.4rem 0.6rem;
     gap: 0.35rem;
   }

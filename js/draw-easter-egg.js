@@ -194,6 +194,7 @@
       document.body.classList.toggle('draw-enabled', drawModeEnabled);
       if (!canDraw()) {
         document.body.classList.remove('draw-mode');
+        toolbar.querySelector('.draw-color-popover').classList.remove('open');
         handleEnd();
       }
     }
