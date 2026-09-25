@@ -799,11 +799,11 @@ body.work-page .section-label {
 }
 
 .experience-projects-row--secondary[data-active="0"] {
-  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .experience-projects-row--secondary[data-active="1"] {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
 }
 
 .experience-projects-row--secondary .project-tile {
@@ -823,6 +823,7 @@ body.work-page .section-label {
   transition:
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    background-size 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -839,6 +840,7 @@ body.work-page .section-label {
   transition:
     transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.06s,
     box-shadow 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.06s,
+    background-size 0.9s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -930,6 +932,20 @@ body.work-page .section-label {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+
+/* Stated in percent rather than `contain` so it can interpolate while the
+   column width animates — the keyword would snap instead. 100% matches what
+   `contain` resolves to here, since these tiles are always width-constrained. */
+.experience-projects-row--secondary .project-tile:not(.project-tile--featured) {
+  background-size: 100% auto;
+}
+
+/* The active column is 1.125x its resting width; counter-scale the artwork by
+   the same amount, since at full width it outgrows the tile height and rides
+   up behind the label. */
+.experience-projects-row--secondary .project-tile:not(.project-tile--featured).is-active {
+  background-size: 88.9% auto;
 }
 
 .experience-projects-row .project-tile--chorus-ios {
@@ -2562,8 +2578,10 @@ body.modal-open {
     display: none;
   }
 
-  .experience-projects-row--secondary .project-tile {
+  .experience-projects-row--secondary .project-tile:not(.project-tile--featured),
+  .experience-projects-row--secondary .project-tile:not(.project-tile--featured).is-active {
     background-position: center bottom;
+    background-size: contain;
   }
 
   .experience-projects-row--secondary .project-tile-inner {
