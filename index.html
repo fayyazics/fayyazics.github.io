@@ -103,6 +103,17 @@
                   <div class="project-tile-visual">
                     <img src="images/experiment-hero.png" data-gif="images/experiment-hero.gif" alt="" class="project-tile-gif" decoding="async" />
                   </div>
+                  <ul class="project-modal-sources" hidden>
+                    <li data-src="images/experiment/ve-toolbar.gif" data-caption="Toolbar"></li>
+                    <li data-src="images/experiment-hero.gif" data-still="images/experiment-hero.png" data-caption="Activity"></li>
+                    <li data-src="images/experiment/loading-waves.gif" data-caption="Loading waves"></li>
+                    <li data-src="images/experiment/ve-ask-ai.gif" data-caption="Ask AI"></li>
+                    <li data-src="images/experiment/visual-editor.gif" data-caption="Visual Editor"></li>
+                    <li data-src="images/experiment/ve-hover-states.gif" data-caption="Hover states"></li>
+                    <li data-src="images/experiment/regenerate-report.gif" data-caption="Experiment report"></li>
+                    <li data-src="images/experiment/ve-loading.gif" data-caption="Loading state"></li>
+                    <li data-src="images/experiment/duration-estimator.gif" data-caption="Duration estimator"></li>
+                  </ul>
                 </div>
                 <div id="session-replay" class="project-tile project-tile--featured project-tile--session" data-modal-open data-modal-title="Session Replay" data-modal-description="Amplitude's tool for watching real user sessions to understand behavior beyond the numbers. I led design from 0 to GA, owning everything from the core player and recordings list to event stream search, AI-powered replay discovery, Heatmaps, and integrations that brought replay into charts, dashboards, notebooks, and experiment results." role="button" tabindex="0" aria-haspopup="dialog">
                   <div class="project-tile-inner">
@@ -112,6 +123,12 @@
                   <div class="project-tile-visual">
                     <img src="images/session-replay-hero.png" data-gif="images/session-replay-hero.gif" alt="" class="project-tile-gif" decoding="async" />
                   </div>
+                  <ul class="project-modal-sources" hidden>
+                    <li data-src="images/session-replay-hero.gif" data-still="images/session-replay-hero.png" data-caption="Session Replay"></li>
+                    <li data-src="images/session-replay/heatmaps.gif" data-caption="Heatmaps"></li>
+                    <li data-src="images/session-replay/sr-to-heatmap.gif" data-caption="Session to heatmap"></li>
+                    <li data-src="images/session-replay/sr-modal-preview.gif" data-caption="Replay modal"></li>
+                  </ul>
                 </div>
                 <div id="journeys" class="project-tile project-tile--featured project-tile--journeys" data-modal-open data-modal-title="Journeys" data-modal-description="Amplitude's chart for visualizing the paths users take through a product, from first touch to conversion and beyond. I led the design consolidation of Amplitude's fragmented pathing tools into a unified Journeys chart experience, taking it through alpha, open beta, and GA, including research, directed graph explorations, and the integration that let teams jump from a journey path directly into a session replay." role="button" tabindex="0" aria-haspopup="dialog">
                   <div class="project-tile-inner">
@@ -121,6 +138,11 @@
                   <div class="project-tile-visual">
                     <img src="images/journeys-hero.png" data-gif="images/journeys-hero.gif" alt="" class="project-tile-gif" decoding="async" />
                   </div>
+                  <ul class="project-modal-sources" hidden>
+                    <li data-src="images/journeys-hero.gif" data-still="images/journeys-hero.png" data-caption="Journeys"></li>
+                    <li data-src="images/journeys/top-paths-intro.gif" data-caption="Top paths"></li>
+                    <li data-src="images/journeys/workflow.gif" data-caption="Workflow"></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -198,7 +220,7 @@
       <!-- Tool stack -->
       <section class="work-tool-stack" id="tool-stack">
         <h2 class="tool-stack-label">Tool stack</h2>
-        <p class="tool-stack-intro">The tools I reach for.</p>
+        <p class="tool-stack-intro">The tools I reach for</p>
         <div class="tool-stack-row" aria-label="My tool stack">
           <div class="tool-stack-item">
             <button type="button" class="tool-stack-tool" aria-label="Figma" aria-describedby="tool-opinion-figma">
@@ -666,9 +688,10 @@
         <h2 class="project-modal-title" id="project-modal-title"></h2>
         <p class="project-modal-description" id="project-modal-description" hidden></p>
         <p class="project-modal-coming-soon">More details to come</p>
-        <div class="project-modal-preview">
+        <div class="project-modal-preview" id="project-modal-preview">
           <img class="project-modal-gif" id="project-modal-gif" src="" alt="" hidden />
         </div>
+        <div class="project-modal-gallery" id="project-modal-gallery" hidden></div>
       </div>
     </div>
   </div>
@@ -680,7 +703,9 @@
       var placeholder = document.getElementById('project-modal-placeholder');
       var titleEl = document.getElementById('project-modal-title');
       var descEl = document.getElementById('project-modal-description');
+      var previewEl = document.getElementById('project-modal-preview');
       var gifEl = document.getElementById('project-modal-gif');
+      var galleryEl = document.getElementById('project-modal-gallery');
       var closeBtn = overlay.querySelector('.project-modal-close');
       var panel = overlay.querySelector('.project-modal-panel');
       var backdrop = overlay.querySelector('.project-modal-backdrop');
@@ -711,19 +736,8 @@
             }
           }
 
-          var previewImg = trigger && trigger.querySelector('img[data-gif]');
-          if (gifEl && previewImg) {
-            var gif = previewImg.getAttribute('data-gif');
-            var still = previewImg.getAttribute('src');
-            var useStill = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            gifEl.src = useStill && still ? still : gif || still || '';
-            gifEl.alt = title ? title + ' preview' : '';
-            gifEl.removeAttribute('hidden');
-          } else if (gifEl) {
-            gifEl.setAttribute('hidden', '');
-            gifEl.src = '';
-            gifEl.alt = '';
-          }
+          renderPreviews(trigger, title);
+          placeholder.scrollTop = 0;
         }
 
         overlay.setAttribute('aria-hidden', 'false');
@@ -752,12 +766,85 @@
             descEl.textContent = '';
             descEl.setAttribute('hidden', '');
           }
-          if (gifEl) {
-            gifEl.setAttribute('hidden', '');
-            gifEl.src = '';
-            gifEl.alt = '';
-          }
+          clearPreviews();
         }, closeDuration);
+      }
+
+      function previewSources(trigger) {
+        var sources = [];
+        var useStill = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var previewImg = trigger && trigger.querySelector('img[data-gif]');
+        var hasList = !!(trigger && trigger.querySelector('.project-modal-sources [data-src]'));
+
+        if (previewImg && !hasList) {
+          var gif = previewImg.getAttribute('data-gif');
+          var still = previewImg.getAttribute('src');
+          sources.push({
+            src: useStill && still ? still : (gif || still || ''),
+            caption: previewImg.getAttribute('data-caption') || ''
+          });
+        }
+
+        if (trigger) {
+          trigger.querySelectorAll('.project-modal-sources [data-src]').forEach(function(item) {
+            var src = item.getAttribute('data-src');
+            var still = item.getAttribute('data-still');
+            if (!src) return;
+            sources.push({
+              src: useStill && still ? still : src,
+              caption: item.getAttribute('data-caption') || ''
+            });
+          });
+        }
+
+        return sources.filter(function(item) { return item.src; });
+      }
+
+      function clearPreviews() {
+        placeholder.classList.remove('has-gallery');
+        if (previewEl) previewEl.removeAttribute('hidden');
+        if (gifEl) {
+          gifEl.setAttribute('hidden', '');
+          gifEl.removeAttribute('src');
+          gifEl.alt = '';
+        }
+        if (galleryEl) {
+          galleryEl.setAttribute('hidden', '');
+          galleryEl.replaceChildren();
+        }
+      }
+
+      function renderPreviews(trigger, title) {
+        var sources = previewSources(trigger);
+        clearPreviews();
+
+        if (sources.length > 1 && galleryEl) {
+          placeholder.classList.add('has-gallery');
+          if (previewEl) previewEl.setAttribute('hidden', '');
+          galleryEl.removeAttribute('hidden');
+          sources.forEach(function(item) {
+            var figure = document.createElement('figure');
+            figure.className = 'project-modal-shot';
+
+            var frame = document.createElement('div');
+            frame.className = 'project-modal-shot-frame';
+
+            var img = document.createElement('img');
+            img.src = item.src;
+            img.alt = item.caption || (title ? title + ' preview' : '');
+            img.decoding = 'async';
+            frame.appendChild(img);
+            figure.appendChild(frame);
+            galleryEl.appendChild(figure);
+          });
+          return;
+        }
+
+        if (gifEl && sources.length) {
+          gifEl.src = sources[0].src;
+          gifEl.alt = title ? title + ' preview' : '';
+          gifEl.removeAttribute('hidden');
+        }
       }
 
       document.querySelectorAll('[data-modal-src]').forEach(function(link) {
