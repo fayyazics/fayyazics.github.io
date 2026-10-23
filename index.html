@@ -114,6 +114,11 @@
                     <li data-src="images/experiment/ve-loading.gif" data-caption="Loading state"></li>
                     <li data-src="images/experiment/duration-estimator.gif" data-caption="Duration estimator"></li>
                   </ul>
+                  <ul class="project-modal-metrics" hidden data-context="Maintained adoption while redesigning the setup flow">
+                    <li data-figure="90–145" data-caption="Users a day starting experiments"></li>
+                    <li data-figure="3–4%" data-caption="Daily start rate"></li>
+                    <li data-figure="No drop-off" data-caption="After the new setup UI became the default"></li>
+                  </ul>
                 </div>
                 <div id="session-replay" class="project-tile project-tile--featured project-tile--session" data-modal-open data-modal-title="Session Replay" data-modal-description="Amplitude's tool for watching real user sessions to understand behavior beyond the numbers. I led design from 0 to GA, owning everything from the core player and recordings list to event stream search, AI-powered replay discovery, Heatmaps, and integrations that brought replay into charts, dashboards, notebooks, and experiment results." role="button" tabindex="0" aria-haspopup="dialog">
                   <div class="project-tile-inner">
@@ -129,6 +134,10 @@
                     <li data-src="images/session-replay/sr-to-heatmap.gif" data-caption="Session to heatmap"></li>
                     <li data-src="images/session-replay/sr-modal-preview.gif" data-caption="Replay modal"></li>
                   </ul>
+                  <ul class="project-modal-metrics" hidden data-context="Scaled after GA">
+                    <li data-figure="171" data-caption="Paying customers"></li>
+                    <li data-figure="$3M" data-caption="ARR"></li>
+                  </ul>
                 </div>
                 <div id="journeys" class="project-tile project-tile--featured project-tile--journeys" data-modal-open data-modal-title="Journeys" data-modal-description="Amplitude's chart for visualizing the paths users take through a product, from first touch to conversion and beyond. I led the design consolidation of Amplitude's fragmented pathing tools into a unified Journeys chart experience, taking it through alpha, open beta, and GA, including research, directed graph explorations, and the integration that let teams jump from a journey path directly into a session replay." role="button" tabindex="0" aria-haspopup="dialog">
                   <div class="project-tile-inner">
@@ -142,6 +151,11 @@
                     <li data-src="images/journeys-hero.gif" data-still="images/journeys-hero.png" data-caption="Journeys"></li>
                     <li data-src="images/journeys/top-paths-intro.gif" data-caption="Top paths"></li>
                     <li data-src="images/journeys/workflow.gif" data-caption="Workflow"></li>
+                  </ul>
+                  <ul class="project-modal-metrics" hidden data-context="Strongest adoption result">
+                    <li data-figure="14.8%" data-caption="Actual usage, more than 9.5% above a 13.5% target"></li>
+                    <li data-figure="&gt;10%" data-caption="Net lift in overall Journeys usage"></li>
+                    <li data-figure="&gt;65%" data-caption="Journeys charts started from Funnels, up from roughly 25%"></li>
                   </ul>
                 </div>
               </div>
@@ -295,7 +309,7 @@
           <li class="musings-item">
             <span class="musings-category">Latte art</span>
             <div class="musings-detail">
-              <p class="musings-desc">I recently got into latte art and have gotten pretty decent at it — still chasing that perfect rosetta.</p>
+              <p class="musings-desc">I recently got into latte art and have gotten pretty decent at it. Still chasing that perfect rosetta.</p>
               <div class="musings-image-row" data-lightbox-group="latte-art" aria-label="Recent latte art">
                 <button type="button" class="musings-thumb" aria-label="View latte art with heart pattern"><img src="images/musings/latte-01.png" alt="" loading="lazy" decoding="async" /></button>
                 <button type="button" class="musings-thumb" aria-label="View latte art tulip in speckled mug"><img src="images/musings/latte-02.png" alt="" loading="lazy" decoding="async" /></button>
@@ -351,7 +365,7 @@
           <li class="musings-item">
             <span class="musings-category">Gallery</span>
             <div class="musings-detail">
-              <p class="musings-desc">A sampling from my photography over the years — landscapes, long exposures, and quiet moments.</p>
+              <p class="musings-desc">A sampling from my photography over the years: landscapes, long exposures, and quiet moments.</p>
               <div class="musings-photo-preview" data-lightbox-group="gallery" aria-label="Photography preview">
                 <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Golden Gate Bridge photo"><img src="css/images/goldengate.jpg" alt="" loading="lazy" decoding="async" /></button>
                 <button type="button" class="musings-thumb musings-thumb--square" aria-label="View Yosemite photo"><img src="css/images/yosemite.jpg" alt="" loading="lazy" decoding="async" /></button>
@@ -686,7 +700,10 @@
       <div class="project-modal-placeholder" id="project-modal-placeholder" hidden>
         <h2 class="project-modal-title" id="project-modal-title"></h2>
         <p class="project-modal-description" id="project-modal-description" hidden></p>
-        <p class="project-modal-coming-soon">More details to come</p>
+        <div class="project-modal-impact" id="project-modal-impact" hidden>
+          <p class="project-modal-impact-context" id="project-modal-impact-context"></p>
+          <ul class="project-modal-impact-list" id="project-modal-impact-list" aria-labelledby="project-modal-impact-context"></ul>
+        </div>
         <div class="project-modal-preview" id="project-modal-preview">
           <img class="project-modal-gif" id="project-modal-gif" src="" alt="" hidden />
         </div>
@@ -702,6 +719,9 @@
       var placeholder = document.getElementById('project-modal-placeholder');
       var titleEl = document.getElementById('project-modal-title');
       var descEl = document.getElementById('project-modal-description');
+      var impactEl = document.getElementById('project-modal-impact');
+      var impactContextEl = document.getElementById('project-modal-impact-context');
+      var impactListEl = document.getElementById('project-modal-impact-list');
       var previewEl = document.getElementById('project-modal-preview');
       var gifEl = document.getElementById('project-modal-gif');
       var galleryEl = document.getElementById('project-modal-gallery');
@@ -735,6 +755,7 @@
             }
           }
 
+          renderImpact(trigger);
           renderPreviews(trigger, title);
           placeholder.scrollTop = 0;
         }
@@ -765,6 +786,7 @@
             descEl.textContent = '';
             descEl.setAttribute('hidden', '');
           }
+          clearImpact();
           clearPreviews();
         }, closeDuration);
       }
@@ -797,6 +819,45 @@
         }
 
         return sources.filter(function(item) { return item.src; });
+      }
+
+      function clearImpact() {
+        if (!impactEl) return;
+        impactEl.setAttribute('hidden', '');
+        if (impactContextEl) impactContextEl.textContent = '';
+        if (impactListEl) impactListEl.replaceChildren();
+      }
+
+      function renderImpact(trigger) {
+        clearImpact();
+        if (!trigger || !impactEl || !impactListEl) return;
+
+        var source = trigger.querySelector('.project-modal-metrics');
+        if (!source) return;
+
+        var items = source.querySelectorAll('[data-figure]');
+        if (!items.length) return;
+
+        if (impactContextEl) impactContextEl.textContent = source.getAttribute('data-context') || '';
+
+        items.forEach(function(item) {
+          var card = document.createElement('li');
+          card.className = 'project-modal-impact-card';
+
+          var figure = document.createElement('span');
+          figure.className = 'project-modal-impact-figure';
+          figure.textContent = item.getAttribute('data-figure') || '';
+
+          var caption = document.createElement('span');
+          caption.className = 'project-modal-impact-caption';
+          caption.textContent = item.getAttribute('data-caption') || '';
+
+          card.appendChild(figure);
+          card.appendChild(caption);
+          impactListEl.appendChild(card);
+        });
+
+        impactEl.removeAttribute('hidden');
       }
 
       function clearPreviews() {

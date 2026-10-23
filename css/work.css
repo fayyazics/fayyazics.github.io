@@ -2266,13 +2266,6 @@ a.project-tile:hover,
   margin: 0;
 }
 
-.project-modal-coming-soon {
-  flex-shrink: 0;
-  font-size: var(--text-body-sm);
-  color: var(--color-text-muted);
-  margin: 0.625rem 0 0;
-}
-
 .project-modal-description {
   flex-shrink: 0;
   font-size: var(--text-body);
@@ -2285,6 +2278,63 @@ a.project-tile:hover,
 
 .project-modal-description[hidden] {
   display: none !important;
+}
+
+.project-modal-impact {
+  width: 100%;
+  max-width: 44rem;
+  margin: 1.35rem 0 0.15rem;
+}
+
+.project-modal-impact[hidden] {
+  display: none !important;
+}
+
+.project-modal-impact-context {
+  margin: 0 0 0.8rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-body-sm);
+  line-height: 1.45;
+}
+
+.project-modal-impact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-modal-impact-card {
+  flex: 1 1 11rem;
+  max-width: 14.5rem;
+  margin: 0;
+  padding: 0.95rem 1rem 0.9rem;
+  text-align: left;
+  background: var(--theme-bg-elevated, #fff);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(26, 35, 48, 0.04);
+}
+
+.project-modal-impact-figure {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-text);
+}
+
+.project-modal-impact-caption {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.4;
 }
 
 body.modal-open {
@@ -2771,5 +2821,14 @@ body.modal-open {
 
   .project-modal-gallery {
     column-count: 1;
+  }
+
+  .project-modal-impact-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal-impact-card {
+    max-width: none;
   }
 }
