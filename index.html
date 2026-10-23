@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/work.css?v=20261022">
   <link rel="stylesheet" href="css/draw-easter-egg.css">
   <link rel="stylesheet" href="css/theme.css">
   <script src="js/theme.js"></script>
@@ -702,7 +702,7 @@
         <p class="project-modal-description" id="project-modal-description" hidden></p>
         <div class="project-modal-impact" id="project-modal-impact" hidden>
           <p class="project-modal-impact-context" id="project-modal-impact-context"></p>
-          <ul class="project-modal-impact-list" id="project-modal-impact-list" aria-labelledby="project-modal-impact-context"></ul>
+          <div class="project-modal-impact-list" id="project-modal-impact-list" role="list" aria-labelledby="project-modal-impact-context"></div>
         </div>
         <div class="project-modal-preview" id="project-modal-preview">
           <img class="project-modal-gif" id="project-modal-gif" src="" alt="" hidden />
@@ -841,14 +841,15 @@
         if (impactContextEl) impactContextEl.textContent = source.getAttribute('data-context') || '';
 
         items.forEach(function(item) {
-          var card = document.createElement('li');
+          var card = document.createElement('div');
           card.className = 'project-modal-impact-card';
+          card.setAttribute('role', 'listitem');
 
-          var figure = document.createElement('span');
+          var figure = document.createElement('div');
           figure.className = 'project-modal-impact-figure';
           figure.textContent = item.getAttribute('data-figure') || '';
 
-          var caption = document.createElement('span');
+          var caption = document.createElement('div');
           caption.className = 'project-modal-impact-caption';
           caption.textContent = item.getAttribute('data-caption') || '';
 
