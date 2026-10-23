@@ -1052,14 +1052,7 @@ a.experience-brand-pill:hover {
 }
 
 .work-tool-stack .tool-stack-label {
-  margin: 0 0 var(--space-sm);
-}
-
-.work-tool-stack .tool-stack-intro {
-  max-width: 32em;
   margin: 0 0 var(--space-lg);
-  color: var(--color-text-muted);
-  font-size: var(--text-body-sm);
 }
 
 .tool-stack-row {
@@ -1232,7 +1225,6 @@ a.experience-brand-pill:hover {
 }
 
 .work-tool-stack .tool-stack-label,
-.work-tool-stack .tool-stack-intro,
 .work-tool-stack .tool-stack-row {
   opacity: 0;
   transform: translateY(16px);
@@ -1240,11 +1232,9 @@ a.experience-brand-pill:hover {
 }
 
 .work-tool-stack .tool-stack-label { transition-delay: 0.05s; }
-.work-tool-stack .tool-stack-intro { transition-delay: 0.12s; }
-.work-tool-stack .tool-stack-row { transition-delay: 0.2s; }
+.work-tool-stack .tool-stack-row { transition-delay: 0.12s; }
 
 .work-tool-stack.is-visible .tool-stack-label,
-.work-tool-stack.is-visible .tool-stack-intro,
 .work-tool-stack.is-visible .tool-stack-row {
   opacity: 1;
   transform: translateY(0);
@@ -2658,10 +2648,6 @@ body.modal-open {
 }
 
 @media (max-width: 540px) {
-  .work-tool-stack .tool-stack-intro {
-    margin-bottom: var(--space-md);
-  }
-
   .tool-stack-row {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
